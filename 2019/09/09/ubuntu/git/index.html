@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Overturn</title>
+  <title>ubuntu/git | Overturn</title>
   <meta name="keywords" content="">
-  <meta name="description" content="Overturn">
+  <meta name="description" content="ubuntu/git | Overturn">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Overturn">
@@ -47,7 +47,7 @@
 </div>
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/" class="avatar_target">
     <img class="avatar" src="/img/avatar.jpg" />
@@ -572,12 +572,43 @@
         </div>
     </div>
 </aside>
-<div class="post index">
+<div class="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-ubuntu/git" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-Blog"><span class="toc-text">Why Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#对博客的理解"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于叶落阁"><span class="toc-text">关于叶落阁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#博客平台"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
+        <h1 class="article-title">ubuntu/git</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2019-09-08 14:36:39'>2019-09-09 16:30</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#获取-Git-仓库"><span class="toc-text">获取 Git 仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#跟踪文件的修改"><span class="toc-text">跟踪文件的修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对工作区的修改"><span class="toc-text">对工作区的修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对暂存区的修改"><span class="toc-text">对暂存区的修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git状态检查和历史"><span class="toc-text">git状态检查和历史</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#扩展、标记和调校历史记录"><span class="toc-text">扩展、标记和调校历史记录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#远程仓库"><span class="toc-text">远程仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分支"><span class="toc-text">分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#应用"><span class="toc-text">应用</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -590,36 +621,223 @@
     }
 </style>
 </div>
-            <h1 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog"></a>Why Blog</h1><h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>喜欢写Blog的人，会经历三个阶段。</p>
-<blockquote>
-<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。</p>
-</blockquote>
-<blockquote>
-<p>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。</p>
-</blockquote>
-<blockquote>
-<p>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
-</blockquote>
-<p>我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。</p>
-<p>通过博客，我们可以记录自己的生活和成长的轨迹。它不像 Twitter 那样碎片化，也不像 Facebook 那样关系化，它是私人的空间。</p>
-<h2 id="关于叶落阁"><a href="#关于叶落阁" class="headerlink" title="关于叶落阁"></a>关于叶落阁</h2><p><strong>叶落阁</strong> 是阿杰（杨玉杰）的个人站。</p>
-<p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
-<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 生成，部署在 <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>，主题 <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank" rel="noopener">3-hexo</a> 已经在github上开源</p>
-<p>主要功能：</p>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#git</p>
+<!-- vim-markdown-toc GFM -->
+
 <ul>
-<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
-<li>pad/手机等移动端适配</li>
-<li>页面全局快捷键 <a href='http://yelog.org/2017/03/24/3-hexo-shortcuts/' target="_blank" rel="noopener">3-hexo快捷键说明</a></li>
+<li><a href="#获取-git-仓库">获取 Git 仓库</a></li>
+<li><a href="#跟踪文件的修改">跟踪文件的修改</a></li>
+<li><a href="#对工作区的修改">对工作区的修改</a></li>
+<li><a href="#对暂存区的修改">对暂存区的修改</a></li>
+<li><a href="#git状态检查和历史">git状态检查和历史</a></li>
+<li><a href="#扩展标记和调校历史记录">扩展、标记和调校历史记录</a></li>
+<li><a href="#远程仓库">远程仓库</a></li>
+<li><a href="#分支">分支</a></li>
+<li><a href="#应用">应用</a></li>
+</ul>
+<!-- vim-markdown-toc -->
+
+<h2 id="获取-Git-仓库"><a href="#获取-Git-仓库" class="headerlink" title="获取 Git 仓库"></a>获取 Git 仓库</h2><ul>
+<li>初始化仓库 <code>git init</code></li>
+<li>克隆现有的仓库 <code>git clone</code></li>
+</ul>
+<h2 id="跟踪文件的修改"><a href="#跟踪文件的修改" class="headerlink" title="跟踪文件的修改"></a>跟踪文件的修改</h2><ul>
+<li>git add filename    增加跟踪文件或将已跟踪文件添加到暂存区</li>
+<li>git rm filename     删除跟踪文件<ul>
+<li>默认删除文件跟踪状态和本地文件</li>
+<li>–cache参数 只删除跟踪状态而不删除本地文件，之后在.gitignore修改即可不再提示修改该文件</li>
+</ul>
+</li>
+<li>git mv sourcefile targetfile        跟踪文件改名</li>
+<li>.gitignore 忽略某文件的跟踪</li>
+<li>git ls-files 列出所有跟踪文件</li>
+</ul>
+<h2 id="对工作区的修改"><a href="#对工作区的修改" class="headerlink" title="对工作区的修改"></a>对工作区的修改</h2><p><code>git checkout -- filename</code> 撤销某文件的修改到上次提交</p>
+<h2 id="对暂存区的修改"><a href="#对暂存区的修改" class="headerlink" title="对暂存区的修改"></a>对暂存区的修改</h2><ul>
+<li>git add 将已跟踪文件添加到暂存区</li>
+<li>reset Head 将文件从暂存区删除</li>
+</ul>
+<h2 id="git状态检查和历史"><a href="#git状态检查和历史" class="headerlink" title="git状态检查和历史"></a>git状态检查和历史</h2><ul>
+<li>检查当前文件状态 <code>git status</code></li>
+<li>查看文件修改 <code>git diff</code><ul>
+<li>默认情况下比较工作区文件（未暂存）和暂存区文件</li>
+<li>–cached 查看暂存区和上次提交的区别</li>
+</ul>
+</li>
+<li>查看提交历史 <code>git log</code><ul>
+<li>默认会列出每次提交的SHA-1校验和，作者名字和邮箱，电子邮件地址，提交时间，提交说明</li>
+<li>–stat 额外显示出每次提交差异的简略说明</li>
+<li>–graph 图形化显示分支，合并历史</li>
+<li>–pretty 自定义显示，与graph联合使用，如： <code>git log --pretty=format:&quot;%h %s&quot; --graph</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="扩展、标记和调校历史记录"><a href="#扩展、标记和调校历史记录" class="headerlink" title="扩展、标记和调校历史记录"></a>扩展、标记和调校历史记录</h2><ul>
+<li><p>提交更新 </p>
+<ul>
+<li><code>git commit</code><ul>
+<li>默认情况下提交修改</li>
+<li>-a 跳过提交暂存区而直接将已修改的跟踪文件提交</li>
+<li>–amend 重新提交上次修改</li>
+</ul>
+</li>
+<li><code>git checkout -- filename</code> 撤销某文件的修改到上次提交</li>
+</ul>
+</li>
+<li><p>撤销操作</p>
+<ul>
+<li><code>git commit --amend</code> 重新提交</li>
+<li><code>git reset HEAD &lt;file&gt;</code> 取消暂存</li>
+<li><code>git checkout -- &lt;file&gt;</code> 撤消对文件的修改- 将它还原成上次提交时的样子</li>
+</ul>
+</li>
+<li><p>打标签</p>
+<ul>
+<li>列出标签<ul>
+<li>git tag 列出标签</li>
+<li>git show 看到标签信息与对应的提交信息</li>
+</ul>
+</li>
+<li>创建标签<ul>
+<li>附注标签（annotated） <code>git tag -a &lt;tagname&gt;</code> 包含打标签者的名字、电子邮件地址、日期时间；还有一个标签信息</li>
+<li>轻量标签 没有保存任何其他信息 <code>git tag  &lt;tagname&gt;</code></li>
+<li>后期打标签 <code>git tag -a &lt;tag&gt; &lt;部分校验和&gt;</code></li>
+</ul>
+</li>
+<li>共享标签<ul>
+<li>git push origin [tagname]</li>
+<li>git push origin –tags 把所有不在远程仓库服务器上的标签全部传送到那里</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><ul>
+<li>查看远程仓库 git remote<ul>
+<li>默认列出指定的远程仓库的简写</li>
+<li>git remote -v列出读写所需的git仓库简写及对应URL</li>
+<li>查看远程仓库 git remote show origin</li>
+</ul>
+</li>
+<li>添加远程仓库 <code>git remote add &lt;shotname&gt; &lt;URL&gt;</code><ul>
+<li>添加新的远程 Git 仓库，同时指定一个你可以轻松引用的简写： </li>
+<li>之后可以使用git fetch shotname获取远程仓库</li>
+</ul>
+</li>
+<li>从远程仓库拉取<ul>
+<li><code>git fetch &lt;shotname&gt;</code> 访问远程仓库，拉取所有分支的引用，可以随时查看和合并，但不会自动合并</li>
+<li><code>git pull</code></li>
+</ul>
+</li>
+<li>远程仓库的移除与重命名<ul>
+<li><code>git remote rename old new</code></li>
+<li><code>git remote rm shotname</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><ul>
+<li>本地分支<ul>
+<li>分支创建<ul>
+<li><code>git branch &lt;branchname&gt;</code> 仅仅 创建 一个新分支，并不会自动切换到新分支</li>
+<li><code>git checkout -b &lt;branchname&gt;</code> 新建一个分支并同时切换到那个分支上</li>
+</ul>
+</li>
+<li>分支切换 <code>git checkout &lt;branchname&gt;</code> 更改HEAD指针的指向,并将工作目录恢复成该分支所指向的快照内容</li>
+<li>分支查看<ul>
+<li><code>git log --all --oneline --decorate --graph</code> 查看所有分支提交</li>
+<li><code>git branch</code> 查看分支</li>
+</ul>
+</li>
+<li>分支合并 git merge <branchname><ul>
+<li><code>Fast-forward</code> master 分支所指向的提交是你当前提交的直接上游， Git 只是简单的将指针向前移动</li>
+<li>分支冲突 用编辑其修改冲突文件并git add手动加入暂存区</li>
+</ul>
+</li>
+<li>删除分支<ul>
+<li><code>git branch -d &lt;branchname&gt;</code></li>
+<li><code>git branch -D &lt;branchname&gt;</code> 强制删除分支，放弃合并</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>远程分支<ul>
+<li>远程分支创建<ul>
+<li><code>git remote add &lt;shotname&gt; &lt;URL&gt;</code></li>
+<li><code>git checkout -b &lt;local_branch&gt; origin/&lt;remote_branch&gt;</code></li>
+</ul>
+</li>
+<li>远程分支查看 git remote</li>
+<li>远程分支获取<ul>
+<li><code>git fetch origin(remote_name)</code></li>
+<li><code>git pull origin(remote_name) master(branch_name)</code></li>
+</ul>
+</li>
+<li>远程分支推送 <code>git push origin(remote_name) local_branch:remote_branch</code></li>
+<li>远程分支删除 <code>git push origin --delete serverfix</code></li>
+</ul>
+</li>
+<li>变基<ul>
+<li>将提交到某一分支上的所有修改都移至另一分支上<ul>
+<li><code>git checkout experiment</code></li>
+<li><code>git rebase master</code></li>
+</ul>
+</li>
+<li>回到 master 分支，进行一次快进合并<ul>
+<li>git checkout master</li>
+<li>git merge experiment</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><ul>
+<li>本地项目git初始化并提交远程仓库<ol>
+<li>先在远程仓库(如github)创建项目,为了避免错误,不要初始化 README, license, 或者gitignore文件</li>
+<li>切换到你的本地项目目录,初始化本地仓库<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure></li>
+<li>添加文件到本地仓库<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure></li>
+<li>提交文件<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;First commit&quot;</span><br></pre></td></tr></table></figure></li>
+<li>添加远程仓库地址到本地仓库<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin &#123;远程仓库地址&#125;</span><br><span class="line"># Sets the new remote</span><br><span class="line">git remote -v</span><br><span class="line"># Verifies the new remote URL</span><br></pre></td></tr></table></figure></li>
+<li>为推送当前分支并建立与远程上游的跟踪<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git push --set-upstream origin master</span><br><span class="line"># 若出现拒绝合并无关历史(在远程库中创建README等)则运行先运行git pull origin master --allow-unrelated-histories</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
 </ul>
 
-        </article>
-        
-        <p>
-            <a  class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>ubuntu/git</p>
+    
+    <p><span class="copy-title">本文作者:</span><a  title="overturncat">overturncat</a></p>
+    <p><span class="copy-title">发布时间:</span>2019-09-09, 16:30:19</p>
+    <p><span class="copy-title">最后更新:</span>2019-09-08, 14:36:39</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/09/ubuntu/git/" title="ubuntu/git">http://yoursite.com/2019/09/09/ubuntu/git/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">©2016-2019 Yelog</p>

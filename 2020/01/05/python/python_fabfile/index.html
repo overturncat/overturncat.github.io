@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Overturn</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="Overturn">
+  <title>Python-fabric2 | Overturn</title>
+  <meta name="keywords" content=" fabric2 ">
+  <meta name="description" content="Python-fabric2 | Overturn">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Overturn">
@@ -47,7 +47,7 @@
 </div>
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/" class="avatar_target">
     <img class="avatar" src="/img/avatar.jpg" />
@@ -572,12 +572,55 @@
         </div>
     </div>
 </aside>
-<div class="post index">
+<div class="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-python/python_fabfile" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-Blog"><span class="toc-text">Why Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#对博客的理解"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于叶落阁"><span class="toc-text">关于叶落阁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#博客平台"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
+        <h1 class="article-title">Python-fabric2</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a  data-rel="Python">Python</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a class="color3">fabric2</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2020-01-05 04:23:41'>2020-01-05 00:33</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#使用fabric2实现网站自动部署"><span class="toc-text">使用fabric2实现网站自动部署</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#运行远程命令"><span class="toc-text">运行远程命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#传输文件"><span class="toc-text">传输文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多服务器连接"><span class="toc-text">多服务器连接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fab命令行工具"><span class="toc-text">fab命令行工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用方法详解"><span class="toc-text">常用方法详解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Connection"><span class="toc-text">Connection</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#参数"><span class="toc-text">参数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#返回值"><span class="toc-text">返回值</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Connection_get"><span class="toc-text">Connection.get(remote, local&#x3D;None, preserve_mode&#x3D;True)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Connection_put"><span class="toc-text">Connection.put(local, remote&#x3D;None, preserve_mode&#x3D;True)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#invoke_run"><span class="toc-text">invoke.run(command, **kwargs)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#遇见过的坑"><span class="toc-text">遇见过的坑</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -590,36 +633,171 @@
     }
 </style>
 </div>
-            <h1 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog"></a>Why Blog</h1><h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>喜欢写Blog的人，会经历三个阶段。</p>
-<blockquote>
-<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。</p>
-</blockquote>
-<blockquote>
-<p>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。</p>
-</blockquote>
-<blockquote>
-<p>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
-</blockquote>
-<p>我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。</p>
-<p>通过博客，我们可以记录自己的生活和成长的轨迹。它不像 Twitter 那样碎片化，也不像 Facebook 那样关系化，它是私人的空间。</p>
-<h2 id="关于叶落阁"><a href="#关于叶落阁" class="headerlink" title="关于叶落阁"></a>关于叶落阁</h2><p><strong>叶落阁</strong> 是阿杰（杨玉杰）的个人站。</p>
-<p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
-<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 生成，部署在 <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>，主题 <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank" rel="noopener">3-hexo</a> 已经在github上开源</p>
-<p>主要功能：</p>
-<ul>
-<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
-<li>pad/手机等移动端适配</li>
-<li>页面全局快捷键 <a href='http://yelog.org/2017/03/24/3-hexo-shortcuts/' target="_blank" rel="noopener">3-hexo快捷键说明</a></li>
-</ul>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="使用fabric2实现网站自动部署"><a href="#使用fabric2实现网站自动部署" class="headerlink" title="使用fabric2实现网站自动部署"></a>使用fabric2实现网站自动部署</h1><h2 id="运行远程命令"><a href="#运行远程命令" class="headerlink" title="运行远程命令"></a>运行远程命令</h2><p>fabric通过SSH在远程系统上执行shell命令.默认情况下，远程程序的输出将直接打印到终端并进行捕获。</p>
+<pre><code>from fabric import Config, Connection
+# 配置sudo命令的密码
+config = Config(overrides={&apos;sudo&apos;: {&apos;password&apos;: &apos;password_root&apos;}})
+# 以明文方式配置用户登录密码
+conn = Connection(&apos;ip&apos;, user=&quot;name&quot;, config=config, connect_kwargs={&quot;password&quot;: &quot;passwd&quot;})
+conn.run(&quot;whoami&quot;) # 返回ayuan
+conn.sudo(&quot;whoami&quot;) # 返回root
+conn.close()</code></pre><p>关于Connect类的详情参阅<a href="#Connection">Connection</a><br>run, sudo, local(运行本地命令) 都是调用了invoke.run, 函数详情如<a href="#invoke_run">invoke.run</a></p>
+<h2 id="传输文件"><a href="#传输文件" class="headerlink" title="传输文件"></a>传输文件</h2><p>可以通过来传输文件.<br>其参数行为类似于cp和scp/sftp</p>
+<pre><code>result = conn.put(&quot;fabfile.py&quot;, &quot;/home/ubuntu/fabfile_put.py&quot;)
+print(&quot;Uploaded {0.local} to {0.remote}&quot;.format(result))
 
-        </article>
-        
-        <p>
-            <a  class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+result = conn.get(&quot;/home/ubuntu/fabfile_put.py&quot;, &quot;fabfile_get.py&quot;)
+print(&quot;Download {0.remote} to {0.local}&quot;.format(result))</code></pre><p>返回<br>Uploaded /home/…/fabfile.py to /home/…/fabfile_put.py<br>Download /home/…/fabfile_put.py to /home/…/fabfile_get.py</p>
+<p>详情参见<a href="#Connection_put">Connection.put</a>和<a href="#Connection_get">Connection.get</a></p>
+<h2 id="多服务器连接"><a href="#多服务器连接" class="headerlink" title="多服务器连接"></a>多服务器连接</h2><pre><code>from fabric import SerialGroup as Group
+results = Group(&apos;web1&apos;, &apos;web2&apos;, &apos;mac1&apos;).run(&apos;uname -s&apos;)
+for connection, result in results.items():
+    print(&quot;{0.host}: {1.stdout}&quot;.format(connection, result))</code></pre><p><strong>Group</strong>返回<strong>GroupResult</strong>dict-like对象 </p>
+<h2 id="fab命令行工具"><a href="#fab命令行工具" class="headerlink" title="fab命令行工具"></a>fab命令行工具</h2><p>在fabfile.py中打包命令并用@task装饰器暴露函数</p>
+<pre><code>from fabric import task
+@task
+def upload_and_unpack(c):
+    if c.run(&apos;test -f /opt/mydata/myfile&apos;, warn=True).failed:
+        c.put(&apos;myfiles.tgz&apos;, &apos;/opt/mydata&apos;)
+        c.run(&apos;tar -C /opt/mydata -xzvf /opt/mydata/myfiles.tgz&apos;)</code></pre><p>在命令行中</p>
+<pre><code>$ fab --list
+Available tasks:
+
+  upload_and_unpack
+
+$ fab -H web1,web2,web3 upload_and_unpack</code></pre><h2 id="常用方法详解"><a href="#常用方法详解" class="headerlink" title="常用方法详解"></a>常用方法详解</h2><h3 id="Connection">Connection</h3>
+
+<pre><code>class fabric.connection.Connection(host, user=None, port=None, config=None, gateway=None, forward_agent=None, connect_timeout=None, connect_kwargs=None, inline_ssh_env=None)</code></pre><p>此类继承自Invoke的<strong>Context</strong>，因为它是命令，任务等可以在其中运行的上下文。<br>它还封装了<strong>Paramiko SSHClient</strong>实例，使用从中生成的<strong>SSHClient</strong>和<strong>Channel</strong>实例执行有用的高级操作。 </p>
+<p>许多SSH特定选项 - 例如指定私钥和密码，超时，禁用SSH代理等 - 由Paramiko直接处理，应通过构造函数的connect_kwargs参数指定。</p>
+<h5 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h5><pre><code>class fabric.connection.Connection()
+    __init__(host, user=None, port=None, config=None, gateway=None, forward_agent=None, connect_timeout=None, connect_kwargs=None, inline_ssh_env=None)</code></pre><ul>
+<li>host 主机名或ip地址</li>
+<li>user 登录用户名</li>
+<li>port (int) 端口</li>
+<li>config 可以使Config或<strong>fabric.config.Config</strong>对象或<strong>invoke.config.Config</strong>对象</li>
+<li>gateway 用作此连接的代理或网关的对象。 可以接受以下两种参数<blockquote>
+<p>另一个Connection（用于ProxyJump样式网关）;</p>
+<p>shell命令字符串（用于ProxyCommand样式样式网关）。</p>
+</blockquote>
+</li>
+</ul>
+<p>默认值：无，表示不会发生网关（除非另行配置;如果想要在运行时覆盖已配置的网关，请指定gateway = False。）</p>
+<ul>
+<li>forward_agent（bool）  是否启用SSH代理转发。 默认值：config.forward_agent。</li>
+<li>connect_timeout（int） - 连接超时，以秒为单位。 默认值：config.timeouts.connect。</li>
+<li>connect_kwargs（字典） - 关键字参数逐字传递给SSHClient.connect（调用open时）。<br>可以接受多种验证方式<blockquote>
+<p><strong>私钥文件</strong> connect_kwargs={“key_filename”:”file_path”}</p>
+<p><strong>加密的私钥文件</strong>  配置connect_kwargs.passphrase或者使用fab命令时加入参数–prompt-fro-passphrase以命令行交互式方式写入密码</p>
+<p><strong>秘钥对象</strong> 详情参阅API, 将该对象配置为connect_kwargs.pkey</p>
+<p><strong>SSH 客户端</strong> 此为默认情况,会连接到正在运行的SSH代理(在Unix上为SSU_AUTH_SOCK, 在Window上为Pageant),但是请<strong>注意</strong>,在我的ubuntu电脑上出错, 可以使用connect_kwargs.allow_agent=False禁用,详情参阅<a href="#遇见过的坑">遇见过的坑</a> </p>
+<p><strong>明文密码</strong> 通过connect_kwargs.password方式</p>
+<p><strong>GSSAPI</strong>  详情参阅文档</p>
+</blockquote>
+</li>
+<li>inline_ssh_env（bool） -<br>是否将“inline”环境变量作为命令字符串前面的前缀发送（export VARNAME = value &amp;&amp; mycommand），而不是尝试通过SSH协议本身提交它们（这是默认行为）。 如果远程服务器具有受限制的AcceptEnv设置（这是常见的默认设置），则必须执行此操作。</li>
+</ul>
+<h5 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h5><p>Connection对象的方法（如run）通常返回invoke.runners.Result（或其子类）的实例。</p>
+<ul>
+<li>stdout（str） - 子进程的标准输出。</li>
+<li>stderr（str） - 与stdout相同但包含标准错误（除非通过pty调用进程，在这种情况下它将为空）</li>
+<li>encoding（str） - 本地shell环境使用的字符串编码。</li>
+<li>command（str） - 执行的命令。</li>
+<li>shell（str） - 用于执行的shell二进制文件。</li>
+<li>env（dict） - 用于执行的shell环境。 （默认为空字典）</li>
+<li>exited（int） - 表示子进程’退出/返回代码的整数。</li>
+<li>pty（bool） - 描述子进程是否使用pty调用的布尔值;见Runner.run。</li>
+<li>hide（元组） - 流名称的元组（无，一个或两个（’stdout’，’stderr’））在执行生成命令时对用户隐藏;这是从Runner.run的hide参数派生的标准化值。</li>
+</ul>
+<pre><code>&gt;&gt;&gt; result.stdout.strip() == &apos;Linux&apos;
+True
+&gt;&gt;&gt; result.exited
+0
+&gt;&gt;&gt; result.ok
+True
+&gt;&gt;&gt; result.command
+&apos;uname -s&apos;
+&gt;&gt;&gt; result.connection
+&lt;Connection host=web1&gt;
+&gt;&gt;&gt; result.connection.host
+&apos;web1&apos;</code></pre><h5 id="Connection_get">Connection.get(remote, local=None, preserve_mode=True)</h5>
+* remote (str) – 要下载的远程文件。 
+**Note** 不解析~, 默认工作目录为用户家目录
+* local – 存储下载文件的本地路径，或类文件对象。
+* preserve_mode（bool） - 是否对os.chmod本地文件进行匹配，使其与远程文件的模式匹配（默认值：True）。
+
+<p>返回<strong>Result</strong>对象</p>
+<h5 id="Connection_put">Connection.put(local, remote=None, preserve_mode=True)</h5>
+* remote (str) – 要下载的远程文件。 
+**Note** 不解析~, 默认工作目录为用户家目录
+* local – 存储下载文件的本地路径，或类文件对象。
+* preserve_mode（bool） - 是否对os.chmod本地文件进行匹配，使其与远程文件的模式匹配（默认值：True）。
+
+<p>返回<strong>Result</strong>对象</p>
+<h3 id="invoke_run">invoke.run(command, **kwargs)</h3>
+* command（str） - 要执行的shell命令。
+* bool(布尔) - 当执行的命令以非零状态退出时，是否警告并继续，而不是引发UnexpectedExit。 默认值：False。
+* hide - 允许调用者禁用run的将子进程'stdout和stderr复制到控制终端的默认行为。 指定hide ='out'（或'stdout'）以仅隐藏stdout流，hide ='err'（或'stderr'）仅隐藏stderr，或hide ='both'（或True）以隐藏两个流。
+* pty（bool） - 默认情况下，run直接连接到调用的进程并读取其stdout / stderr流。。 要使用pty(伪终端)而不是默认行为，请指定pty = True。
+* fallback (bool) –  控制自动回退功能
+* echo（bool） - 控制run是否在执行命令之前将命令字符串打印到本地stdout。 默认值：False。
+* env（dict） - 默认情况下，子进程接收Invoke自己的环境（即os.environ）的副本。在这里提供dict来更新子环境。例如`run('command', env={'PYTHONPATH': '/some/virtual/env/maybe'})`会修改PYTHONPATH环境变量
+* replace_env（bool） - 当为True时，使子进程接收给予env的字典作为其整个shell环境，而不是更新os.environ的副本。 默认值：False。
+* encoding（str） - 覆盖自动检测子进程对其stdout / stderr流使用哪种编码（默认为default_encoding的返回值）。
+* out_stream  - 应该写入子进程'标准输出的类文件流对象。 如果为None（默认值），将使用sys.stdout。
+* err_stream  - 与out_stream相同，除标准错误外，默认为sys.stderr。
+* watchers - StreamWatcher实例列表，用于扫描程序的stdout或stderr，并可以响应模式或其他启发式方法写入其stdin
+* echo_stdin（bool） - 是否将数据从in_stream写回out_stream。
+
+<h2 id="遇见过的坑">遇见过的坑</h2>
+运行时报错如下
+
+<pre><code>ayuan@ayuan-ubuntu:~/code/python/webapp/day15$ python fabfile.py 
+Exception: key cannot be used for signing
+Traceback (most recent call last):
+  File &quot;/home/ayuan/.local/lib/python3.6/site-packages/paramiko/transport.py&quot;, line 2036, in run
+    handler(self.auth_handler, m)
+  File &quot;/home/ayuan/.local/lib/python3.6/site-packages/paramiko/auth_handler.py&quot;, line 298, in _parse_service_accept
+    sig = self.private_key.sign_ssh_data(blob)
+  File &quot;/home/ayuan/.local/lib/python3.6/site-packages/paramiko/agent.py&quot;, line 418, in sign_ssh_data
+    raise SSHException(&quot;key cannot be used for signing&quot;)
+paramiko.ssh_exception.SSHException: key cannot be used for signing</code></pre><p>问题详情可见<br><a href="https://answers.launchpad.net/ubuntu/+source/paramiko/+question/183769" target="_blank" rel="noopener">question/183769</a>以及<br><a href="https://bugs.launchpad.net/paramiko/+bug/912123" target="_blank" rel="noopener">bug/912123</a></p>
+<p>总结来说就是环境变量SSH_AUTH_SOCK导致的坑，可以设置connect_kwargs.allow_agent=False禁用SSH agent方式,或只要是没有该变量的用户，如root即可, sudo python fabfile.py可正常运行</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>Python-fabric2</p>
+    
+    <p><span class="copy-title">本文作者:</span><a  title="overturncat">overturncat</a></p>
+    <p><span class="copy-title">发布时间:</span>2020-01-05, 00:33:00</p>
+    <p><span class="copy-title">最后更新:</span>2020-01-05, 04:23:41</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/01/05/python/python_fabfile/" title="Python-fabric2">http://yoursite.com/2020/01/05/python/python_fabfile/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">©2016-2019 Yelog</p>

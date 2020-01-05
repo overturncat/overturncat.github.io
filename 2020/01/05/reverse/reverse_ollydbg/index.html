@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Overturn</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="Overturn">
+  <title>Ollydbg的解析 | Overturn</title>
+  <meta name="keywords" content=" 逆向 , Ollydbg ">
+  <meta name="description" content="Ollydbg的解析 | Overturn">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Overturn">
@@ -47,7 +47,7 @@
 </div>
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/" class="avatar_target">
     <img class="avatar" src="/img/avatar.jpg" />
@@ -572,12 +572,57 @@
         </div>
     </div>
 </aside>
-<div class="post index">
+<div class="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-reverse/reverse_ollydbg" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-Blog"><span class="toc-text">Why Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#对博客的理解"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于叶落阁"><span class="toc-text">关于叶落阁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#博客平台"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
+        <h1 class="article-title">Ollydbg的解析</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a  data-rel="逆向">逆向</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a class="color3">逆向</a>
+            
+            <a class="color3">Ollydbg</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2020-01-05 04:31:57'>2020-01-05 00:33</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#OllyDBG"><span class="toc-text">OllyDBG</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一般原理"><span class="toc-text">一般原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#选项"><span class="toc-text">选项</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#界面选项"><span class="toc-text">界面选项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#调试选项"><span class="toc-text">调试选项</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安全"><span class="toc-text">安全</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#调试"><span class="toc-text">调试</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#事件"><span class="toc-text">事件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#异常"><span class="toc-text">异常</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#跟踪"><span class="toc-text">跟踪</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SFX"><span class="toc-text">SFX</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#字串"><span class="toc-text">字串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#地址"><span class="toc-text">地址</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#命令"><span class="toc-text">命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#反汇编"><span class="toc-text">反汇编</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CPU"><span class="toc-text">CPU</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#寄存器"><span class="toc-text">寄存器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#堆栈"><span class="toc-text">堆栈</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#分析"><span class="toc-text">分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ollydbg的使用"><span class="toc-text">ollydbg的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#调试-1"><span class="toc-text">调试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#跳转"><span class="toc-text">跳转</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查找"><span class="toc-text">查找</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改"><span class="toc-text">修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码跟踪"><span class="toc-text">代码跟踪</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#增加代码可读性"><span class="toc-text">增加代码可读性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#模糊命令"><span class="toc-text">模糊命令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用技巧"><span class="toc-text">使用技巧</span></a></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -590,36 +635,464 @@
     }
 </style>
 </div>
-            <h1 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog"></a>Why Blog</h1><h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>喜欢写Blog的人，会经历三个阶段。</p>
-<blockquote>
-<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。</p>
-</blockquote>
-<blockquote>
-<p>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。</p>
-</blockquote>
-<blockquote>
-<p>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
-</blockquote>
-<p>我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。</p>
-<p>通过博客，我们可以记录自己的生活和成长的轨迹。它不像 Twitter 那样碎片化，也不像 Facebook 那样关系化，它是私人的空间。</p>
-<h2 id="关于叶落阁"><a href="#关于叶落阁" class="headerlink" title="关于叶落阁"></a>关于叶落阁</h2><p><strong>叶落阁</strong> 是阿杰（杨玉杰）的个人站。</p>
-<p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
-<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 生成，部署在 <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>，主题 <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank" rel="noopener">3-hexo</a> 已经在github上开源</p>
-<p>主要功能：</p>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="OllyDBG"><a href="#OllyDBG" class="headerlink" title="OllyDBG"></a>OllyDBG</h1><h2 id="一般原理"><a href="#一般原理" class="headerlink" title="一般原理"></a>一般原理</h2><p><img src="static/img/ollydbg_screen.jpg" alt="ollydbg界面">  </p>
 <ul>
-<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
-<li>pad/手机等移动端适配</li>
-<li>页面全局快捷键 <a href='http://yelog.org/2017/03/24/3-hexo-shortcuts/' target="_blank" rel="noopener">3-hexo快捷键说明</a></li>
+<li>在调试期间的断点［breakpoints］、标签［labels］、注释［comment］信息会保存在扩展名为.UDD的文件中, 当OllyDbg下一次加载该模块时，它会自动恢复所有的调试信息(默认名是 程序名.udd, 忽略路径, 后缀, 时间戳, RCR信息, 在选项–&gt;调试设置–&gt;安全 中修改)  </li>
+<li>dll文件的相关信息也会保存到.UDD文件中, 即使是不同的程序调用</li>
 </ul>
+<h2 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h2><h3 id="界面选项"><a href="#界面选项" class="headerlink" title="界面选项"></a>界面选项</h3><p>外观配置, 无需更改</p>
+<h3 id="调试选项"><a href="#调试选项" class="headerlink" title="调试选项"></a>调试选项</h3><h4 id="安全"><a href="#安全" class="headerlink" title="安全"></a>安全</h4><p><strong>忽略路径和扩展名</strong>［Ignore path and extention］<br>OllyDbg 将用户自定义的数据，如标签、注释、断点等保存到.udd文件中。通常这个文件会以可执行模块的名字命名，并且保存到 OllyDbg 的目录中。然而，可执行文件和DLL文件是可以具有相同名字的，不同目录中的DLL文件也可以具有相同名字。为了避免冲突，OllyDbg 1.09 在文件名中添加了后缀（_1,_2等）。这种做法的负面影响是如果您把被调试程序移动到其他文件夹时，以前的标签和断点将无法使用。选项“忽略路径和扩展名”［Ignore path and extention］在检查数据正确性时，会忽略 .udd 文件中的文件名后缀、路径和扩展名。</p>
+<p><strong>忽略时间戳</strong>［Ignore timestamp］<br>忽略时间的不同</p>
+<p><strong>忽略代码段CRC检验</strong>［Ignore CRC of code section］<br>当应用程序加载新模块时，OllyDbg会在在恢复用户自定义的数据之前，先要将数据的最近改动、模块长度、代码段CRC校验，与文件中列出的对应内容进行比较。如果您有几个相同名字的DLL或相同程序的几个不同版本，这将是最低的安全限度，保证不会识别错误。您可以禁止CRC和时间戳比较。如果您修改了可执行模块，最后一个选项将特别有用。</p>
+<p><strong>其他</strong> 保持默认</p>
+<h4 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h4><p><strong>保持默认即可</strong></p>
+<h4 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h4><p>选择在发生相应的事件时自动中断<br>第一次暂停在［Make first pause at］：</p>
+<ul>
+<li>系统断点［System breakpoint］</li>
+<li>主模块入口［Entry point of main module］</li>
+<li>WinMain（函数如果位置已知）［WinMain (if location is known)］</li>
+</ul>
+<p><strong>当新模块（动态链接库）加载时中断</strong>［Break on new module (DLL)］<br>如果该选项开启，则当被调试程序加载新模块时，OllyDbg将停止执行。不同于一些其他的调试器，OllyDbg将一直等到模块被完全加载到内存才停止，所以您可以立即对这模块浏览，设置断点等操作。</p>
+<p><strong>当模块（动态链接库）卸载时中断</strong>［Break on module (DLL) unloading］  .<br>如果该选项被激活，OllyDbg将在操作系统卸载某些模块时暂停被调试程序。注意，此时模块已经不可浏览。</p>
+<p><strong>当新线程运行时中断</strong>［Break on new thread］<br>如果想让OllyDbg在模块启动新线程时暂停执行，请开启该项。</p>
+<p><strong>当线程中止时中断</strong>［Break on thread end］<br>如果该选项被激活，OllyDbg将在某些线程结束时停止被调试程序。</p>
+<p><strong>当调试字符串时中断</strong>［Break on debug string］<br>如果想让OllyDbg在每次被调试程序发出调试字符串（通过调用OutputDebugString）时暂停，请选中该项。</p>
+<h4 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h4><p>选择忽略特定异常导致的中断</p>
+<p><strong>其他</strong> 保持默认即可</p>
+<h4 id="跟踪"><a href="#跟踪" class="headerlink" title="跟踪"></a>跟踪</h4><p>设置RUN跟踪时的一些设置, 保持默认即可</p>
+<h4 id="SFX"><a href="#SFX" class="headerlink" title="SFX"></a>SFX</h4><p>设置自解压选项, 保持默认即可</p>
+<h4 id="字串"><a href="#字串" class="headerlink" title="字串"></a>字串</h4><p>设置字符的解码模式及显示方式</p>
+<h4 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h4><p>设置地址和修饰符号的显示方式</p>
+<h4 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h4><p>设置命令的显示形式, 保持默认即可</p>
+<h4 id="反汇编"><a href="#反汇编" class="headerlink" title="反汇编"></a>反汇编</h4><p>设置反汇编的语法及显示形式, 保持默认即可</p>
+<h4 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h4><p>设置跳转线的显示</p>
+<h4 id="寄存器"><a href="#寄存器" class="headerlink" title="寄存器"></a>寄存器</h4><p>设置寄存器栏的显示</p>
+<h4 id="堆栈"><a href="#堆栈" class="headerlink" title="堆栈"></a>堆栈</h4><p>设置堆栈栏的显示</p>
+<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>代码分析相关设置</p>
+<p>###快捷按钮<br><strong>断点</strong>［Breakpoints］<br>显示各种类型的断点</p>
+<p><strong>可执行模块窗口</strong>［Executable modules window］</p>
+<h2 id="ollydbg的使用"><a href="#ollydbg的使用" class="headerlink" title="ollydbg的使用"></a>ollydbg的使用</h2><h3 id="调试-1"><a href="#调试-1" class="headerlink" title="调试"></a>调试</h3><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>调用方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>一般断点</td>
+<td>F2 或 双击反汇编窗口中的16进制代码栏</td>
+</tr>
+<tr>
+<td>条件断点(表达式的结果非零或者表达式无效，将暂停被调试程序)</td>
+<td>Shift+F2 或右键–&gt;断点–&gt;条件断点</td>
+</tr>
+<tr>
+<td>消息断点</td>
+<td>BP API函数</td>
+</tr>
+<tr>
+<td>执行到光标处</td>
+<td>F4</td>
+</tr>
+<tr>
+<td>单步步入</td>
+<td>F7</td>
+</tr>
+<tr>
+<td>单步步入直到中断或Esc</td>
+<td>Ctrl+F7</td>
+</tr>
+<tr>
+<td>单步步过</td>
+<td>F8</td>
+</tr>
+<tr>
+<td>单步步过直到中断或Esc</td>
+<td>Ctrl+F8</td>
+</tr>
+<tr>
+<td>执行到断点</td>
+<td>F9</td>
+</tr>
+<tr>
+<td>重新运行</td>
+<td>Ctrl+F2 或快捷键</td>
+</tr>
+<tr>
+<td>执行到函数返回</td>
+<td>Ctrl+F9 或 调试–&gt;执行到返回</td>
+</tr>
+<tr>
+<td>执行到用户代码处</td>
+<td>Alt+F9 或 调试–&gt;执行到用户代码</td>
+</tr>
+</tbody></table>
+<h3 id="跳转"><a href="#跳转" class="headerlink" title="跳转"></a>跳转</h3><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>调用方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>快速跳转地址或内存</td>
+<td>Ctrl+G</td>
+</tr>
+<tr>
+<td>跟进到跳转、调用、返回或转换语句的目的地址</td>
+<td>Enter 或 右键–&gt;跟随</td>
+</tr>
+<tr>
+<td>跳转到调用该函数的地址</td>
+<td>右键–&gt;转到–&gt;call … 或  右键–&gt;调用树</td>
+</tr>
+<tr>
+<td>跳转到刚刚调用调用该函数的call命令</td>
+<td>堆栈栏–&gt;ESP–&gt;反汇编窗口跟随(call会push 地址)</td>
+</tr>
+<tr>
+<td>调到EIP所指命令</td>
+<td>双击寄存器区的EIP 或 右键–&gt;转到–&gt;EIP</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>数据窗口跳转到反汇编栏选中的内存区</td>
+<td>右键–&gt;数据窗口跟随–&gt;选择</td>
+</tr>
+<tr>
+<td>数据窗口跳转到鼠标选中命令的立即数</td>
+<td>右键–&gt;数据窗口跟随–&gt;立即数</td>
+</tr>
+</tbody></table>
+<h3 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h3><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>调用方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>查找命令中含有选中地址的命令</td>
+<td>右键–&gt;查找参考–&gt;选定命令</td>
+</tr>
+<tr>
+<td>查找含有选中命令的地址常量的命令</td>
+<td>右键–&gt;查找参考–&gt;地址常量</td>
+</tr>
+<tr>
+<td>查找数据区的字符串</td>
+<td>右键–&gt;查找–&gt;所有参考文本字串</td>
+</tr>
+<tr>
+<td>查看调用了本函数的函数</td>
+<td>右键–&gt;调用树</td>
+</tr>
+<tr>
+<td>返回刚刚调用本函数的地址</td>
+<td>堆栈栏–&gt; ESP(由于call指令会push 地址)</td>
+</tr>
+<tr>
+<td>查找相应的命令</td>
+<td>右键–&gt;查找–&gt;命令/命令序列</td>
+</tr>
+<tr>
+<td>查找下一个</td>
+<td>Ctrl+l</td>
+</tr>
+</tbody></table>
+<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>调用方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>修改鼠标下的汇编代码</td>
+<td>双击反汇编栏</td>
+</tr>
+<tr>
+<td>撤销修改的汇编代码</td>
+<td>右键–&gt;撤销此处修改 或 Ctrl+p(P按钮, 补丁窗口)</td>
+</tr>
+<tr>
+<td>查看之前的汇编代码</td>
+<td>右键–&gt;备份–&gt;查看备份</td>
+</tr>
+<tr>
+<td>修改汇编代码的二进制</td>
+<td>右键–&gt;二进制–&gt;编辑</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>修改鼠标下的内存数据</td>
+<td>双击内存栏</td>
+</tr>
+<tr>
+<td>撤销修改的内存数据</td>
+<td>右键–&gt;撤销此处修改</td>
+</tr>
+<tr>
+<td>查看之前的内存数据</td>
+<td>右键–&gt;备份–&gt;查看备份</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>复制相应栏目的数据</td>
+<td>右键–&gt;复制–&gt;到剪切板(如果复制时要排除栏目，请减小其的宽度到最小)</td>
+</tr>
+</tbody></table>
+<h3 id="代码跟踪"><a href="#代码跟踪" class="headerlink" title="代码跟踪"></a>代码跟踪</h3><p><strong>Hit跟踪</strong><br>选择部分代码跟踪, 未执行代码显紫色, 已执行代码显红色.当退出Hit跟踪的时候，Run跟踪也会同时退出。 </p>
+<table>
+<thead>
+<tr>
+<th>功能描述</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>对选择的代码部分进行Hit跟踪</td>
+<td>右键–&gt;Hit跟踪–&gt;添加选择部分</td>
+</tr>
+<tr>
+<td>对当前函数过程进行Hit跟踪。</td>
+<td>右键–&gt;Hit跟踪–&gt;添加函数过程</td>
+</tr>
+<tr>
+<td>从选择部分中移除Hit跟踪和Run跟踪</td>
+<td>右键–&gt;Hit跟踪–&gt;从选择的部分移除</td>
+</tr>
+<tr>
+<td>从当前模块的代码段中移除所有Hit跟踪和Run跟踪</td>
+<td>右键–&gt;Hit跟踪–&gt;从选择的模块中移除</td>
+</tr>
+<tr>
+<td>选择代码均不进行Hit跟踪。</td>
+<td>右键–&gt;Hit跟踪–&gt;标记选择部分不跟踪</td>
+</tr>
+<tr>
+<td>当前模块命令均不进行Hit跟踪。</td>
+<td>右键–&gt;Hit跟踪–&gt;标记模块不跟踪</td>
+</tr>
+</tbody></table>
+<p><strong>Run跟踪</strong><br>在Hit跟踪的基础上记录地址、寄存器的内容、消息以及已知的操作数。您还可以使用Run跟踪来了解运行的简单统计  </p>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>调用方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开始RUN跟踪</td>
+<td>菜单–&gt;调试–&gt;开始或清除RUN跟踪</td>
+</tr>
+<tr>
+<td>查看RUN跟踪记录</td>
+<td>(…按钮)</td>
+</tr>
+<tr>
+<td>上一记录</td>
+<td>-号</td>
+</tr>
+<tr>
+<td>下一级路</td>
+<td>+号</td>
+</tr>
+<tr>
+<td>RUN跟踪步入直到断点或Esc</td>
+<td>Ctrl+F11 或 菜单–&gt;调试–&gt;跟踪步入</td>
+</tr>
+<tr>
+<td>RUN跟踪步入直到断点或Esc</td>
+<td>Ctrl+F11 或 菜单–&gt;调试–&gt;跟踪步入</td>
+</tr>
+<tr>
+<td>在选择的代码上强迫设置Run跟踪和Hit跟踪。</td>
+<td>右键–&gt;添加选择部分</td>
+</tr>
+<tr>
+<td>在当前函数过程上强迫设置Run跟踪和Hit跟踪。</td>
+<td>右键–&gt;添加函数过程</td>
+</tr>
+<tr>
+<td>在当前函数过程上及所有可识别的跳转或调用目的地址设置Run跟踪</td>
+<td>右键–&gt;添加过程中的分支</td>
+</tr>
+<tr>
+<td>从Run跟踪中排除选定的准线性代码。</td>
+<td>右键–&gt;跟踪时忽略选择部分</td>
+</tr>
+<tr>
+<td>设置条件以暂停Run跟踪.</td>
+<td>右键–&gt;设置条件</td>
+</tr>
+</tbody></table>
+<h3 id="增加代码可读性"><a href="#增加代码可读性" class="headerlink" title="增加代码可读性"></a>增加代码可读性</h3><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>调用方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>注释</td>
+<td>双击注释栏 或 右键–&gt;注释</td>
+</tr>
+<tr>
+<td>查看所有用户注释</td>
+<td>右键–&gt;查看–&gt;用户自定义注释</td>
+</tr>
+<tr>
+<td>标签(用于函数入口地址,帮助分析代码, 标签之后分析代码可自动识别参数)</td>
+<td>右键–&gt;标签</td>
+</tr>
+<tr>
+<td>查看所有用户标签</td>
+<td>右键–&gt;查看–&gt;用户自定义标签</td>
+</tr>
+</tbody></table>
+<h4 id="模糊命令"><a href="#模糊命令" class="headerlink" title="模糊命令"></a>模糊命令</h4><p>在搜索命令时，您可以使用模糊汇编指令。可以使用下面的关键字：</p>
+<table>
+<thead>
+<tr>
+<th>关键字</th>
+<th>匹配</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>R8</td>
+<td>任何8位寄存器(AL,BL, CL, DL, AH, BH, CH, DH)</td>
+</tr>
+<tr>
+<td>R16</td>
+<td>任任何16位寄存器(AX, BX, CX, DX, SP, BP, SI, DI)</td>
+</tr>
+<tr>
+<td>R32</td>
+<td>任任何32位寄存器 (EAX, EBX, ECX, EDX, ESP, EBP, ESI, EDI)</td>
+</tr>
+<tr>
+<td>RA &amp; RB</td>
+<td>像R32一样，它们可以替代任何32位通用寄存器，但他们在整个序列中含义的总是不变的</td>
+</tr>
+<tr>
+<td>FPU</td>
+<td>任任何FPU寄存器(ST0..ST7)</td>
+</tr>
+<tr>
+<td>MMX</td>
+<td>任任何MMX寄存器(MM0..MM7)</td>
+</tr>
+<tr>
+<td>CRX</td>
+<td>任任何控制寄存器(CR0..CR7)</td>
+</tr>
+<tr>
+<td>DRX</td>
+<td>任任何调试寄存器r (DR0..DR7)</td>
+</tr>
+<tr>
+<td>CONST</td>
+<td>任任何常量</td>
+</tr>
+<tr>
+<td>ANY</td>
+<td>跳过n个命令</td>
+</tr>
+<tr>
+<td>OFFSET</td>
+<td>与CONST相同</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>JCC</td>
+<td>任何条件跳转(JE, JC, JNGE…)</td>
+</tr>
+<tr>
+<td>SETCC</td>
+<td>任何条件设置字节(SETE, SETC, SETNGE… )</td>
+</tr>
+<tr>
+<td>CMOVCC</td>
+<td>任何条件移动 (CMOVE, CMOVC, CMOVNGE…)</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>例子<br><code>call CONST</code> 可以匹配 <code>call test.00401020</code><br><code>LEA RA,[4 * RA + RA]</code> 匹配到<code>LEA EAX,[4 * EAX + EAX]</code><br><code>PUSH EBP;ANY 2;MOV EBP,ESP</code> 函数过程的头部可以有两条任意的命令</p>
+</blockquote>
+<h3 id="使用技巧"><a href="#使用技巧" class="headerlink" title="使用技巧"></a>使用技巧</h3><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>调用方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ollydbg作为二进制编辑器使用</td>
+<td>菜单–&gt;查看–&gt;文件</td>
+</tr>
+<tr>
+<td>对数据窗口翻动一个字节。</td>
+<td>Ctrl +↑ 或 Ctrl+↓</td>
+</tr>
+<tr>
+<td>保存修改的可执行文件</td>
+<td>右键–&gt;复制到可执行文件–&gt;全部–&gt;D标签窗口–&gt;保存文件</td>
+</tr>
+<tr>
+<td>找到函数入口</td>
+<td>注意三个push</td>
+</tr>
+</tbody></table>
 
-        </article>
-        
-        <p>
-            <a  class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>Ollydbg的解析</p>
+    
+    <p><span class="copy-title">本文作者:</span><a  title="overturncat">overturncat</a></p>
+    <p><span class="copy-title">发布时间:</span>2020-01-05, 00:33:00</p>
+    <p><span class="copy-title">最后更新:</span>2020-01-05, 04:31:57</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/01/05/reverse/reverse_ollydbg/" title="Ollydbg的解析">http://yoursite.com/2020/01/05/reverse/reverse_ollydbg/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">©2016-2019 Yelog</p>

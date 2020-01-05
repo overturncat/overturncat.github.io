@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Overturn</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="Overturn">
+  <title>密码学-维吉尼亚加密破解 | Overturn</title>
+  <meta name="keywords" content=" 密码学 ">
+  <meta name="description" content="密码学-维吉尼亚加密破解 | Overturn">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Overturn">
@@ -47,7 +47,7 @@
 </div>
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/" class="avatar_target">
     <img class="avatar" src="/img/avatar.jpg" />
@@ -572,12 +572,55 @@
         </div>
     </div>
 </aside>
-<div class="post index">
+<div class="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-cipher/cipher_vigenere" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-Blog"><span class="toc-text">Why Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#对博客的理解"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于叶落阁"><span class="toc-text">关于叶落阁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#博客平台"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
+        <h1 class="article-title">密码学-维吉尼亚加密破解</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a  data-rel="密码学">密码学</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a class="color4">密码学</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2020-01-05 04:03:42'>2020-01-05 00:33</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#维吉尼亚加密破解"><span class="toc-text">维吉尼亚加密破解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#凯撒密码"><span class="toc-text">凯撒密码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#维吉尼亚密码"><span class="toc-text">维吉尼亚密码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#维吉尼亚破解"><span class="toc-text">维吉尼亚破解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#卡西斯基-Kasiski-测秘钥长度"><span class="toc-text">卡西斯基(Kasiski)测秘钥长度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#重合指数法测秘钥长度"><span class="toc-text">重合指数法测秘钥长度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#根据秘钥长度解密秘钥"><span class="toc-text">根据秘钥长度解密秘钥</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -590,36 +633,186 @@
     }
 </style>
 </div>
-            <h1 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog"></a>Why Blog</h1><h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>喜欢写Blog的人，会经历三个阶段。</p>
-<blockquote>
-<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。</p>
-</blockquote>
-<blockquote>
-<p>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。</p>
-</blockquote>
-<blockquote>
-<p>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
-</blockquote>
-<p>我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。</p>
-<p>通过博客，我们可以记录自己的生活和成长的轨迹。它不像 Twitter 那样碎片化，也不像 Facebook 那样关系化，它是私人的空间。</p>
-<h2 id="关于叶落阁"><a href="#关于叶落阁" class="headerlink" title="关于叶落阁"></a>关于叶落阁</h2><p><strong>叶落阁</strong> 是阿杰（杨玉杰）的个人站。</p>
-<p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
-<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 生成，部署在 <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>，主题 <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank" rel="noopener">3-hexo</a> 已经在github上开源</p>
-<p>主要功能：</p>
-<ul>
-<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
-<li>pad/手机等移动端适配</li>
-<li>页面全局快捷键 <a href='http://yelog.org/2017/03/24/3-hexo-shortcuts/' target="_blank" rel="noopener">3-hexo快捷键说明</a></li>
-</ul>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="维吉尼亚加密破解"><a href="#维吉尼亚加密破解" class="headerlink" title="维吉尼亚加密破解"></a>维吉尼亚加密破解</h1><h2 id="凯撒密码"><a href="#凯撒密码" class="headerlink" title="凯撒密码"></a>凯撒密码</h2><p>凯撒密码是一种简单的加密方法，即将文本中的每一个字符都位移相同的位置。</p>
+<p>如选定位移3位：<br>原文：a b c<br>密文：d e f</p>
+<h2 id="维吉尼亚密码"><a href="#维吉尼亚密码" class="headerlink" title="维吉尼亚密码"></a>维吉尼亚密码</h2><p>在恺撒移位密码的基础上扩展出多表密码,引入秘钥的概念,称为维吉尼亚密码。</p>
+<p>未加密文字：THE BUTCHER THE BAKER AND THE CANDLESTICK MAKER。（屠夫、面包师和蜡烛匠）。<br>关键密钥：    BIG BIGBIGB IGB IGBIG BIG BIG BIGBIGBIGBI GBIGB<br>加密文字：   UPK CCZDPKS BNF JGLMX BVJ UPK DITETKTBODS SBSKS  </p>
+<h3 id="维吉尼亚破解"><a href="#维吉尼亚破解" class="headerlink" title="维吉尼亚破解"></a>维吉尼亚破解</h3><p>维吉尼亚密码分解后实则就是多个凯撒密码，只要知道密钥的长度，我们就可以将其分解。<br>如密文为：ABCDEFGHIJKLMN<br>如果我们知道密钥长度为3，就可将其分解为三组：<br>组1：A D G J N<br>组2：B E H K<br>组3：C F I M<br>分解后每组就是一个凯撒密码，即组内的位移量是一致的，对每一组即可用频度分析法来解密。<br>所以破解维吉尼亚密码的关键就是确定密钥的长度。  </p>
+<h4 id="卡西斯基-Kasiski-测秘钥长度"><a href="#卡西斯基-Kasiski-测秘钥长度" class="headerlink" title="卡西斯基(Kasiski)测秘钥长度"></a>卡西斯基(Kasiski)测秘钥长度</h4><p>在英文中，一些常见的单词如the有几率被密钥的相同部分加密，即原文中的the可能在密文中呈现为相同的三个字母。<br>在这种情况下，相同片段的间距就是密文长度的倍数。<br>我们可以通过在密文中找到相同的片段，计算出这些相同片段之间的间距，而密钥长度理论上就是这些间距的公约数。<br>代码如下:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">kasiski_length</span><span class="params">(str_en)</span>:</span></span><br><span class="line">    l = dict()</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(str_en)<span class="number">-3</span>):</span><br><span class="line">        num = str_en.find(str_en[i:i+<span class="number">3</span>], i+<span class="number">3</span>)</span><br><span class="line">        <span class="keyword">if</span> num != <span class="number">-1</span>:</span><br><span class="line">            spacing = num-i</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">2</span>, spacing):</span><br><span class="line">                <span class="keyword">if</span> spacing % i == <span class="number">0</span>:</span><br><span class="line">                    l[i] = l.get(i, <span class="number">0</span>)+<span class="number">1</span></span><br><span class="line">    logging.info(<span class="string">'all avaible key length:%s'</span> % l)</span><br><span class="line">    max_avaible = [<span class="number">0</span>, <span class="number">0</span>]</span><br><span class="line">    <span class="keyword">for</span> k, v <span class="keyword">in</span> l.items():</span><br><span class="line">        <span class="keyword">if</span> v &gt; max_avaible[<span class="number">1</span>]:</span><br><span class="line">            max_avaible = [k, v]</span><br><span class="line">    logging.info(<span class="string">'the max_avaible:%s'</span> % max_avaible[<span class="number">0</span>])</span><br><span class="line">    <span class="keyword">return</span> max_avaible[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+<h4 id="重合指数法测秘钥长度"><a href="#重合指数法测秘钥长度" class="headerlink" title="重合指数法测秘钥长度"></a>重合指数法测秘钥长度</h4><p>对于一种特定的自然语言，如果文本足够长，那么各个字母出现的概率是相对稳定的。</p>
+<table>
+<thead>
+<tr>
+<th>字母</th>
+<th>英语中出现的频率</th>
+<th>字母</th>
+<th>英语中出现的频率</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>a</td>
+<td>8.167%</td>
+<td>n</td>
+<td>6.749%</td>
+</tr>
+<tr>
+<td>b</td>
+<td>1.492%</td>
+<td>o</td>
+<td>7.507%</td>
+</tr>
+<tr>
+<td>c</td>
+<td>2.782%</td>
+<td>p</td>
+<td>1.929%</td>
+</tr>
+<tr>
+<td>d</td>
+<td>4.253%</td>
+<td>q</td>
+<td>0.095%</td>
+</tr>
+<tr>
+<td>e</td>
+<td>12.702%</td>
+<td>r</td>
+<td>5.987%</td>
+</tr>
+<tr>
+<td>f</td>
+<td>2.228%</td>
+<td>s</td>
+<td>6.327%</td>
+</tr>
+<tr>
+<td>g</td>
+<td>2.015%</td>
+<td>t</td>
+<td>9.056%</td>
+</tr>
+<tr>
+<td>h</td>
+<td>6.094%</td>
+<td>u</td>
+<td>2.758%</td>
+</tr>
+<tr>
+<td>i</td>
+<td>6.966%</td>
+<td>v</td>
+<td>0.978%</td>
+</tr>
+<tr>
+<td>j</td>
+<td>0.153%</td>
+<td>w</td>
+<td>2.360%</td>
+</tr>
+<tr>
+<td>k</td>
+<td>0.772%</td>
+<td>x</td>
+<td>0.150%</td>
+</tr>
+<tr>
+<td>l</td>
+<td>4.025%</td>
+<td>y</td>
+<td>1.974%</td>
+</tr>
+<tr>
+<td>m</td>
+<td>2.406%</td>
+<td>z</td>
+<td>0.074%</td>
+</tr>
+</tbody></table>
+<p>重合指数表示两个随机选出的字母是相同的的概率，即随机选出两个A的概率+随机选出两个B的概率+随机选出两个C的概率+……+随机选出两个Z的概率。  </p>
+<p>对英语而言，根据上述的频率表，我们可以计算出英语文本的重合指数为 CI=\sum ^{n}<em>{i=1}p^{2}</em>{i}  , 即$ P(A)^2 + P(B)^2+……+P(Z)^2 = 0.65 $<br>利用重合指数推测密钥长度的原理在于，对于一个由凯撒密码加密的序列，由于所有字母的位移程度相同，所以密文的重合指数应等于原文语言的重合指数。<br>据此，我们可以逐一计算不同密钥长度下的重合指数，当重合指数接近期望的0.65时，我们就可以推测这是我们所要找的密钥长度。<br>由于现实世界中密文的长度有限,故从密文计算的重合指数 总是不同于理论值,所以一般用IC总是不同于理论值,<br>所以一般用 IC的无偏估计值 $$ CI’=\sum^{n}<em>{i=1}\dfrac {x</em>{i}\left( x_{i}-1\right) }{L\left( L-1\right) } $$  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">coincidence</span><span class="params">(str_en)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fraction</span><span class="params">(s)</span>:</span></span><br><span class="line">        d = dict()</span><br><span class="line">        t = <span class="number">0.0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(s)):</span><br><span class="line">            d[s[i]] = d.get(s[i], <span class="number">0</span>)+<span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> k, v <span class="keyword">in</span> d.items():</span><br><span class="line">            t += (d[k]*(d[k]<span class="number">-1</span>))/(len(s)*(len(s)<span class="number">-1</span>))</span><br><span class="line">        <span class="keyword">return</span> t</span><br><span class="line">    <span class="keyword">for</span> avaible <span class="keyword">in</span> range(<span class="number">2</span>, <span class="number">20</span>):</span><br><span class="line">        l = dict()</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(str_en)):</span><br><span class="line">            str1 = l.get(i % avaible, <span class="string">''</span>)</span><br><span class="line">            l[i % avaible] = <span class="string">'%s%s'</span> % (str1, str_en[i])</span><br><span class="line">        ci = <span class="number">0.0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(l)):</span><br><span class="line">            ci += fraction(l[i])</span><br><span class="line">        ci /= len(l)</span><br><span class="line">        <span class="keyword">if</span> ci &gt; <span class="number">0.065</span>:</span><br><span class="line">            logging.info(<span class="string">'max_avaible:%s'</span> % avaible)</span><br><span class="line">            <span class="keyword">return</span> avaible</span><br></pre></td></tr></table></figure>
+<h4 id="根据秘钥长度解密秘钥"><a href="#根据秘钥长度解密秘钥" class="headerlink" title="根据秘钥长度解密秘钥"></a>根据秘钥长度解密秘钥</h4><p>分组求凯撒密码, 可根据字母频度分析，找到出现次数最多的字母并求出与e的相对偏移即为秘钥字母</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">key_crack</span><span class="params">(str_en, len_key)</span>:</span></span><br><span class="line">    d = dict()</span><br><span class="line">    key = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(str_en)):</span><br><span class="line">        substr = d.get(i % len_key, <span class="string">''</span>)</span><br><span class="line">        d[i % len_key] = <span class="string">'%s%s'</span> % (substr, str_en[i])</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len_key):</span><br><span class="line">        d_j = dict()</span><br><span class="line">        <span class="comment"># 统计每一组的字符频率</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(len(d[i])):</span><br><span class="line">            d_j[d[i][j]] = d_j.get(d[i][j], <span class="number">0</span>)+<span class="number">1</span></span><br><span class="line">        logging.info(d_j)</span><br><span class="line">        <span class="comment"># 找出最大频率的字符</span></span><br><span class="line">        max_char = [<span class="string">'a'</span>, <span class="number">0</span>]</span><br><span class="line">        <span class="keyword">for</span> x, y <span class="keyword">in</span> d_j.items():</span><br><span class="line">            <span class="keyword">if</span> y &gt; max_char[<span class="number">1</span>]:</span><br><span class="line">                max_char = [x, y]</span><br><span class="line">        <span class="comment"># 每一组的秘钥</span></span><br><span class="line">        key_j = chr((ord(max_char[<span class="number">0</span>])-ord(<span class="string">'e'</span>)+<span class="number">26</span>) % <span class="number">26</span>+ord(<span class="string">'a'</span>))</span><br><span class="line">        key.append(key_j)</span><br><span class="line">    logging.info(<span class="string">'key:%s'</span> % key)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">''</span>.join(key)</span><br></pre></td></tr></table></figure>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li>作者：limisky  原文：<a href="https://blog.csdn.net/limisky/article/details/16885959" target="_blank" rel="noopener">https://blog.csdn.net/limisky/article/details/16885959</a></li>
+</ol>
 
-        </article>
-        
-        <p>
-            <a  class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>密码学-维吉尼亚加密破解</p>
+    
+    <p><span class="copy-title">本文作者:</span><a  title="overturncat">overturncat</a></p>
+    <p><span class="copy-title">发布时间:</span>2020-01-05, 00:33:00</p>
+    <p><span class="copy-title">最后更新:</span>2020-01-05, 04:03:42</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/01/05/cipher/cipher_vigenere/" title="密码学-维吉尼亚加密破解">http://yoursite.com/2020/01/05/cipher/cipher_vigenere/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js"
+        value="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</input>
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">©2016-2019 Yelog</p>

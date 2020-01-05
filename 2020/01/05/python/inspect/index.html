@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Overturn</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="Overturn">
+  <title>Python-inspect解析 | Overturn</title>
+  <meta name="keywords" content=" Python , inspect ">
+  <meta name="description" content="Python-inspect解析 | Overturn">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Overturn">
@@ -47,7 +47,7 @@
 </div>
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/" class="avatar_target">
     <img class="avatar" src="/img/avatar.jpg" />
@@ -572,12 +572,57 @@
         </div>
     </div>
 </aside>
-<div class="post index">
+<div class="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-python/inspect" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-Blog"><span class="toc-text">Why Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#对博客的理解"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于叶落阁"><span class="toc-text">关于叶落阁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#博客平台"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
+        <h1 class="article-title">Python-inspect解析</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a  data-rel="Python">Python</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a class="color2">Python</a>
+            
+            <a class="color3">inspect</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2020-01-05 04:23:20'>2020-01-05 00:22</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#inspect-Inspect-Live-object"><span class="toc-text">inspect - Inspect Live object</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#类型检查"><span class="toc-text">类型检查</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#inspect-getmembers-object-predicate"><span class="toc-text">inspect.getmembers(object[, predicate])</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#inspect-ismodule-object"><span class="toc-text">inspect.ismodule(object)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#inspect-isclass-object"><span class="toc-text">inspect.isclass(object)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#inspect-ismethod-object"><span class="toc-text">inspect.ismethod(object)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#inspect-isfunction-object"><span class="toc-text">inspect.isfunction(object)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#inspect-isgeneratorfunction-object"><span class="toc-text">inspect.isgeneratorfunction(object)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#inspect-isgenerator-object"><span class="toc-text">inspect.isgenerator(object)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#inspect-iscoroutinefunction-object"><span class="toc-text">inspect.iscoroutinefunction(object)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#inspect-iscoroutine-object"><span class="toc-text">inspect.iscoroutine(object)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#inspect-isawaitable-object"><span class="toc-text">inspect.isawaitable(object)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#inspect-istraceback-object"><span class="toc-text">inspect.istraceback(object)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#inspect-isframe-object"><span class="toc-text">inspect.isframe(object)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#inspect-iscode-object"><span class="toc-text">inspect.iscode(object)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#inspect-isbuiltin-object"><span class="toc-text">inspect.isbuiltin(object)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#inspect-isroutine-object"><span class="toc-text">inspect.isroutine(object)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#inspect-isabstract-object"><span class="toc-text">inspect.isabstract(object)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#检索源代码"><span class="toc-text">检索源代码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#inspect-getdoc-object"><span class="toc-text">inspect.getdoc(object)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#inspect-getcomments-object"><span class="toc-text">inspect.getcomments(object)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#inspect-getfile-object"><span class="toc-text">inspect.getfile(object)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#inspect-getmodule-object"><span class="toc-text">inspect.getmodule(object)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#inspect-getsourcefile-object"><span class="toc-text">inspect.getsourcefile(object)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#inspect-getsourcelines-object"><span class="toc-text">inspect.getsourcelines(object)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#inspect-getsource-object"><span class="toc-text">inspect.getsource(object)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#inspect-cleandoc-doc"><span class="toc-text">inspect.cleandoc(doc)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#检查类和函数"><span class="toc-text">检查类和函数</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -590,36 +635,142 @@
     }
 </style>
 </div>
-            <h1 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog"></a>Why Blog</h1><h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>喜欢写Blog的人，会经历三个阶段。</p>
-<blockquote>
-<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。</p>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="inspect-Inspect-Live-object"><a href="#inspect-Inspect-Live-object" class="headerlink" title="inspect - Inspect Live object"></a>inspect - Inspect Live object</h1><blockquote>
+<p>The inspect module provides several useful functions to help get information about live objects such as modules, classes, methods, functions, tracebacks, frame objects, and code objects. For example, it can help you examine the contents of a class, retrieve the source code of a method, extract and format the argument list for a function, or get all the information you need to display a detailed traceback.</p>
 </blockquote>
+<p>inspect模块提供了四种主要的服务:类型检查，获取源代码，检查类和函数，检查解释器和堆栈</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> inspect</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Model</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">'''模型'''</span></span><br><span class="line">    __table__ = <span class="string">"modle"</span></span><br><span class="line">    id = <span class="number">0</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span><span class="params">(Model)</span>:</span></span><br><span class="line">    <span class="string">'''用户'''</span></span><br><span class="line">    __table__ = <span class="string">'users'</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取本模块的类, 返回元祖的列表[(name,obj), (name, obj)]</span></span><br><span class="line">clsmembers = inspect.getmembers(sys.modules[__name__], inspect.isclass)</span><br><span class="line"><span class="keyword">for</span> name, obj <span class="keyword">in</span> clsmembers:</span><br><span class="line">    print(name, inspect.getdoc(obj))</span><br><span class="line"><span class="comment"># 获取其他模块的函数</span></span><br><span class="line">mod = __import__(<span class="string">"fabfile"</span>)</span><br><span class="line">clsmembers = inspect.getmembers(mod, inspect.isfunction)</span><br><span class="line">print(clsmembers)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(clsmembers)):</span><br><span class="line">    print(<span class="string">"&#123;&#125;:&#123;&#125;----&gt;&#123;&#125;"</span>.format(i, clsmembers[i][<span class="number">0</span>], inspect.getdoc(clsmembers[i][<span class="number">1</span>])))</span><br></pre></td></tr></table></figure>
+<h2 id="类型检查"><a href="#类型检查" class="headerlink" title="类型检查"></a>类型检查</h2><p><code>getmembers()</code>检索诸如类或模块的对象的成员, 对象或模块的类型及其属性为<a href="#table1">详情</a></p>
+<h4 id="inspect-getmembers-object-predicate"><a href="#inspect-getmembers-object-predicate" class="headerlink" title="inspect.getmembers(object[, predicate])"></a>inspect.getmembers(object[, predicate])</h4><p>以列表形式返回ocject的成员。如果提供了可选的predicate参数(以is开头的inspect方法)，则只包含predicate返回true值的成员。</p>
 <blockquote>
-<p>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。</p>
+<h4 id="inspect-ismodule-object"><a href="#inspect-ismodule-object" class="headerlink" title="inspect.ismodule(object)"></a>inspect.ismodule(object)</h4><p>如果对象是模块，则返回true。</p>
+<h4 id="inspect-isclass-object"><a href="#inspect-isclass-object" class="headerlink" title="inspect.isclass(object)"></a>inspect.isclass(object)</h4><p>如果对象是一个类，无论是内置的还是用Python代码创建的，则返回true。</p>
+<h4 id="inspect-ismethod-object"><a href="#inspect-ismethod-object" class="headerlink" title="inspect.ismethod(object)"></a>inspect.ismethod(object)</h4><p>如果对象是用Python编写的绑定方法，则返回true。</p>
+<h4 id="inspect-isfunction-object"><a href="#inspect-isfunction-object" class="headerlink" title="inspect.isfunction(object)"></a>inspect.isfunction(object)</h4><p>如果对象是一个Python函数（包含由lambda表达式创建的函数），则返回true。</p>
+<h4 id="inspect-isgeneratorfunction-object"><a href="#inspect-isgeneratorfunction-object" class="headerlink" title="inspect.isgeneratorfunction(object)"></a>inspect.isgeneratorfunction(object)</h4><p>如果对象是Python生成器函数，则返回true。</p>
+<h4 id="inspect-isgenerator-object"><a href="#inspect-isgenerator-object" class="headerlink" title="inspect.isgenerator(object)"></a>inspect.isgenerator(object)</h4><p>如果对象是一个生成器，则返回true。</p>
+<h4 id="inspect-iscoroutinefunction-object"><a href="#inspect-iscoroutinefunction-object" class="headerlink" title="inspect.iscoroutinefunction(object)"></a>inspect.iscoroutinefunction(object)</h4><p>如果对象是coroutine function（用async def语法定义的函数），则返回true。</p>
+<h4 id="inspect-iscoroutine-object"><a href="#inspect-iscoroutine-object" class="headerlink" title="inspect.iscoroutine(object)"></a>inspect.iscoroutine(object)</h4><p>如果对象是由async def函数创建的coroutine，则返回true。</p>
+<h4 id="inspect-isawaitable-object"><a href="#inspect-isawaitable-object" class="headerlink" title="inspect.isawaitable(object)"></a>inspect.isawaitable(object)</h4><p>如果对象可以在await表达式中使用，则返回true。</p>
+<h4 id="inspect-istraceback-object"><a href="#inspect-istraceback-object" class="headerlink" title="inspect.istraceback(object)"></a>inspect.istraceback(object)</h4><p>如果对象是回溯，则返回true。</p>
+<h4 id="inspect-isframe-object"><a href="#inspect-isframe-object" class="headerlink" title="inspect.isframe(object)"></a>inspect.isframe(object)</h4><p>如果对象是一个框架，则返回true。</p>
+<h4 id="inspect-iscode-object"><a href="#inspect-iscode-object" class="headerlink" title="inspect.iscode(object)"></a>inspect.iscode(object)</h4><p>如果对象是代码，则返回true。</p>
+<h4 id="inspect-isbuiltin-object"><a href="#inspect-isbuiltin-object" class="headerlink" title="inspect.isbuiltin(object)"></a>inspect.isbuiltin(object)</h4><p>如果对象是内置函数或绑定的内置方法，则返回true。</p>
+<h4 id="inspect-isroutine-object"><a href="#inspect-isroutine-object" class="headerlink" title="inspect.isroutine(object)"></a>inspect.isroutine(object)</h4><p>如果对象是用户定义的或内置的函数或方法，则返回true。</p>
+<h4 id="inspect-isabstract-object"><a href="#inspect-isabstract-object" class="headerlink" title="inspect.isabstract(object)"></a>inspect.isabstract(object)</h4><p>如果对象是抽象基类，则返回true。</p>
 </blockquote>
-<blockquote>
-<p>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
-</blockquote>
-<p>我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。</p>
-<p>通过博客，我们可以记录自己的生活和成长的轨迹。它不像 Twitter 那样碎片化，也不像 Facebook 那样关系化，它是私人的空间。</p>
-<h2 id="关于叶落阁"><a href="#关于叶落阁" class="headerlink" title="关于叶落阁"></a>关于叶落阁</h2><p><strong>叶落阁</strong> 是阿杰（杨玉杰）的个人站。</p>
-<p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
-<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 生成，部署在 <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>，主题 <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank" rel="noopener">3-hexo</a> 已经在github上开源</p>
-<p>主要功能：</p>
-<ul>
-<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
-<li>pad/手机等移动端适配</li>
-<li>页面全局快捷键 <a href='http://yelog.org/2017/03/24/3-hexo-shortcuts/' target="_blank" rel="noopener">3-hexo快捷键说明</a></li>
-</ul>
+<h2 id="检索源代码"><a href="#检索源代码" class="headerlink" title="检索源代码"></a>检索源代码</h2><h4 id="inspect-getdoc-object"><a href="#inspect-getdoc-object" class="headerlink" title="inspect.getdoc(object)"></a>inspect.getdoc(object)</h4><p>获取一个对象的文档字符串，用cleandoc()清理。如果未提供对象的文档字符串，并且该对象是类，方法，属性或描述符，则从继承层次结构中检索文档字符串。</p>
+<h4 id="inspect-getcomments-object"><a href="#inspect-getcomments-object" class="headerlink" title="inspect.getcomments(object)"></a>inspect.getcomments(object)</h4><p>在单个字符串中返回紧接在对象源代码之前（对于类，函数或方法）或Python源文件顶部（如果对象是模块）的任何注释行。</p>
+<h4 id="inspect-getfile-object"><a href="#inspect-getfile-object" class="headerlink" title="inspect.getfile(object)"></a>inspect.getfile(object)</h4><p>返回定义了对象的（文本或二进制）文件的名称。如果对象是内置的模块，类或函数，则这会失败，并带有TypeError。</p>
+<h4 id="inspect-getmodule-object"><a href="#inspect-getmodule-object" class="headerlink" title="inspect.getmodule(object)"></a>inspect.getmodule(object)</h4><p>尝试猜测某个对象是在哪个模块中定义的。</p>
+<h4 id="inspect-getsourcefile-object"><a href="#inspect-getsourcefile-object" class="headerlink" title="inspect.getsourcefile(object)"></a>inspect.getsourcefile(object)</h4><p>返回定义了对象的Python源文件的名称。如果对象是内置的模块，类或函数，则这会失败，并带有TypeError。</p>
+<h4 id="inspect-getsourcelines-object"><a href="#inspect-getsourcelines-object" class="headerlink" title="inspect.getsourcelines(object)"></a>inspect.getsourcelines(object)</h4><p>返回一个对象的源代码行和起始行号的列表。参数可以是模块，类，方法，函数，追溯，框架或代码对象。源代码作为与对象相对应的行列表返回，行号指示在原始源文件中找到第一行代码的位置。如果无法检索源代码，则会引发OSError。</p>
+<h4 id="inspect-getsource-object"><a href="#inspect-getsource-object" class="headerlink" title="inspect.getsource(object)"></a>inspect.getsource(object)</h4><p>返回一个对象的源代码文本。参数可以是模块，类，方法，函数，追溯，框架或代码对象。源代码作为单个字符串返回。如果无法检索源代码，则会引发OSError。</p>
+<h4 id="inspect-cleandoc-doc"><a href="#inspect-cleandoc-doc" class="headerlink" title="inspect.cleandoc(doc)"></a>inspect.cleandoc(doc)</h4><p>清除缩排以排列代码块的文档字符串中的缩进。</p>
+<h2 id="检查类和函数"><a href="#检查类和函数" class="headerlink" title="检查类和函数"></a>检查类和函数</h2><table  id="table1" border="1">
+  <thead valign="bottom">
+  <tr> <th> Type </th> <th> Attribute </th> <th> Description </th> </tr>
+  </thead>
+  <tbody valign="top">
+  <tr> <td> module </td> <td> __doc__ </td> <td> documentation string </td> </tr>
+  <tr> <td> </td> <td> __file__ </td> <td> filename(missing for built-in modules) </td> </tr>
+  <tr> <td> class </td> <td> __doc__ </td> <td> documentation string </td> </tr>
+  <tr> <td> </td> <td> __name__ </td> <td> name with which this class was defined </td> </tr>
+  <tr> <td> </td> <td> __qualname__ </td> <td> qualified name </td> </tr>
+  <tr> <td> </td> <td> __module__ </td> <td> name of module in which this class was defined </td> </tr>
+  <tr> <td> method </td> <td> __doc__ </td> <td> documentation string </td> </tr>
+  <tr> <td> </td> <td> __name__ </td> <td> name with which this method was defined </td> </tr>
+  <tr> <td> </td> <td> __qualname__ </td> <td> qualified name </td> </tr>
+  <tr> <td> </td> <td> __func__ </td> <td> function object containing implementation of method </td> </tr>
+  <tr> <td> </td> <td> __self__ </td> <td> None </code> </td> </tr>
+  <tr> <td> function </td> <td> __doc__ </td> <td> documentation string </td> </tr>
+  <tr> <td> </td> <td> __name__ </td> <td> name with which this function was defined </td> </tr>
+  <tr> <td> </td> <td> __qualname__ </td> <td> qualified name </td> </tr>
+  <tr> <td> </td> <td> __code__ </td> <td> bytecode </a> </td> </tr>
+  <tr> <td> </td> <td> __defaults__ </td> <td> tuple of any default values for positional or keyword parameters </td> </tr>
+  <tr> <td> </td> <td> __kwdefaults__ </td> <td> mapping of any default values for keyword-only parameters </td> </tr>
+  <tr> <td> </td> <td> __globals__ </td> <td> global namespace in which this function was defined </td> </tr>
+  <tr> <td> </td> <td> __annotations__ </td> <td> &quot;return&quot; </code> key is reserved for return annotations.  </td> </tr>
+  <tr> <td> traceback </td> <td> tb_frame </td> <td> frame object at this level </td> </tr>
+  <tr> <td> </td> <td> tb_lasti </td> <td> index of last attempted instruction in bytecode </td> </tr>
+  <tr> <td> </td> <td> tb_lineno </td> <td> current line number in Python source code </td> </tr>
+  <tr> <td> </td> <td> tb_next </td> <td> next inner traceback object(called by this level) </td> </tr>
+  <tr> <td> frame </td> <td> f_back </td> <td> next outer frame object(this frame’s caller) </td> </tr>
+  <tr> <td> </td> <td> f_builtins </td> <td> builtins namespace seen by this frame </td> </tr>
+  <tr> <td> </td> <td> f_code </td> <td> code object being executed in this frame </td> </tr>
+  <tr> <td> </td> <td> f_globals </td> <td> global namespace seen by this frame </td> </tr>
+  <tr> <td> </td> <td> f_lasti </td> <td> index of last attempted instruction in bytecode </td> </tr>
+  <tr> <td> </td> <td> f_lineno </td> <td> current line number in Python source code </td> </tr>
+  <tr> <td> </td> <td> f_locals </td> <td> local namespace seen by this frame </td> </tr>
+  <tr> <td> </td> <td> f_restricted </td> <td> 0 or 1 if frame is in restricted execution mode </td> </tr>
+  <tr> <td> </td> <td> f_trace </td> <td> None </code> </td> </tr>
+  <tr> <td> code </td> <td> co_argcount </td> <td> number of arguments(not including*or**args) </td> </tr>
+  <tr> <td> </td> <td> co_code </td> <td> string of raw compiled bytecode </td> </tr>
+  <tr> <td> </td> <td> co_consts </td> <td> tuple of constants used in the bytecode </td> </tr>
+  <tr> <td> </td> <td> co_filename </td> <td> name of file in which this code object was created </td> </tr>
+  <tr> <td> </td> <td> co_firstlineno </td> <td> number of first line in Python source code </td> </tr>
+  <tr> <td> </td> <td> co_flags </td> <td> bitmap: 1=optimized | 2=newlocals | 4=*arg | 8=**arg </td> </tr>
+  <tr> <td> </td> <td> co_lnotab </td> <td> encoded mapping of line numbers to bytecode indices </td> </tr>
+  <tr> <td> </td> <td> co_name </td> <td> name with which this code object was defined </td> </tr>
+  <tr> <td> </td> <td> co_names </td> <td> tuple of names of local variables </td> </tr>
+  <tr> <td> </td> <td> co_nlocals </td> <td> number of local variables </td> </tr>
+  <tr> <td> </td> <td> co_stacksize </td> <td> virtual machine stack space required </td> </tr>
+  <tr> <td> </td> <td> co_varnames </td> <td> tuple of names of arguments and local variables </td> </tr>
+  <tr> <td> generator </td> <td> __name__ </td> <td> name </td> </tr>
+  <tr> <td> </td> <td> __qualname__ </td> <td> qualified name </td> </tr>
+  <tr> <td> </td> <td> gi_frame </td> <td> frame </td> </tr>
+  <tr> <td> </td> <td> gi_running </td> <td> is the generator running?  </td> </tr>
+  <tr> <td> </td> <td> gi_code </td> <td> code </td> </tr>
+  <tr> <td> </td> <td> gi_yieldfrom </td> <td> None </code> </td> </tr>
+  <tr> <td> coroutine </td> <td> __name__ </td> <td> name </td> </tr>
+  <tr> <td> </td> <td> __qualname__ </td> <td> qualified name </td> </tr>
+  <tr> <td> </td> <td> cr_await </td> <td> None </code> </td> </tr>
+  <tr> <td> </td> <td> cr_frame </td> <td> frame </td> </tr>
+  <tr> <td> </td> <td> cr_running </td> <td> is the coroutine running?  </td> </tr>
+  <tr> <td> </td> <td> cr_code </td> <td> code </td> </tr>
+  <tr> <td> builtin </td> <td> __doc__ </td> <td> documentation string </td> </tr>
+  <tr> <td> </td> <td> __name__ </td> <td> original name of this function or method </td> </tr>
+  <tr> <td> </td> <td> __qualname__ </td> <td> qualified name </td> </tr>
+  <tr> <td> </td> <td> __self__ </td> <td> None </code> </td> </tr>
+  </tbody>
+</table>
 
-        </article>
-        
-        <p>
-            <a  class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>Python-inspect解析</p>
+    
+    <p><span class="copy-title">本文作者:</span><a  title="overturncat">overturncat</a></p>
+    <p><span class="copy-title">发布时间:</span>2020-01-05, 00:22:00</p>
+    <p><span class="copy-title">最后更新:</span>2020-01-05, 04:23:20</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/01/05/python/inspect/" title="Python-inspect解析">http://yoursite.com/2020/01/05/python/inspect/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">©2016-2019 Yelog</p>

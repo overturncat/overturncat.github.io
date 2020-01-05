@@ -1,0 +1,1866 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>汇编 | Overturn</title>
+  <meta name="keywords" content=" 汇编 , 逆向 ">
+  <meta name="description" content="汇编 | Overturn">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Overturn">
+<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:site_name" content="Overturn">
+<meta property="article:author" content="overturncat">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1" ></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.0.1" ></script>
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value="">
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
+</a>
+<div class="author">
+    <span>overturncat</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="rss" href="/atom.xml" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-rss"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="github" href="https://github.com/yelog" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="facebook" href="https://www.facebook.com/faker.tops" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-facebook"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+        
+        <a title="instagram" href="https://www.facebook.com/faker.tops" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-instagram"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="reddit" href="https://www.reddit.com/user/yelog/" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-reddit"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="weibo" href="http://weibo.com/u/2307534817" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-weibo"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="jianshu" href="https://www.jianshu.com/u/ff56736de7cf" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-jianshu"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="zhihu" href="https://www.zhihu.com/people/jaytp/activities" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-zhihu"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+        <a title="oschina" href="https://my.oschina.net/yelog" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-oschina"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+        <a title="email" href="mailto:jaytp@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=872336115&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="kugou" href="https://www.kugou.com/" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-kugou"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="neteasemusic" href="https://music.163.com/#/user/home?id=88151013" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-neteasemusic"></use>
+                </svg>
+            
+        </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(28)</small></div></li>
+    
+        
+            
+            <li><div data-rel="WEB">WEB<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="逆向">逆向<small>(4)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="密码学">密码学<small>(4)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="Python">Python<small>(3)</small></div>
+                
+            </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="28">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="Search..." autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a class="color4">WEB</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">Mysql</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">汇编</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">逆向</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">密码学</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">CTF</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">fabric2</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">Python</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">request</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">inspect</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">函数堆栈</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">c反汇编</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">Ollydbg</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class="WEB "
+           href="/2020/01/05/Mysql/"
+           data-tag="WEB,Mysql"
+           data-author="" >
+            <span class="post-title" title="Mysql">Mysql</span>
+            <span class="post-date" title="2020-01-05 00:22:00">2020/01/05</span>
+        </a>
+        
+        <a  class="逆向 "
+           href="/2020/01/05/%E6%B1%87%E7%BC%96/"
+           data-tag="汇编,逆向"
+           data-author="" >
+            <span class="post-title" title="汇编">汇编</span>
+            <span class="post-date" title="2020-01-05 00:33:00">2020/01/05</span>
+        </a>
+        
+        <a  class="密码学 "
+           href="/2020/01/05/cipher/cipher_block/"
+           data-tag="密码学"
+           data-author="" >
+            <span class="post-title" title="密码学-分组加密DES/AES">密码学-分组加密DES/AES</span>
+            <span class="post-date" title="2020-01-05 00:33:00">2020/01/05</span>
+        </a>
+        
+        <a  class="密码学 "
+           href="/2020/01/05/cipher/cipher_rc4/"
+           data-tag="密码学"
+           data-author="" >
+            <span class="post-title" title="密码学-流密码RC4">密码学-流密码RC4</span>
+            <span class="post-date" title="2020-01-05 00:33:00">2020/01/05</span>
+        </a>
+        
+        <a  class="密码学 "
+           href="/2020/01/05/cipher/cipher_vigenere/"
+           data-tag="密码学"
+           data-author="" >
+            <span class="post-title" title="密码学-维吉尼亚加密破解">密码学-维吉尼亚加密破解</span>
+            <span class="post-date" title="2020-01-05 00:33:00">2020/01/05</span>
+        </a>
+        
+        <a  class="密码学 "
+           href="/2020/01/05/cipher/cipher_hash/"
+           data-tag="密码学"
+           data-author="" >
+            <span class="post-title" title="密码学-散列函数Hash">密码学-散列函数Hash</span>
+            <span class="post-date" title="2020-01-05 00:33:00">2020/01/05</span>
+        </a>
+        
+        <a  class="WEB "
+           href="/2020/01/05/CTF/"
+           data-tag="WEB,CTF"
+           data-author="" >
+            <span class="post-title" title="CTF">CTF</span>
+            <span class="post-date" title="2020-01-05 00:22:00">2020/01/05</span>
+        </a>
+        
+        <a  class="Python "
+           href="/2020/01/05/python/python_requests/"
+           data-tag="request"
+           data-author="" >
+            <span class="post-title" title="Python-request的解析">Python-request的解析</span>
+            <span class="post-date" title="2020-01-05 00:33:00">2020/01/05</span>
+        </a>
+        
+        <a  class="Python "
+           href="/2020/01/05/python/python_fabfile/"
+           data-tag="fabric2"
+           data-author="" >
+            <span class="post-title" title="Python-fabric2">Python-fabric2</span>
+            <span class="post-date" title="2020-01-05 00:33:00">2020/01/05</span>
+        </a>
+        
+        <a  class="Python "
+           href="/2020/01/05/python/inspect/"
+           data-tag="Python,inspect"
+           data-author="" >
+            <span class="post-title" title="Python-inspect解析">Python-inspect解析</span>
+            <span class="post-date" title="2020-01-05 00:22:00">2020/01/05</span>
+        </a>
+        
+        <a  class="逆向 "
+           href="/2020/01/05/reverse/reverse_cStack/"
+           data-tag="逆向,函数堆栈"
+           data-author="" >
+            <span class="post-title" title="反汇编之c函数堆栈">反汇编之c函数堆栈</span>
+            <span class="post-date" title="2020-01-05 00:33:00">2020/01/05</span>
+        </a>
+        
+        <a  class="逆向 "
+           href="/2020/01/05/reverse/reverse_c/"
+           data-tag="逆向,c反汇编"
+           data-author="" >
+            <span class="post-title" title="反汇编之C语言">反汇编之C语言</span>
+            <span class="post-date" title="2020-01-05 00:33:00">2020/01/05</span>
+        </a>
+        
+        <a  class="逆向 "
+           href="/2020/01/05/reverse/reverse_ollydbg/"
+           data-tag="逆向,Ollydbg"
+           data-author="" >
+            <span class="post-title" title="Ollydbg的解析">Ollydbg的解析</span>
+            <span class="post-date" title="2020-01-05 00:33:00">2020/01/05</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/09/reverse/reverse_task/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="reverse/reverse_task">reverse/reverse_task</span>
+            <span class="post-date" title="2019-09-09 16:30:18">2019/09/09</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/09/reverse/reverse/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="reverse/reverse">reverse/reverse</span>
+            <span class="post-date" title="2019-09-09 16:30:18">2019/09/09</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/09/ubuntu/gdb/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ubuntu/gdb">ubuntu/gdb</span>
+            <span class="post-date" title="2019-09-09 16:30:19">2019/09/09</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/09/ubuntu/git/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ubuntu/git">ubuntu/git</span>
+            <span class="post-date" title="2019-09-09 16:30:19">2019/09/09</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/09/ubuntu/ubuntu/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ubuntu/ubuntu">ubuntu/ubuntu</span>
+            <span class="post-date" title="2019-09-09 16:30:19">2019/09/09</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/09/ubuntu/ubuntu_ariac/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ubuntu/ubuntu_ariac">ubuntu/ubuntu_ariac</span>
+            <span class="post-date" title="2019-09-09 16:30:19">2019/09/09</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/09/ubuntu/ubuntu_chormeos/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ubuntu/ubuntu_chormeos">ubuntu/ubuntu_chormeos</span>
+            <span class="post-date" title="2019-09-09 16:30:19">2019/09/09</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/09/ubuntu/ubuntu_python/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ubuntu/ubuntu_python">ubuntu/ubuntu_python</span>
+            <span class="post-date" title="2019-09-09 16:30:19">2019/09/09</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/09/ubuntu/ubuntu_mingw/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ubuntu/ubuntu_mingw">ubuntu/ubuntu_mingw</span>
+            <span class="post-date" title="2019-09-09 16:30:19">2019/09/09</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/09/ubuntu/ubuntu_qq/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ubuntu/ubuntu_qq">ubuntu/ubuntu_qq</span>
+            <span class="post-date" title="2019-09-09 16:30:19">2019/09/09</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/09/ubuntu/ubuntu_VM/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ubuntu/ubuntu_VM">ubuntu/ubuntu_VM</span>
+            <span class="post-date" title="2019-09-09 16:30:19">2019/09/09</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/09/ubuntu/ubuntu_ulogme/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ubuntu/ubuntu_ulogme">ubuntu/ubuntu_ulogme</span>
+            <span class="post-date" title="2019-09-09 16:30:19">2019/09/09</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/09/ubuntu/ubuntu_wps/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ubuntu/ubuntu_wps">ubuntu/ubuntu_wps</span>
+            <span class="post-date" title="2019-09-09 16:30:19">2019/09/09</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/09/ubuntu/ubuntu_ss/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ubuntu/ubuntu_ss">ubuntu/ubuntu_ss</span>
+            <span class="post-date" title="2019-09-09 16:30:19">2019/09/09</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/09/ubuntu/vim/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ubuntu/vim">ubuntu/vim</span>
+            <span class="post-date" title="2019-09-09 16:30:19">2019/09/09</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-汇编" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">汇编</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a  data-rel="逆向">逆向</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a class="color3">汇编</a>
+            
+            <a class="color3">逆向</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2020-01-05 00:40:50'>2020-01-05 00:33</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#汇编"><span class="toc-text">汇编</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#寄存器详解"><span class="toc-text">寄存器详解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#通用寄存器"><span class="toc-text">通用寄存器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数据寄存器"><span class="toc-text">数据寄存器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#变址寄存器"><span class="toc-text">变址寄存器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标志寄存器-FLAGS-PSW）"><span class="toc-text">标志寄存器 (FLAGS&#x2F;PSW）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#段寄存器"><span class="toc-text">段寄存器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#CS-IP指令寄存器"><span class="toc-text">CS:IP指令寄存器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DS-address-数据段寄存器"><span class="toc-text">DS:[address] 数据段寄存器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ES-FS-GS附加段段寄存器"><span class="toc-text">ES FS GS附加段段寄存器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SS-SP-堆栈段寄存器"><span class="toc-text">SS:SP 堆栈段寄存器</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本指令"><span class="toc-text">基本指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#通用数据传输指令"><span class="toc-text">通用数据传输指令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#mov"><span class="toc-text">mov</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#XCHG"><span class="toc-text">XCHG</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#push-amp-pop"><span class="toc-text">push&amp;pop</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PUSHA-amp-POPA"><span class="toc-text">PUSHA&amp;POPA</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PUSHADS-amp-POPAD"><span class="toc-text">PUSHADS&amp;POPAD</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运算指令"><span class="toc-text">运算指令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#add"><span class="toc-text">add</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ADC"><span class="toc-text">ADC</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#INC"><span class="toc-text">INC</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SUB"><span class="toc-text">SUB</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SBB"><span class="toc-text">SBB</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CMP"><span class="toc-text">CMP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DEC"><span class="toc-text">DEC</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#NEG"><span class="toc-text">NEG</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MUL"><span class="toc-text">MUL</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IMUL"><span class="toc-text">IMUL</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DIV"><span class="toc-text">DIV</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IDIV"><span class="toc-text">IDIV</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十进制调整指令"><span class="toc-text">十进制调整指令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#DAA"><span class="toc-text">DAA</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DAS"><span class="toc-text">DAS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#AAA"><span class="toc-text">AAA</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#AAS"><span class="toc-text">AAS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#案例"><span class="toc-text">案例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#逻辑指令"><span class="toc-text">逻辑指令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#AND"><span class="toc-text">AND</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OR"><span class="toc-text">OR</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#NOT"><span class="toc-text">NOT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#XOR"><span class="toc-text">XOR</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TEST"><span class="toc-text">TEST</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SHL-amp-SHR"><span class="toc-text">SHL&amp;SHR</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SAL-amp-SAR"><span class="toc-text">SAL&amp;SAR</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ROL-amp-ROR"><span class="toc-text">ROL&amp;ROR</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RCL-amp-RCR"><span class="toc-text">RCL&amp;RCR</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#串处理指令"><span class="toc-text">串处理指令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#REP重复前缀指令"><span class="toc-text">REP重复前缀指令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MOVS字符串传送指令"><span class="toc-text">MOVS字符串传送指令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#STOS置字符串数据指令"><span class="toc-text">STOS置字符串数据指令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#取字符串数据指令（Load-String-Instruction）"><span class="toc-text">取字符串数据指令（Load String Instruction）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#串输入指令INS"><span class="toc-text">串输入指令INS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#串输出指令OUTS"><span class="toc-text">串输出指令OUTS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#REPZ"><span class="toc-text">REPZ</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#REPNE-REPNZ"><span class="toc-text">REPNE&#x2F;REPNZ</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CMPS"><span class="toc-text">CMPS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SCAS"><span class="toc-text">SCAS</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#累加器专用传送"><span class="toc-text">累加器专用传送</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#IN"><span class="toc-text">IN</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OUT"><span class="toc-text">OUT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#XLAT"><span class="toc-text">XLAT</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#地址传送"><span class="toc-text">地址传送</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#LEA-有效地址送寄存器指令-Load-Effective-Address"><span class="toc-text">LEA 有效地址送寄存器指令(Load Effective Address)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LDS-Load-pointer-into-DS"><span class="toc-text">LDS  (Load pointer into DS)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LES-Load-pointer-into-ES"><span class="toc-text">LES (Load pointer into ES)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标志寄存器传送"><span class="toc-text">标志寄存器传送</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#LAHF"><span class="toc-text">LAHF</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SAHF"><span class="toc-text">SAHF</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PUSHF"><span class="toc-text">PUSHF</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#POPF"><span class="toc-text">POPF</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类型转换指令"><span class="toc-text">类型转换指令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#CBW"><span class="toc-text">CBW</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CWD"><span class="toc-text">CWD</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#寻址指令"><span class="toc-text">寻址指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#与数据有关的寻址方式-内存访问"><span class="toc-text">与数据有关的寻址方式(内存访问)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#与转移地址有关的寻址方式-指令跳转"><span class="toc-text">与转移地址有关的寻址方式(指令跳转)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#段内寻址"><span class="toc-text">段内寻址</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#段间寻址"><span class="toc-text">段间寻址</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#条件转移指令JXX"><span class="toc-text">条件转移指令JXX</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LOOP-amp-LOOPE-amp-LOOPNE"><span class="toc-text">LOOP &amp; LOOPE &amp; LOOPNE</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#处理机控制和杂项指令"><span class="toc-text">处理机控制和杂项指令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#标志处理指令"><span class="toc-text">标志处理指令</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#进位位置0指令-CLC"><span class="toc-text">进位位置0指令 CLC</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#进位位求反指令-CMC"><span class="toc-text">进位位求反指令 CMC</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#进位位置1指令-STC"><span class="toc-text">进位位置1指令   STC</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#方向标志位置0指令-CLD"><span class="toc-text">方向标志位置0指令    CLD</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#方向标志位置1指令-STD"><span class="toc-text">方向标志位置1指令 STD</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#中断标志位置0指令-CLI"><span class="toc-text">中断标志位置0指令   CLI</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#中断标志位置1指令-STI"><span class="toc-text">中断标志位置1指令  STI</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#标志置位指令-SETX"><span class="toc-text">标志置位指令 SETX</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CPU控制类指令"><span class="toc-text">CPU控制类指令</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#空操作指令-NOP（No-Operation-Instruction）"><span class="toc-text">空操作指令   NOP（No Operation Instruction）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#暂停指令-HLT（Enter-Halt-State-Instruction）"><span class="toc-text">暂停指令   HLT（Enter Halt State Instruction）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#换码指令ESC"><span class="toc-text">换码指令ESC</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#等待指令-WAIT（Put-Processor-in-Wait-State-Instruction）"><span class="toc-text">等待指令  WAIT（Put Processor in Wait State Instruction）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#封锁数据指令LOCK（Lock-Bus-Instruction）"><span class="toc-text">封锁数据指令LOCK（Lock Bus Instruction）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#子程序"><span class="toc-text">子程序</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#CALL"><span class="toc-text">CALL</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#段内直接调用"><span class="toc-text">段内直接调用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#段内间接调用"><span class="toc-text">段内间接调用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#段间直接调用"><span class="toc-text">段间直接调用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#段间直接调用-1"><span class="toc-text">段间直接调用</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RET"><span class="toc-text">RET</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#段内近返回：RET"><span class="toc-text">段内近返回：RET</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#段内带立即数近返回：RET-EXP"><span class="toc-text">段内带立即数近返回：RET  EXP</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#段间远返回：RET"><span class="toc-text">段间远返回：RET</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#段间带立即数远返回：RET-EXP（同段内带立即数返回）"><span class="toc-text">段间带立即数远返回：RET  EXP（同段内带立即数返回）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#中断"><span class="toc-text">中断</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#中断源"><span class="toc-text">中断源</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#内部中断-amp-硬件中断"><span class="toc-text">内部中断&amp;硬件中断</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#内部中断"><span class="toc-text">内部中断</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#硬件中断"><span class="toc-text">硬件中断</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#中断向量表"><span class="toc-text">中断向量表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#中断向量"><span class="toc-text">中断向量</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#取中断向量"><span class="toc-text">取中断向量</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#设置中断向量"><span class="toc-text">设置中断向量</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DOS功能调用"><span class="toc-text">DOS功能调用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#中断指令INT"><span class="toc-text">中断指令INT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#溢出指令-INTO"><span class="toc-text">溢出指令 INTO</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#中断返回指令-IRET"><span class="toc-text">中断返回指令 IRET</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#汇编程序"><span class="toc-text">汇编程序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#伪指令"><span class="toc-text">伪指令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数据定义伪指令"><span class="toc-text">数据定义伪指令</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#end"><span class="toc-text">end</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#assume"><span class="toc-text">assume</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#段组语句GROUP"><span class="toc-text">段组语句GROUP</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ORG伪指令"><span class="toc-text">ORG伪指令</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#程序计数器"><span class="toc-text">程序计数器$</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#过程定义伪指令-PROC"><span class="toc-text">过程定义伪指令 PROC</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#循环结构"><span class="toc-text">循环结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#计数控制法-循环次数已知的循环控制方法"><span class="toc-text">计数控制法(循环次数已知的循环控制方法)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#多重循环"><span class="toc-text">多重循环</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#条件控制法（循环次数未知的循环控制方法）"><span class="toc-text">条件控制法（循环次数未知的循环控制方法）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运行"><span class="toc-text">运行</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="汇编"><a href="#汇编" class="headerlink" title="汇编"></a>汇编</h1><h2 id="寄存器详解"><a href="#寄存器详解" class="headerlink" title="寄存器详解"></a>寄存器详解</h2><h3 id="通用寄存器"><a href="#通用寄存器" class="headerlink" title="通用寄存器"></a>通用寄存器</h3><p>eax 编号:0<br>ecx 编号:1<br>edx 编号:2<br>ebx 编号:3<br>esp 编号:4<br>ebp 编号:5<br>esi 编号:6<br>edi 编号:7</p>
+<h4 id="数据寄存器"><a href="#数据寄存器" class="headerlink" title="数据寄存器"></a>数据寄存器</h4><p>EAX (Accumulator)寄存器称为累加器<br>EBX (Base Register)寄存器称为基址寄存器<br>ECX (Count Register)寄存器称为计数器。 一般作为循环或串操作等指令中的隐含计数器。在位操作中，当移多位时，要用CL来指明移位的位数<br>EDX (Data Register)寄存器称为数据寄存器 常用来存放双字数据的高16位，在进行乘、除运算时，它可作为默认的操作数参与运算,亦可存放外设端口地址。  </p>
+<h4 id="变址寄存器"><a href="#变址寄存器" class="headerlink" title="变址寄存器"></a>变址寄存器</h4><p>ESI 源变址寄存器<br>EDI 目的变址寄存器 </p>
+<ul>
+<li>SI和DI一般与数据段寄存器DS联用,用来确定数据段中某存储单元的地址.</li>
+<li>SI和DI都具有自动增量或减量的功能</li>
+</ul>
+<p>ESP (Stack Pointer)为堆栈指针寄存器，用于存放当前堆栈段中栈顶的偏移地址； SS:SP 访问栈顶<br>EBP  (Base Pointer)为基址指针寄存器，用于存放堆栈段中某一存储单元的偏移地址  SS:BP  访问栈内  </p>
+<h3 id="标志寄存器-FLAGS-PSW）"><a href="#标志寄存器-FLAGS-PSW）" class="headerlink" title="标志寄存器 (FLAGS/PSW）"></a>标志寄存器 (FLAGS/PSW）</h3><table>
+<thead>
+<tr>
+<th>15</th>
+<th>14</th>
+<th>13</th>
+<th>12</th>
+<th>11</th>
+<th>10</th>
+<th>9</th>
+<th>8</th>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>OF</td>
+<td>DF</td>
+<td>IF</td>
+<td>TF</td>
+<td>SF</td>
+<td>ZF</td>
+<td>0</td>
+<td>AF</td>
+<td>0</td>
+<td>PF</td>
+<td>1</td>
+<td>CF</td>
+</tr>
+</tbody></table>
+<p><strong>状态标志</strong>：  用来记录程序运行结果的状态信息，许多指令的执行都将相应地设置它   </p>
+<p>CF (Carry Flag)进位标志  当无符号数运算结果有进位(加法)或借位（减法）时，进位标志置1，即CF = 1；否则CF = 0  </p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mov eax, 0x5555FFFF  </span><br><span class="line">add eax, 0x1          ;数据宽度为32位, 没有进位：CF &#x3D; 0 </span><br><span class="line">mov al, 0xFF   </span><br><span class="line">add al, 0x1           ;有进位：CF &#x3D; 1  </span><br></pre></td></tr></table></figure>
+<p>使用场合：多字节运算，无符号数比较大小和移位操作时，用到该标志。<br>CF 位表示无符号数相加的溢出。 如 7+251=258        CF=1</p>
+</blockquote>
+<p>PF（Parity Flag）奇偶标志   当运算结果最低字节中“1”的个数为零或偶数时，PF = 1；否则PF = 0。  </p>
+<blockquote>
+<p>3AH + 7CH＝B6H＝10110110B，结果中有5个1，是奇数：PF = 0<br>注意：PF标志仅反映最低8位中“1”的个数是偶或奇，即使是进行16位字操作。  </p>
+</blockquote>
+<p>AF （Auxiliary Carry Flag）辅助进位标志<br>运算时D3位（低半位）有进位或借位时，AF = 1；否则AF = 0。  </p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mov EAX, 0x55EEFFFF  </span><br><span class="line">add EAX, 0x1              ;AF&#x3D;1</span><br><span class="line">mov ax 0x5EFF</span><br><span class="line">add ax, 0x1               ;AF&#x3D;1</span><br></pre></td></tr></table></figure>
+<p>这个标志主要由处理器内部使用，用于十进制算术运算指令中，用户一般不必关心。  </p>
+</blockquote>
+<p>ZF（Sign Flag）零标志  若运算结果为0，则ZF = 1，否则ZF = 0。                           </p>
+<blockquote>
+<p>3AH + 7CH＝B6H，结果不是零：ZF = 0<br>86H + 7CH＝（1）00H，结果是零：ZF = 1<br>使用场合：需判断运算结果是否为0  </p>
+</blockquote>
+<p>SF（Sign Flag）符号标志  运算结果最高位为1，则SF = 1；否则SF = 0。     </p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mov al, 0x7F</span><br><span class="line">add al, 0x1        ;最高位D7＝1：SF &#x3D; 1</span><br><span class="line">mov ax, 0x7FFF</span><br><span class="line">add ax, 0x1           ;SF &#x3D; 1</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>OF（Overflow Flag）溢出标志  若有符号算术运算的结果有溢出，则OF=1；否则 OF＝0。  </p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mov al, 8</span><br><span class="line">add al, 8     ;CF&#x3D;0;OF&#x3D;0</span><br><span class="line">mov al, 0xFF</span><br><span class="line">add al, 2         ;无符号溢出CF&#x3D;1, 有符号不溢出OF&#x3D;0</span><br><span class="line">mov al, 0x7f</span><br><span class="line">add al, 2         ;无符号不溢出CF&#x3D;0,有符号溢出OF&#x3D;1  </span><br><span class="line">mov al 0xFE</span><br><span class="line">add al 0x80       ;无符号溢出CF&#x3D;1, 有符号溢出OF&#x3D;1</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><strong>控制标志</strong>：  可由程序根据需要用指令设置，用于控制处理器执行指令的方式。  </p>
+<p>DF（Direction Flag）方向标志   用于串操作指令中，控制地址的变化方向：  </p>
+<blockquote>
+<p>设置DF＝0，串操作的存储器地址自动增加；<br>设置DF＝1，串操作的存储器地址自动减少。<br>CLD指令复位方向标志：DF＝0<br>STD指令置位方向标志：DF＝1</p>
+</blockquote>
+<p>IF  （Interrupt-enable Flag） 中断允许标志IF   用于控制外部可屏蔽中断是否可以被处理器响应  </p>
+<blockquote>
+<p>设置IF＝1，则允许中断；<br>设置IF＝0，则禁止中断。<br>CLI指令复位中断标志：IF＝0<br>STI指令置位中断标志：IF＝1</p>
+</blockquote>
+<p>TF（Trap Flag）陷阱标志EFLAGS  用于控制处理器是否进入单步操作方式：</p>
+<blockquote>
+<p>设置TF＝0，处理器正常工作；<br>设置TF＝1，处理器单步执行指令。<br>单步执行指令——处理器在每条指令执行结束时，便产生一个编号为1的内部中断。这种内部中断称为单步中断，所以TF也称为单步标志。<br>利用单步中断可对程序进行逐条指令的调试。<br>这种逐条指令调试程序的方法就是单步调试。  </p>
+</blockquote>
+<h3 id="段寄存器"><a href="#段寄存器" class="headerlink" title="段寄存器"></a>段寄存器</h3><p>不能将数据直接送入段寄存器, 即不支持mov 段寄存器, 数据</p>
+<h4 id="CS-IP指令寄存器"><a href="#CS-IP指令寄存器" class="headerlink" title="CS:IP指令寄存器"></a>CS:IP指令寄存器</h4><p>代表即将执行的指令的地址, 无法使用mov指令进行直接更改, 可用的指令有  </p>
+<ul>
+<li>JMP无条件转移指令<br>详情见下方</li>
+</ul>
+<h4 id="DS-address-数据段寄存器"><a href="#DS-address-数据段寄存器" class="headerlink" title="DS:[address] 数据段寄存器"></a>DS:[address] 数据段寄存器</h4><p>用于对内存的直接访问</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mov bx, 1000H</span><br><span class="line">mov ds, bx</span><br><span class="line">mov al,[0]              ;将10000H单元的内容送入al</span><br></pre></td></tr></table></figure>
+
+<h4 id="ES-FS-GS附加段段寄存器"><a href="#ES-FS-GS附加段段寄存器" class="headerlink" title="ES FS GS附加段段寄存器"></a>ES FS GS附加段段寄存器</h4><h4 id="SS-SP-堆栈段寄存器"><a href="#SS-SP-堆栈段寄存器" class="headerlink" title="SS:SP 堆栈段寄存器"></a>SS:SP 堆栈段寄存器</h4><p>SS:SP 指向栈顶</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mov ax, 1000H</span><br><span class="line">mov ss, ax              ;ss是段寄存器, 不可直接修改</span><br><span class="line">mov sp, 0010H           ;sp可直接修改</span><br><span class="line">push ax</span><br><span class="line">push ds</span><br><span class="line">push [0]</span><br></pre></td></tr></table></figure>
+
+<h2 id="基本指令"><a href="#基本指令" class="headerlink" title="基本指令"></a>基本指令</h2><h3 id="通用数据传输指令"><a href="#通用数据传输指令" class="headerlink" title="通用数据传输指令"></a>通用数据传输指令</h3><h4 id="mov"><a href="#mov" class="headerlink" title="mov"></a>mov</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mov R, D          ;比如mov ax, 8  </span><br><span class="line">mov R, R          ;比如mov ax, bx  </span><br><span class="line">mov R, M          ;比如mov ax, [0]  </span><br><span class="line">mov M, R          ;比如mov [0], ax  </span><br><span class="line">mov SR, R         ;比如mov ds, ax  </span><br><span class="line">mov R, SR         ;比如mov ax, ds  </span><br><span class="line">mov SR, M         ;比如mov ds, [0]  </span><br><span class="line">mov M, SR         ;比如mov [0], ds</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>可以通过<strong>通用寄存器</strong>和<strong>段寄存器</strong>和<strong>内存单元</strong>来改变<strong>通用寄存器</strong>的值</li>
+<li>可以通过<strong>通用寄存器</strong>和<strong>内存单元</strong>来改变<strong>段寄存器</strong>的值</li>
+<li>可以通过<strong>通用寄存器</strong>和<strong>段寄存器</strong>来改变<strong>内存单元</strong>的值</li>
+</ul>
+<h4 id="XCHG"><a href="#XCHG" class="headerlink" title="XCHG"></a>XCHG</h4><p>这是一条交换指令，可以将一个字节或一个字的源操作数与目的操作数相交换。<br><code>XCHG R/M, R/M</code>  两边宽度一致且不能同时为内存   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">XCHG DWORD PTR DS:[12FFC4], EAX</span><br><span class="line">XCHG BYTE PTR DS:[12FFC4], AL</span><br></pre></td></tr></table></figure>
+
+<h4 id="push-amp-pop"><a href="#push-amp-pop" class="headerlink" title="push&amp;pop"></a>push&amp;pop</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">push&#x2F;pop R16&#x2F;r32              ;比如 push&#x2F;pop ax  , 执行后esp-2</span><br><span class="line">push&#x2F;pop SR             ;比如 push&#x2F;pop ds</span><br><span class="line">push&#x2F;pop M16&#x2F;M32              ;比如 push&#x2F;pop [0]</span><br><span class="line">push&#x2F;pop imm8, imm16, imm32     ;ESP减4</span><br></pre></td></tr></table></figure>
+
+<h4 id="PUSHA-amp-POPA"><a href="#PUSHA-amp-POPA" class="headerlink" title="PUSHA&amp;POPA"></a>PUSHA&amp;POPA</h4><p>PUSHA  16位通用寄存器依次进栈，次序为AX、CX、DX、BX，SP、BP、SI、DI。指令执行后(SP)-16→(SP)仍指向栈顶。<br>POPA  16位通用寄存器依次出栈，次序为DI、SI、BP、SP，BX、DX、CX、AX。<br><strong>NOTE</strong></p>
+<ul>
+<li>需要说明的是：SP出栈只是修改了指针使其后的BX能够出栈，而堆栈中原先由PUSHA指令存入的SP的原始内容被丢弃，并未真正送到SP寄存器中。</li>
+<li>上述两条堆栈指令均不影响标志位</li>
+</ul>
+<h4 id="PUSHADS-amp-POPAD"><a href="#PUSHADS-amp-POPAD" class="headerlink" title="PUSHADS&amp;POPAD"></a>PUSHADS&amp;POPAD</h4><p>同上顺序, 但出入栈的为32位寄存器, 用于保护现场</p>
+<h3 id="运算指令"><a href="#运算指令" class="headerlink" title="运算指令"></a>运算指令</h3><h4 id="add"><a href="#add" class="headerlink" title="add"></a>add</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">add R, D          ;比如add ax, 8  </span><br><span class="line">add R, R          ;比如add ax, bx  </span><br><span class="line">add R, M          ;比如add ax, [0]  </span><br><span class="line">add M, R          ;比如add [0], ax</span><br></pre></td></tr></table></figure>
+
+<h4 id="ADC"><a href="#ADC" class="headerlink" title="ADC"></a>ADC</h4><p>带进位加法指令：  <code>ADC  R/M , R/M/imm</code>  两边宽度一致且不能同时为内存<br>功能：将目的操作数加源操作数再加低位进位，结果送目的地址。<br>执行操作：（DST）&lt;–（SRC）+（DST）+ CF</p>
+<blockquote>
+<p>双字加法运算，设目的操作数存放在DX和AX寄存器中，其中DX放高位字，源操作数存放在BX和CX寄存器中，其中BX放高位字，指令执行前：（DX）=0002H，（AX）=0F365H，（BX）=0005H，（CX）=0E024H。<br>ADD  AX，CX；（AX）=0D389H，CF=1<br>ADC  DX，BX；（DX）=0008H，CF=0  </p>
+</blockquote>
+<h4 id="INC"><a href="#INC" class="headerlink" title="INC"></a>INC</h4><p>功能：将目的操作数加1，结果送目的地址。<br>执行操作：  （OPR）&lt;– （OPR）+ 1<br>注意:  除INC指令不影响CF标志外，均对条件(状态)标志位有影响。<br>使用场合: 寄存器或存储器单元自增，修改计数器或地址,比加法指令简便、效率高。</p>
+<h4 id="SUB"><a href="#SUB" class="headerlink" title="SUB"></a>SUB</h4><p><code>sub R/M, R/M/imm</code> 两边宽度一致且不能同时为内存   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sub R, D          ;比如sub ax, 8  </span><br><span class="line">sub R, R          ;比如sub ax, bx  </span><br><span class="line">sub R, M          ;比如sub ax, [0]  </span><br><span class="line">sub M, R          ;比如sub [0], ax</span><br></pre></td></tr></table></figure>
+
+<h4 id="SBB"><a href="#SBB" class="headerlink" title="SBB"></a>SBB</h4><p>带借位减法指令： SBB  DST，SRC<br>功能：目的操作数减源操作数再减低位借位CF，结果送目的地址<br>执行操作：  （DST）&lt;–（DST） - （SRC）- CF  </p>
+<h4 id="CMP"><a href="#CMP" class="headerlink" title="CMP"></a>CMP</h4><p>比较指令： CMP  R/M, R/M/imm<br>功能：目的操作数减源操作数(两边不能同时为0)，结果只影响标志位，不送入目的地址。<br>执行操作：（OPR1） - （OPR2）<br><strong>注意</strong>:  除DEC和ADC指令不影响 CF标志外，均对状态标志位有影响。</p>
+<h4 id="DEC"><a href="#DEC" class="headerlink" title="DEC"></a>DEC</h4><p>功能：将目的操作数减1，结果送目的地址。<br>执行操作：   （OPR） &lt;– （OPR） - 1  </p>
+<h4 id="NEG"><a href="#NEG" class="headerlink" title="NEG"></a>NEG</h4><p>求补指令： NEG  OPR<br>功能：将目的操作数的每一位求反（包括符号位）后加1，结果送目的地址。<br>执行操作：（OPR） &lt;–  - （OPR）<br>NEG指令的功能:改变操作数的符号可用于取操作数的绝对</p>
+<blockquote>
+<p>MOV   DX，6780H<br>NEG    DX；（DX）=9880H  </p>
+</blockquote>
+<p>求补指令对of和cf的设置  </p>
+<ul>
+<li>只有当操作数为0时，cf=0，否则cf=1  </li>
+<li>字节运算时对-128求补，字运算时对-32768求补，0f=1，否则0f=0  </li>
+</ul>
+<h4 id="MUL"><a href="#MUL" class="headerlink" title="MUL"></a>MUL</h4><p>无符号数乘法指令：        MUL   SRC<br>功     能： 若是字节数据相乘，（AL）与SRC相乘得到字数据存入AX中；若是字数据相乘，则（AX）与SRC相乘得到双字数据，高字存入DX、低字存入AX中。<br>执行操作：<br>字节操作数  （AX）&lt;–（AL） ×（SRC）<br>字操作数      （DX，AX）&lt;–（AX） × （SRC）<br><strong>NOTE</strong>  </p>
+<ul>
+<li>MUL指令——若乘积的高一半（AH或DX）为0，则OF=CF=0；否则OF=CF=1。（用来检查字节相乘的结果是字节还是字，或字相乘的结果是字还是双字）</li>
+<li>乘法指令对其他状态标志没有定义：指令执行后这些标志是任意的、不可预测（就是谁也不知道是0还是1）。</li>
+</ul>
+<blockquote>
+<p>无符号乘法：<br>MOV AL，0B4H              ；AL=B4H=180<br>MOV BL，11H                 ；BL=11H=17<br>MUL BL                            ； AX=OBF4H=3060，；OF=CF=1 , AX高8位不为0</p>
+</blockquote>
+<h4 id="IMUL"><a href="#IMUL" class="headerlink" title="IMUL"></a>IMUL</h4><p>带符号数乘法指令：        IMUL  SRC<br><strong>注意</strong>  </p>
+<ul>
+<li>IMUL指令除计算对象是带符号二进制数外，其他都与MUL一样，但计算结果不同。  </li>
+<li>IMUL指令——若乘积的高一半是低一半的符号扩展，则OF=CF=0；否则均为1。<br>乘法指令如下影响OF和CF标志：<br>MUL指令——若乘积的高一半（AH或DX）为0，则OF=CF=0；否则OF=CF=1。（用来检查字节相乘的结果是字节还是字，或字相乘的结果是字还是双字）<br>IMUL指令——若乘积的高一半是低一半的符号扩展，则OF=CF=0；否则均为1。  </li>
+</ul>
+<blockquote>
+<p>有符号乘法：<br>MOV AL，0B4H              ；AL=B4H=－76<br>MOV BL，11H                 ；BL=11H=17<br>IMUL BL                           ；AX=FAF4H=－1292，；OF=CF=1；AX高8位含有效数字  </p>
+</blockquote>
+<h4 id="DIV"><a href="#DIV" class="headerlink" title="DIV"></a>DIV</h4><p>无符号数除法指令：   DIV  SRC  </p>
+<p>字节操作<br>（AL）&lt;–（AX）/（SRC）的商<br>（AH）&lt;–（AX）/（SRC） 的余数<br>字操作<br>（AX）&lt;–（DX，AX）/（SRC）的商<br>（DX） &lt;–（DX，AX）/（SRC） 的余数<br><strong>NOTE</strong>  </p>
+<ul>
+<li>除法指令DIV和IDIV虽然对标志的影响未定义，但可产生溢出。  </li>
+<li>当被除数远大于除数时，所得的商就有可能超出它所能表达的范围。如果存放商的寄存器AL/AX不能表达，便产生溢出，8086CPU中就产生编号为0的内部中断——除法错中断。<blockquote>
+<p>无符号除法：<br>MOV AX，0400H      ；AX=400H=1024<br>MOV BL，0B4H         ；BL=B4H=180<br>DIV BL                          ；商AL＝05H＝5；余数AH＝7CH＝124  </p>
+</blockquote>
+</li>
+</ul>
+<h4 id="IDIV"><a href="#IDIV" class="headerlink" title="IDIV"></a>IDIV</h4><p>带符号数除法指令：   IDIV  SRC  </p>
+<blockquote>
+<p>有符号除法：<br>MOV AX，0400H      ；AX=400H=1024<br>MOV BL，0B4H         ；BL=B4H=－76<br>IDIV BL                         ；商AL＝F3H＝－13；余数AH＝24H＝36<br>注：带符号除法的余数符号和被除数符号相同。  </p>
+</blockquote>
+<h3 id="十进制调整指令"><a href="#十进制调整指令" class="headerlink" title="十进制调整指令"></a>十进制调整指令</h3><p>BCD码（8421码）：用二进制编码的十进制数，又称二–十进制数。  </p>
+<p><strong>压缩的BCD码</strong><br>用 4 位二进制数表示 1 位十进制数。如（59）＝（0101 1001）<br><strong>压缩的BCD码调整指令</strong><br>DAA      加法的十进制调整指令<br>DAS      减法的十进制调整指令</p>
+<p><strong>非压缩的BCD码</strong><br>用 8 位二进制数表示 1 位十进制数  例（ 59 ）＝（0000 0101   0000 1001 ）<br><strong>非压缩的BCD码调整指令</strong><br>AAA      加法的ASCII码调整指令<br>AAS      减法的ASCII码调整指令<br>AAM      乘法的ASCII码调整指令<br>AAD      除法的ASCII码调整指令  </p>
+<h4 id="DAA"><a href="#DAA" class="headerlink" title="DAA"></a>DAA</h4><p>加法的十进制调整指令DAA  </p>
+<p>DAA    （AL）←把AL中存放的加法的和调整为压缩的BCD码<br>若 AF=1，或（AL )0<del>3=A～F，则（AL）←(AL) + 06H，AF=1<br>若 CF=1，或（AL )4</del>7=A～F，则（AL）←(AL) + 60H，CF=1  </p>
+<blockquote>
+<p>【例】压缩BCD码的加法运算。<br>MOV AL，68H     ；（AL）=68H，表示压缩BCD码68<br>MOV BL，28H      ；（BL）=28H，表示压缩BCD码28<br>ADD AL，BL      ；二进制加法：（AL）=68H+28H=90H<br>DAA                    ；十进制调整：（AL）=96H</p>
+</blockquote>
+<h4 id="DAS"><a href="#DAS" class="headerlink" title="DAS"></a>DAS</h4><p>减法的十进制调整指令DAS  </p>
+<p>语句格式：DAS<br>具体实现：如果AF=1或AL寄存器中低4位大于9，则AL=AL－6且AF=1；<br>如果AL&gt;=0A0H或CF=1，则AL=AL－60H且CF=1。同时SF、ZF、PF均受影响。<br>【例】压缩BCD码的减法运算。<br>MOVAL，68H     ；（AL）=68H，表示压缩BCD码68<br>MOVBL，28H     ；（BL）=28H，表示压缩BCD码28<br>SUBAL，BL       ；二进制减法：（AL）=68H－28H=40H<br>DAS                            ；十进制调整：（AL）=40H  ；实现压缩BCD码减法：68－28=40  </p>
+<h4 id="AAA"><a href="#AAA" class="headerlink" title="AAA"></a>AAA</h4><p>加法的ASCII调整指令AAA  </p>
+<p>语句格式：AAA<br>功能：如果AL的低4位大于9或AF=1，则AL=AL+6，AH=AH+1，AF=CF=1， 且AL高4位清零。  否则：CF=AF=0，AL高4位清零。  </p>
+<blockquote>
+<p>【例】<br>MOV AX，0608        ；AX=0608H，非压缩BCD码表示真值68<br>MOV BL，09H               ；BL=09H，非压缩BCD码表示真值9<br>ADD AL，BL               ；二进制加法：AL=08H+09H=11H<br>AAA                            ；十进制调整：AX=0707H ；实现非压缩BCD码加法：68＋9＝77  </p>
+</blockquote>
+<h4 id="AAS"><a href="#AAS" class="headerlink" title="AAS"></a>AAS</h4><p>减法的ASCII调整指令AAS  </p>
+<p>语句格式：AAS<br>功能：如果AL的低4位大于9或AF=1，则AL=AL－6，AH=AH－1，AF=CF=1，AL高4位清零。否则：CF=AF=0，AL高4位清零。  其他标志位OF、PF、SF、ZF不确定。  </p>
+<blockquote>
+<p>【例】<br>MOV AX，0608H；AX=0608H，非压缩BCD码表示真值68<br>MOV BL，09H              ；BL=09H，非压缩BCD码表示真值9<br>SUB AL，BL              ；二进制减法：AL=08H－09H=FFH<br>AAS                            ；十进制调整：AX=0509H  ；实现非压缩BCD码减法：68－09＝59  </p>
+</blockquote>
+<p>注：使用DAA或DAS指令前，应先执行以AL为目的操作数的加法或减法指令。  </p>
+<h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><p>计算(C - 120 + A*B)/C</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">A       DW  ?  </span><br><span class="line">B   DW  ?  </span><br><span class="line">C   DW  ?  </span><br><span class="line">X   DW  ?  </span><br><span class="line">Y   DW  ?  </span><br><span class="line">    MOV     AX, C  </span><br><span class="line">    SUB     AX, 120D  ;书写指令“ADD AX, -120D”也可以  </span><br><span class="line">    CWD  </span><br><span class="line">    MOV     CX, DX  </span><br><span class="line">    MOV BX, AX  ;(CX, BX)←(DX, AX)，调度寄存器，为作乘法准备必要的寄存器  </span><br><span class="line">    MOV AX, A  </span><br><span class="line">    IMUL    B   ;(DX, AX)←A*B  </span><br><span class="line">    ADD AX, BX  ;计算32位二进制之和，为作除法作准备  </span><br><span class="line">    ADC DX, CX  </span><br><span class="line">    IDIV    C   ;AX是商，DX是余数  </span><br><span class="line">    MOV X, AX   ;分别保存商和余数到指定的字变量单元里  </span><br><span class="line">    MOV Y, DX</span><br></pre></td></tr></table></figure>
+
+<h3 id="逻辑指令"><a href="#逻辑指令" class="headerlink" title="逻辑指令"></a>逻辑指令</h3><p>AND(and)                逻辑与<br>OR(or)              逻辑或<br>NOT(not)                逻辑非<br>XOR(exclusive or)                           异或<br>TEST(test)                      测试<br>Not指令不影响标志位,其他四个指令使cf=of=0，af无定义,Sf，zf，pf按运算结果设置  </p>
+<h4 id="AND"><a href="#AND" class="headerlink" title="AND"></a>AND</h4><p>功 能：把源操作数中的每位二进制与目的操作数中的相应二进制进行逻辑“与操作”，操作结果存入目标操作数中。<br>执行操作：   （DST）（DST）（SRC）<br>用途：该指令用于清除目的操作数中与源操作数置0的对应位。  </p>
+<blockquote>
+<p>【例】已知（BH）=67H，要求把其的第0、1和5位置为0。<br>解：可以构造一个立即数，其第0、1和5位的值为0，其它位的值为1， 该立即数即为：0DCH或11011100B，然后用指令<code>AND   BH, 0DCH</code>来实现此功能。   </p>
+</blockquote>
+<h4 id="OR"><a href="#OR" class="headerlink" title="OR"></a>OR</h4><p>逻辑或指令：OR  DST, SRC  </p>
+<p>功 能：把源操作数中的每位二进制与目的操作数中的相应二进制进行逻辑”或操作”，操作结果存入目标操作数中。<br>执行操作：   （DST）（DST）（SRC）<br>用途：该指令用于设置目的操作数中与源操作数置1的对应位。  </p>
+<blockquote>
+<p>【例】已知（BL）=46H，要求把其的第1、3、4和6位置为1。<br>解：构造一个立即数，使其第1、3、4和6位的值为1，其它位的值为0，该立即数即为：5AH或01011010B，然后用指令<code>OR BL，5AH</code>来实现此功能。   </p>
+</blockquote>
+<h4 id="NOT"><a href="#NOT" class="headerlink" title="NOT"></a>NOT</h4><p>逻辑非指令： NOT  OPR<br>OPR不能为立即数</p>
+<p>功能：将目的地址中的内容逐位取反后送入目的地址。<br>执行操作：    （OPR）&lt;– ~(OPR）   </p>
+<blockquote>
+<p>【例】逻辑非运算。<br>MOV   AX，878AH   ；（AX）=878AH<br>NOT   AX，                   ；（AX）=7875H  </p>
+</blockquote>
+<h4 id="XOR"><a href="#XOR" class="headerlink" title="XOR"></a>XOR</h4><p>异或指令：    XOR  DST，SRC  </p>
+<p>功能：把源操作数中的每位二进制与目的操作数中的相应二进制进行逻辑“异或操作”，操作结果存入目标操作数中。<br>执行操作：    （DST）&lt;– （DST） ^ （SRC）<br>用途：该指令用于将目的操作数中与源操作数置1的对应位取反。  </p>
+<blockquote>
+<p>【例】已知（AH）=46H，要求把其的第0、2、5和7位的二进制值变反。<br>解：构造一个立即数，使其第0、2、5和7位的值为1，其它位的值为0，该立即数即为：0A5H或10100101B，然后再用指令“XOR  AH， 0A5H”来实现此功能。   </p>
+</blockquote>
+<h4 id="TEST"><a href="#TEST" class="headerlink" title="TEST"></a>TEST</h4><p>测试指令：    TEST  R/M，R/M/imm  </p>
+<p>功能：把二个操作数(不能同时为内存)进行逻辑“与”操作，并根据运算结果设置相应的标志位，但并不保存该运算结果，所以，不会改变指令中的操作数。   </p>
+<blockquote>
+<p>【例】 测试AX中的第12位是否为0，不为0则转L。  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">   TEST    AX，1000H  </span><br><span class="line">   JNE     L   </span><br><span class="line">   …  </span><br><span class="line">L：…  </span><br><span class="line">   …  </span><br></pre></td></tr></table></figure>
+</blockquote>
+<h4 id="SHL-amp-SHR"><a href="#SHL-amp-SHR" class="headerlink" title="SHL&amp;SHR"></a>SHL&amp;SHR</h4><p>指令格式：  SHL/SHR　OPR, CL/Imm<br>受影响的标志位：CF、OF、PF、SF和ZF（AF无定义）。  </p>
+<p><img src="https://raw.githubusercontent.com/overturncat/picturebed/master/assembly_SHL_SHR.png" alt=""></p>
+<blockquote>
+<p>例：将BL中的值逻辑右移1位 ，设（BL）=AFH<br><code>SHR  BL，1</code><br>执行指令后：  （BL）=57H  </p>
+</blockquote>
+<blockquote>
+<p>例：移位指令可实现乘法功能  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">MOV   SI，AX  </span><br><span class="line">SHL     SI，1                ；SI←2×AX  </span><br><span class="line">ADD    SI，AX              ；SI←3×AX  </span><br><span class="line">MOV   DX，BX  </span><br><span class="line">MOV   CL，03H  </span><br><span class="line">SHL     DX，CL    ；DX←8×BX  </span><br><span class="line">SUB     DX，BX           ；DX←7×BX  </span><br><span class="line">ADD    DX，SI     ；DX←7×BX＋3×AX  </span><br></pre></td></tr></table></figure>
+</blockquote>
+<h4 id="SAL-amp-SAR"><a href="#SAL-amp-SAR" class="headerlink" title="SAL&amp;SAR"></a>SAL&amp;SAR</h4><p>指令格式：  SHL/SHR　OPR, CL/Imm<br>受影响的标志位：CF、OF、PF、SF和ZF（AF无定义）。  </p>
+<p><img src="https://raw.githubusercontent.com/overturncat/picturebed/master/assembly_SAL_SAR.png" alt=""></p>
+<blockquote>
+<p>将BL中的值算术右移1位 ，设（BL）=AFH<br><code>SAR  BL，1</code><br>执行指令后：  （BL）=D7H  </p>
+</blockquote>
+<h4 id="ROL-amp-ROR"><a href="#ROL-amp-ROR" class="headerlink" title="ROL&amp;ROR"></a>ROL&amp;ROR</h4><p><img src="https://raw.githubusercontent.com/overturncat/picturebed/master/assembly_ROL_ROR.png" alt=""></p>
+<blockquote>
+<p>例：将BL中的值循环左移1位 ，设（BL）=AFH<br>ROL   BL，1<br>执行指令后：  （BL）=5FH  </p>
+</blockquote>
+<h4 id="RCL-amp-RCR"><a href="#RCL-amp-RCR" class="headerlink" title="RCL&amp;RCR"></a>RCL&amp;RCR</h4><p>指令格式：RCL/RCR　OPR, CL/Imm<br>受影响的标志位：CF和OF  </p>
+<p><img src="https://raw.githubusercontent.com/overturncat/picturebed/master/assembly_RCL_RCR.png" alt=""></p>
+<h3 id="串处理指令"><a href="#串处理指令" class="headerlink" title="串处理指令"></a>串处理指令</h3><p>字符串操作指令的实质是对一片连续存储单元进行处理.<br>串操作指令的操作数是主存中连续存放的数据串（String）——即在连续的主存区域中，字节或字的序列<br>串操作指令的操作对象是以字（W）为单位的字串，或是以字节（B）为单位的字节串</p>
+<p>源操作数用寄存器SI寻址，默认在数据段DS中，但允许段超越：DS:SI<br>目的操作数用寄存器DI寻址，默认在附加段ES中，不允许段超越：ES:DI  </p>
+<p>每执行一次串操作指令，SI和DI将自动修改： ±1（对于字节串）或±2（对于字串）<br>执行指令CLD后，DF = 0，地址指针增1或2<br>执行指令STD后，DF = 1，地址指针减1或2  </p>
+<h4 id="REP重复前缀指令"><a href="#REP重复前缀指令" class="headerlink" title="REP重复前缀指令"></a>REP重复前缀指令</h4><p>重复前缀指令是重复其后的字符串操作指令，重复的次数由CX来决定。其一般格式为：<br>           REP　 MOVS / STOS / LODS<br>重复前缀指令的执行步骤如下：<br>1）判断：CX=0；<br>2）如果CX=0，则结束重复操作，执行程序中的下一条指令；<br>3）否则，CX=CX-1（不影响有关标志位），并执行其后的字符串操作指令，在该指令执行完后，再转到步骤（1）。  </p>
+<h4 id="MOVS字符串传送指令"><a href="#MOVS字符串传送指令" class="headerlink" title="MOVS字符串传送指令"></a>MOVS字符串传送指令</h4><p>功能：将以SI为指针的源串中的一个字节（或字）存储单元中的数据传送至以DI为指针的目的地址中去，并自动修改指针，使之指向下一个字节（或字）存储单元。  </p>
+<p><code>MOVS BYTE PTR ES:[EDI], BYTE PTR DS:[ESI]         ;简写MOVSB</code><br><code>MOVS WORD PTR ES:[EDI], WORD PTR DS:[ESI]         ;简写MOVSW</code><br><code>MOVS DWORD PTR ES:[EDI], DWORD PTR DS:[ESI]         ;简写MOVSD</code>  </p>
+<p>执行操作:  </p>
+<ol>
+<li>（DS：[SI]）→ES：[DI]。  </li>
+<li>(SI)←(SI)±1，(DI)←(DI)±1<br>(SI)←(SI)±2，(DI)←(DI)±2     </li>
+</ol>
+<p>字节操作   DF=0(默认)，取+<br>字  操  作  DF=1，取-   </p>
+<blockquote>
+<p>例子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mov esi, 0x12FFDC</span><br><span class="line">mov edi, 0x12FFD0</span><br><span class="line">movsd             ;edi指向的内存传给了esi指向的内存,且esi&#x3D;0x12FFE0, edi&#x3D;0x12FFD4</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><code>REP MOVS</code>：将数据段中的整串数据传送到附加段中。<br>源串（数据段）→ 目的串（附加段）<br>执行 REP MOVS 之前，应先做好：  </p>
+<ol>
+<li>源串首地址（末地址）→ SI  </li>
+<li>目的串首地址（末地址）→ DI  </li>
+<li>串长度 → CX  </li>
+<li>建立方向标志  （ CLD 使 DF=0，STD 使 DF=1 ）</li>
+</ol>
+<blockquote>
+<p>把2000H:0050H的字符串复制到3000H:0100H  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">MOV  SI，0050H  </span><br><span class="line">MOV  DI，0100H  </span><br><span class="line">MOV  CX，5  </span><br><span class="line">CLD  </span><br><span class="line">REP  MOVSB  </span><br></pre></td></tr></table></figure>
+</blockquote>
+<h4 id="STOS置字符串数据指令"><a href="#STOS置字符串数据指令" class="headerlink" title="STOS置字符串数据指令"></a>STOS置字符串数据指令</h4><p>指令格式：<br><code>STOS BYTE PTR ES:[EDI]         ;简介为STOSB</code><br><code>STOS WORD PTR ES:[EDI]         ;简介为STOSW</code><br><code>STOS DWORD PTR ES:[EDI]        ;简介为STOSD</code><br>功能：将AL/AX/EAX中的数据送入ES:EDI所指的目的串中的字节（或字）存储单元中。<br>执行操作：<br>字节操作：ES:[EDI]←（AL），（DI）←（DI）±l<br>字操作： ES:[EDI] ←（AX），（DI）←（DI）±2   </p>
+<blockquote>
+<p>在1000H:0050H之后复制5个’$’</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">MOV  DI，0050H  </span><br><span class="line">MOV  AL， ‘$’  </span><br><span class="line">MOV  CX，5  </span><br><span class="line">CLD  </span><br><span class="line">REP  STOSB      </span><br></pre></td></tr></table></figure>
+</blockquote>
+<h4 id="取字符串数据指令（Load-String-Instruction）"><a href="#取字符串数据指令（Load-String-Instruction）" class="headerlink" title="取字符串数据指令（Load String Instruction）"></a>取字符串数据指令（Load String Instruction）</h4><p>指令格式<br>LODS  SRC （需在操作数中表明数据格式）<br>LODSB          （字节）<br>LODSW         （字）      </p>
+<p>功能：将SI所指的源串中的一个字节（或字）存储单元中的数据取出来送入AL（或AX）中。<br>执行操作：<br>字节操作：（DS:[SI]）→AL，(SI) ±l → (SI)<br>字操作：    （DS:[SI]）→AX，(SI) ±2 → (SI)   </p>
+<h4 id="串输入指令INS"><a href="#串输入指令INS" class="headerlink" title="串输入指令INS"></a>串输入指令INS</h4><p>指令格式：<br>INSB         ；字节串输入： ES:[DI] ←（（DX）） ；DI←DI±1<br>INSW          ；字串串输入： ES:[DI] ← （（DX）） ；DI←DI±2  </p>
+<p>功能：将由DX寄存器指定的I/O端口中的字、字节传送到附加段中的目的串中，并根据DF和数据类型来改变目的变址寄存器的方向内容。  </p>
+<h4 id="串输出指令OUTS"><a href="#串输出指令OUTS" class="headerlink" title="串输出指令OUTS"></a>串输出指令OUTS</h4><p>功能：将由源串中的字、字节传送到在DX寄存器指定的I/O端口中，并根据DF和数据类型来改变源变址寄存器的方向内容。<br>指令格式：<br>OUTSB        ；字节串输出： （（DX））←DS：[SI]  ；SI←SI±1<br>OUTSW      ；字串串输出： （（DX））←DS：[SI]  ；SI←SI±2  </p>
+<h4 id="REPZ"><a href="#REPZ" class="headerlink" title="REPZ"></a>REPZ</h4><p>相等重复前缀指令 REPE/REPZ<br>一直执行指令直到cx=0或条件不为0<br>格式<br>REPE/REPZ　CMPS/SCAS  </p>
+<p>执行步骤：<br>1）判断条件：CX≠0 且 ZF=1；<br>2）如果条件不成立，则结束重复操作，执行程序中的下一条指令；<br>3）否则，CX=CX-1（不影响有关标志位），并执行其后的字符串操作指令，在该指令执行完后，再转到步骤（1）。  </p>
+<h4 id="REPNE-REPNZ"><a href="#REPNE-REPNZ" class="headerlink" title="REPNE/REPNZ"></a>REPNE/REPNZ</h4><p>不等重复前缀指令 REPNE/REPNZ<br>一直执行指令直到cx=0或条件为0<br>一般格式为：<br>REPNE/REPNZ　CMPS/SCAS  </p>
+<p>执行步骤如下：  </p>
+<ol>
+<li>判断条件：CX≠0 且 ZF=0；  </li>
+<li>如果条件不成立，则结束重复操作，执行程序中的下一条指令；  </li>
+<li>否则，CX=CX-1（不影响有关标志位），并执行其后的字符串操作指令，在该指令执行完后，再转到步骤（1）。  </li>
+</ol>
+<h4 id="CMPS"><a href="#CMPS" class="headerlink" title="CMPS"></a>CMPS</h4><p>串比较指令 CMPS    </p>
+<p>语句格式：<br>CMPSB——字节串比较<br>CMPSW——字串比较<br>功      能：将SI所指的源串中的一个字节（或字）存储单元中的数据与DI所指的目的串中的一个字节（或字）存储单元中的数据相减，并根据相减的结果设置标志，但结果并不保存。<br>操作：</p>
+<ol>
+<li>DS:[SI]）－（ES:[DI]）。  </li>
+<li>修改串指针，使之指向串中的下一个元素。  <ul>
+<li>当DF=0时，（SI）和（DI）增量。  </li>
+<li>当DF=1时，（SI）和（DI）减量。  </li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>【例】 比较两个字符串，找出它们不相匹的位置。<br>MOV  SI，1500H<br>MOV  DI，0200H<br>MOV  CX，17<br>CLD<br>REPE  CMPSB  </p>
+</blockquote>
+<h4 id="SCAS"><a href="#SCAS" class="headerlink" title="SCAS"></a>SCAS</h4><p>串搜索指令 SCAS<br>语句格式：<br>SCASB——字节串搜索<br>SCASW——字串搜索  </p>
+<p>功       能：AL（字节）或AX（字）中的内容与DI所指的目的串中的一个字节（或字）存储单元中的数据相减，根据相减结果设置标志位，结果不保存.<br>操        作：  </p>
+<ol>
+<li>字节操作：（AL）－（ES:[DI]），<br> 字操作：（AX）－（ES:[DI]）。  </li>
+<li>修改指针使之指向串中的下一个元素。  <ul>
+<li>当DF=0时，（DI）增量。  </li>
+<li>当DF=1时，（DI）减量。  </li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>【例】 从一个字符串中找出一个指定字符。<br>MOV  DI，0100H<br>MOV  AL，‘R’<br>MOV  CX，10H<br>CLD<br>REPNZ  SCASB  </p>
+</blockquote>
+<h3 id="累加器专用传送"><a href="#累加器专用传送" class="headerlink" title="累加器专用传送"></a>累加器专用传送</h3><h4 id="IN"><a href="#IN" class="headerlink" title="IN"></a>IN</h4><p>该指令的作用是从端口中读入一个字节或字，并保存在寄存器AL或AX中。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">直接IO端口寻址：</span><br><span class="line">IN   AL, n   （字节）  执行操作：（AL） &lt;--（PORT）（字节） </span><br><span class="line">IN   AX, n   （字）  （AX） &lt;--（PORT+1,  PORT）（字） </span><br><span class="line">间接IO端口寻址方式：    </span><br><span class="line">IN   AL, DX   （字节）  （AL）&lt;--（（DX））（字节）</span><br><span class="line">IN   AX, DX   （字）  （AX）&lt;--（（DX）+1,（DX））（字）</span><br></pre></td></tr></table></figure>
+<p><strong>NOTE</strong> 如果某输入设备的端口地址在0~255范围之内，那么，可在指令IN中直接给出，否则，要把该端口地址先存入寄存器DX中，然后在指令中由DX来给出其端口地址。</p>
+<blockquote>
+<p>例6.1 输出字符至打印机。设打印机控制器有3个端出：数据端口的端口地址为378H，状态端口地址为379H，控制端口地址为37AH。在PC机中，打印机通过打印控制器与CPU连接。  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">程序如下：  </span><br><span class="line">          MOV  BX，OFFSET  BUFFER  </span><br><span class="line">          MOV  CX，COUNT  </span><br><span class="line">BG： MOV  AL，[BX]                          ；取字符  </span><br><span class="line">          MOV  DX，378H  </span><br><span class="line">          OUT  DX，AL                             ；输出字符到控制器  </span><br><span class="line">          MOV  DX,  379H  </span><br><span class="line">WT:   IN    AL,  DX                                ；读入打印机状态  </span><br><span class="line">          TEST  AL，80H                           ；判忙否  </span><br><span class="line">          JZ  WT  </span><br><span class="line">          MOV  DX,  37AH  </span><br><span class="line">         MOV  AL,  0DH                          ；令打印机打印字符  </span><br><span class="line">          OUT  DX，AL  </span><br><span class="line">         MOV  AL，0CH  </span><br><span class="line">         OUT   DX，AL  </span><br><span class="line">         INC  BX                                         ；指向下一个输出字符  </span><br><span class="line">         LOOP  BG  </span><br></pre></td></tr></table></figure>
+<p>问题分析：发送给打印机的字符，暂存于控制器中的数据锁存器。打印机的状态存放在控制器的缓冲器中，使用查询方式控制打印过程时，在每把一个字符送到控制器后，都要先查询打印机的状态信息是否为忙(BUSY为0)。如不忙，则发送选通信号，启动打印机取走字符并打印。若为忙，则重新查询，直到不忙时为止。  </p>
+</blockquote>
+<blockquote>
+<p>例6.2 采用程序查询的数据采集程序。  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">DATA     SEGMENT  </span><br><span class="line">BUFF     DB  8  DUP(?)  </span><br><span class="line">DATA     ENDS  </span><br><span class="line">CODE     SEGMENT  </span><br><span class="line">          ASSUME  CS:CODE, DS:DATA  </span><br><span class="line">START:    MOV  AX, DATA  </span><br><span class="line">           MOV  DS, AX  </span><br><span class="line">           MOV  DL, 10H                            ；设置AD启动转换  </span><br><span class="line">           MOV  DI, OFFSET  BUFF          ；DI指向输入缓冲区  </span><br><span class="line">           MOV  CX, 8  </span><br><span class="line">AGAIN:    MOV  AL, DL  </span><br><span class="line">           AND   AL, 0EFH                          ；使端口4的D4为0  </span><br><span class="line">           OUT    4, AL                                 ；停止A&#x2F;D转换  </span><br><span class="line">           CALL  DELAY                                ；延时等待A&#x2F;D停止操作  </span><br><span class="line">           MOV   AL, DL  </span><br><span class="line">           OUT    4, AL             </span><br><span class="line"></span><br><span class="line">A1:     IN     AL, 2                     ；读入状态  </span><br><span class="line">        TEST   AL, 01H             ；将EOC送CF  </span><br><span class="line">        JZ   A1                            ；为0，则未推备好  </span><br><span class="line">        IN   AL, 3                       ；读入一个A&#x2F;D转换值  </span><br><span class="line">        MOV  [DI], AL  </span><br><span class="line">        INC  DI  </span><br><span class="line">        INC  DL                         ；选择下一个模拟量  </span><br><span class="line">        LOOP  AGAIN  </span><br><span class="line">        MOV   AH, 4CH  </span><br><span class="line">        INT   21H  </span><br><span class="line">CODE ENDS  </span><br><span class="line">        END  START  </span><br></pre></td></tr></table></figure>
+<p>问题分析：<br>为了采集具有8个模拟量输入的数据，通过端口4的低3位的值选通模拟量IN0，IN1至IN7中的一个，使其通过多路开关把一个被选择的模拟量送至A/D转换器。<br>A/D转换器的启停则由端口4的D4位加以控制，若D4＝1，则启动A/D转换器进行转换；若D4＝0，使A/D转换器停止转换。<br>  A/D转换器的状态信号EOC是由端口2的D0位输入CPU的，A/D转换后的数字量由端口3送入CPU。因此，端口4为控制端口，端口2为状态端口，端口3为数据端口。  </p>
+</blockquote>
+<h4 id="OUT"><a href="#OUT" class="headerlink" title="OUT"></a>OUT</h4><p>输出指令用来把累加器的内容送往指定的外设存储器，它有几种形式:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">长格式：    </span><br><span class="line">OUT   PORT, AL  （字节）  （PORT）--&gt;（AL） （字节）  </span><br><span class="line">OUT   PORT, AX  （字）    （PORT+1, PORT）--&gt;（AX）（字）               </span><br><span class="line">短格式：    </span><br><span class="line">OUT   DX, AL  （字节）  （（DX））--&gt;（AL）（字节）  </span><br><span class="line">OUT   DX, AX  （字）    （（DX）+1,（DX））--&gt;（AX）（字）</span><br></pre></td></tr></table></figure>
+<p><strong>NOTE</strong> 如果某输出设备的端口地址在0~255范围之内，那么，可在指令OUT中直接给出，否则，要把该端口地址先存入寄存器DX中，然后在指令中由DX来给出其端口地址。</p>
+<blockquote>
+<p>例如：<br>OUT   61H，AL；把AL的内容输出到端口61H中<br>OUT   20H，AX；把AX的内容输出到端口20H、21H中<br>MOV  DX， 3C0H<br>OUT   DX，AL；把AL的内容输出到端口3C0H中<br>OUT   DX，AX；把AX的内容输出到端口3C0H、3C1H中  </p>
+</blockquote>
+<h4 id="XLAT"><a href="#XLAT" class="headerlink" title="XLAT"></a>XLAT</h4><p>转换指令有两个隐含操作数BX和AL。<br>格        式：XLAT    OPR 或  XLAT<br>执行操作： （AL）&lt;–（（BX）+（AL））<br>功        能：其功能是把BX的值作为内存字节数组首地址、下标为AL的数组元素的值传送给AL。   </p>
+<blockquote>
+<p>MOV  BX，offset table  ; （BX）=0040H<br>MOV  AL，3<br>XLAT<br>指令执行后 （AL）=33H<br><strong>NOTE</strong>OFFSET是在汇编阶段得出的相对偏移的值, 只能接标号或变量名</p>
+</blockquote>
+<h3 id="地址传送"><a href="#地址传送" class="headerlink" title="地址传送"></a>地址传送</h3><h4 id="LEA-有效地址送寄存器指令-Load-Effective-Address"><a href="#LEA-有效地址送寄存器指令-Load-Effective-Address" class="headerlink" title="LEA 有效地址送寄存器指令(Load Effective Address)"></a>LEA 有效地址送寄存器指令(Load Effective Address)</h4><p>将源操作数的偏移地址送到指定的寄存器中<br>指令的格式为：LEA   REG，OPS  </p>
+<ol>
+<li>源操作数必须是一个内存操作数；</li>
+<li>目的操作数必须是一个16位的通用寄存器。这条指令通常用来建立串操作指令所须的寄存器指针。 <blockquote>
+<p>lea eax,[ebx+8]就是将ebx+8这个值直接赋给eax</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="LDS-Load-pointer-into-DS"><a href="#LDS-Load-pointer-into-DS" class="headerlink" title="LDS  (Load pointer into DS)"></a>LDS  (Load pointer into DS)</h4><p>这条指令的功能是把mem指向的地址,高位存放在DS中,低位存放在reg中<br>指令的格式为： LDS  REG，OPS<br>要求：源操作数是一个内存操作数，目的操作数是一个基址寄存器或变址寄存器。  </p>
+<blockquote>
+<p>比如当前DS=1000H,BX=0100H.<br>当前内存:<br>1000:0100 01<br>1000:0101 02<br>1000:0102 03<br>1000:0103 04<br>而有一条指令:LDS BX,[BX]<br>[BX]指向1000:0100,执行后BX存低位的内容,也就是BX=0201H,<br>而DS则存高位的内容,也就是[BX+2]的内容,DS=0403H  </p>
+</blockquote>
+<h4 id="LES-Load-pointer-into-ES"><a href="#LES-Load-pointer-into-ES" class="headerlink" title="LES (Load pointer into ES)"></a>LES (Load pointer into ES)</h4><p>指令的格式为： LES  REG，OPS<br>这条指令除将地址指针的段地址部分送入ES外，与LDS类似。<br>例如： LES  DI，[BX+COUNT]   </p>
+<blockquote>
+<p>MOV  BX，TABLE                  ; （BX）=0040H<br>MOV  BX，OFFSET TABLE   ; （BX）=1000H<br>LEA    BX，TABLE                   ; （BX）=1000H<br>LDS    BX， TABLE                  ; （BX）=0040H（DS）=3000H<br>LES  BX，TABLE                      ; （BX）=0040H（ES）=3000H  </p>
+</blockquote>
+<h3 id="标志寄存器传送"><a href="#标志寄存器传送" class="headerlink" title="标志寄存器传送"></a>标志寄存器传送</h3><h4 id="LAHF"><a href="#LAHF" class="headerlink" title="LAHF"></a>LAHF</h4><p>执行操作：（AH）&lt;–（FLAGS的低字节）  </p>
+<h4 id="SAHF"><a href="#SAHF" class="headerlink" title="SAHF"></a>SAHF</h4><p>执行操作：   （FLAGS的低字节）&lt;–（AH）</p>
+<h4 id="PUSHF"><a href="#PUSHF" class="headerlink" title="PUSHF"></a>PUSHF</h4><p>执行操作：<br>(SP）&lt;–（SP） - 2 ;<br>((SP）+1, （SP））&lt;–（FLAGS）</p>
+<h4 id="POPF"><a href="#POPF" class="headerlink" title="POPF"></a>POPF</h4><p>执行操作： （FLAGS）&lt;–（（SP）+1,（SP））; （SP）&lt;–（SP）+ 2</p>
+<h3 id="类型转换指令"><a href="#类型转换指令" class="headerlink" title="类型转换指令"></a>类型转换指令</h3><h4 id="CBW"><a href="#CBW" class="headerlink" title="CBW"></a>CBW</h4><p>字节扩展为字指令  CBW<br>AL –&gt; AX  </p>
+<p>执行操作：<br>若（AL）的最高有效位为0，则（AH)= 00H<br>若（AL）的最高有效位为1，则（AH)= FFH</p>
+<h4 id="CWD"><a href="#CWD" class="headerlink" title="CWD"></a>CWD</h4><p>字扩展成双字指令CWD<br>AX &lt;– （DX,AX）   </p>
+<p>执行操作：<br>若（AX）的最高有效位为0，则（DX)= 0000H<br>若（AX）的最高有效位为1，则（DX)= FFFFH  </p>
+<h2 id="寻址指令"><a href="#寻址指令" class="headerlink" title="寻址指令"></a>寻址指令</h2><p>寻址方式就是寻找操作数地址的方法。</p>
+<ul>
+<li>操作数可以跟随在指令操作码之后，称为立即数；</li>
+<li>操作数也可以存放在CPU内部的寄存器中，称为寄存器操作数。</li>
+<li>绝大多数的操作数存放在内存储器中，称为存储器操作数。</li>
+</ul>
+<h3 id="与数据有关的寻址方式-内存访问"><a href="#与数据有关的寻址方式-内存访问" class="headerlink" title="与数据有关的寻址方式(内存访问)"></a>与数据有关的寻址方式(内存访问)</h3><p><code>MOV  AX , [ 2000H ]</code> <strong>直接寻址</strong>;<br><code>MOV  AX , [ BX ]</code> <strong>寄存器间接寻址</strong> 默认段寄存器为ds, 当寄存器为BP时, 段地址默认为SS<br><code>MOV  AX , COUNT [ SI ]</code> <strong>寄存器相对寻址</strong> 如MOV BX, [SI+100H]<br><code>MOV  AX , [ BP ] [ DI ]</code>  <strong>基址变址寻址</strong> 如MOV BX, [DI+SI]<br><code>MOV  AX, [reg+reg\*{1,2,4,8}]</code><br><code>MOV  AX , MASK [ BX ] [ SI ]</code> <strong>相对基址变址寻址</strong> 如MOV BX, [BX+SI+100H]  </p>
+<h3 id="与转移地址有关的寻址方式-指令跳转"><a href="#与转移地址有关的寻址方式-指令跳转" class="headerlink" title="与转移地址有关的寻址方式(指令跳转)"></a>与转移地址有关的寻址方式(指令跳转)</h3><p>段内寻址仅修改IP的值, 段间寻址修改CS和IP的值</p>
+<h4 id="段内寻址"><a href="#段内寻址" class="headerlink" title="段内寻址"></a>段内寻址</h4><p><strong>段内直接寻址    JMP    NEAR PTR  NEXT</strong>  </p>
+<ul>
+<li>JMP  SHORT  QUEST  其中QUEST表示转移的符号地址，操作符SHORT表示是个8位带符号数，数的范围是80H ~ 7FH，即  -128 ~ +127。它只能相对于当前IP（转移指令的下一条指令的首地址）所指的位置作-128 ~ +127范围内跳转，所以称为短跳转。</li>
+<li>JMP  NEAR  PTR   PROGA  其中PROGA表示转移的符号地址，操作符NEAR  PRT表示是个16位带符号数，数的范围是8000H ~ 7FFFH，即  -32768 ~ +32767。它只能相对于当前IP所指的位置作-32768 ~ +32767范围内跳转，所以称为近跳转。</li>
+</ul>
+<blockquote>
+<p>例子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">        ……   </span><br><span class="line">        JMP  AGAIN              ；转移到AGAIN处继续执行  </span><br><span class="line">        ……  </span><br><span class="line">AGAIN:  DEC CX                  ；标号AGAIN的指令  </span><br><span class="line">        ……  </span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><strong>段内间接寻址 JMP  WORD PTR ORP</strong>  </p>
+<p>执行操作：    （IP）← （EA）<br>将一个寄存器或主存字单元内容送入IP寄存器，作为新的指令指针，但不修改CS寄存器的内容。  </p>
+<blockquote>
+<p>已知 TABLE=20A2H ，（BX）=1256H ，（SI）=528EH，（DS）=2000H ，（232F8H）= 3280H ，（264E4H）=2450H  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">JMP  BX                                                       ; （IP）&#x3D;1256H  </span><br><span class="line">JMP  WORD PTR  TABLE[BX]               ; （IP）&#x3D;3280H  </span><br><span class="line">JMP  WORD PTR  [BX][SI]                      ; （IP）&#x3D;2450H  </span><br></pre></td></tr></table></figure>
+</blockquote>
+<h4 id="段间寻址"><a href="#段间寻址" class="headerlink" title="段间寻址"></a>段间寻址</h4><p><strong>段间直接寻址    JMP    FAR PTR  NEXT</strong><br>用指令中提供的符号的段地址和偏移地址取代CS 和 IP。</p>
+<p><strong>段间间接寻址    JMP    DWORD PTR [ BX ]</strong><br>执行操作：    （IP）← （EA）<br>（CS）← （EA+2）<br>用一个存储单元表示要跳转的目标地址。这个目标地址存放在主存中连续的字单元中的，低位字送IP寄存器，高位字送CS寄存器。  </p>
+<blockquote>
+<p>MOV WORD PTR [BX]，1000H<br>MOV WORD PTR [BX+2]，1500H<br>JMP FAR [BX]；转移到1500H:1000H  </p>
+</blockquote>
+<h4 id="条件转移指令JXX"><a href="#条件转移指令JXX" class="headerlink" title="条件转移指令JXX"></a>条件转移指令JXX</h4><p>基本格式：<br>JXX    LABEL     ；条件满足，发生转移：IP←IP＋位移量  ；条件不满足，顺序执行。<br>指定的条件XX如果成立，程序转移到由标号LABEL指定的目标地址去执行指令；否则程序将顺序执行下一条指令。<br>操作数LABEL是采用短转移，称为相对寻址方式。<br>JXX指令不影响标志，但要利用标志。根据利用的标志位不同分成以下几种情况。  </p>
+<ul>
+<li>测试标志位的JXX指令</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>指 令</th>
+<th>描 述</th>
+<th>条 件</th>
+<th>别 名</th>
+<th>相 反 指 令</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>JC</td>
+<td>如果进位位被置位则跳转</td>
+<td>进位标志＝1</td>
+<td>JB，JNAE</td>
+<td>JNC</td>
+</tr>
+<tr>
+<td>JNC</td>
+<td>如果进位位没有置位则跳转</td>
+<td>进位标志＝0</td>
+<td>JNB，JAE</td>
+<td>JC</td>
+</tr>
+<tr>
+<td>JZ</td>
+<td>如果0标志被置位则跳转</td>
+<td>0标志＝1</td>
+<td>JE</td>
+<td>JNZ</td>
+</tr>
+<tr>
+<td>JNZ</td>
+<td>如果0标志没有置位则跳转</td>
+<td>0标志＝0</td>
+<td>JNE</td>
+<td>JZ</td>
+</tr>
+<tr>
+<td>JS</td>
+<td>如果符号位被置位则跳转</td>
+<td>SF＝1</td>
+<td></td>
+<td>JNS</td>
+</tr>
+<tr>
+<td>JNS</td>
+<td>如果符号位没有被置位则跳转</td>
+<td>符号标志＝0</td>
+<td></td>
+<td>JS</td>
+</tr>
+<tr>
+<td>JO</td>
+<td>如果溢出标志置位则跳转</td>
+<td>溢出标志＝1</td>
+<td></td>
+<td>JNO</td>
+</tr>
+<tr>
+<td>JNO</td>
+<td>如果溢出标志没有置位则跳转</td>
+<td>溢出标志＝0</td>
+<td></td>
+<td>JO</td>
+</tr>
+<tr>
+<td>JP</td>
+<td>如果奇偶校验位被置位则跳转</td>
+<td>奇偶校验标志＝1</td>
+<td>JPE</td>
+<td>JNP</td>
+</tr>
+<tr>
+<td>JPE</td>
+<td>如果奇偶校验位为偶校验则跳转</td>
+<td>奇偶校验标志＝1</td>
+<td>JP</td>
+<td>JPO</td>
+</tr>
+<tr>
+<td>JNP</td>
+<td>如果奇偶校验位没有被置位则跳转</td>
+<td>奇偶校验标志＝0</td>
+<td>JPO</td>
+<td>JP</td>
+</tr>
+<tr>
+<td>JPO</td>
+<td>如果奇偶校验位为奇校验则跳转</td>
+<td>奇偶校验标志＝0</td>
+<td>JNP</td>
+<td>JPE</td>
+</tr>
+<tr>
+<td>JCXZ</td>
+<td>如果CX=0则跳转</td>
+<td>cx=0</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>例:如果 X&gt;50，转到TOO_HIGH；否则 |X-Y| → RESULT, 如果溢出转到 OVERFLOW。    </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">MOV  AX，X  </span><br><span class="line">CMP  AX，50  </span><br><span class="line">JG     TOO_HIGH   </span><br><span class="line">SUB  AX，Y  </span><br><span class="line">JO     OVERFLOW  </span><br><span class="line">JNS   NONNEG   </span><br><span class="line">NEG  AX</span><br><span class="line">NONNEG:     MOV  RESULT, AX  </span><br><span class="line">TOO_HIGH:   ……  </span><br><span class="line">OVERFLOW:  ……  </span><br></pre></td></tr></table></figure>
+</blockquote>
+<ul>
+<li>使用无符号数比较的JCC指令</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>指 令</th>
+<th>描 述</th>
+<th>条 件</th>
+<th>别 名</th>
+<th>相 反 指 令</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>JA</td>
+<td>如果超过(&gt;)则跳转</td>
+<td>进位标志＝0，0标志＝0</td>
+<td>JNBE</td>
+<td>JNA</td>
+</tr>
+<tr>
+<td>JNBE</td>
+<td>如果不低于或等于(不&lt;=)则跳转</td>
+<td>进位标志＝0，0标志＝0</td>
+<td>JA</td>
+<td>JBE</td>
+</tr>
+<tr>
+<td>JAE</td>
+<td>如果超过或等于(&gt;=)则跳转</td>
+<td>进位标志＝0</td>
+<td>JNC，JNB</td>
+<td>JNAE</td>
+</tr>
+<tr>
+<td>JNB</td>
+<td>如果不低于则跳转(不&lt;)</td>
+<td>进位标志＝0</td>
+<td>JNC，JAE</td>
+<td>JB</td>
+</tr>
+<tr>
+<td>JB</td>
+<td>如果低于(&lt;)则跳转</td>
+<td>进位标志＝1</td>
+<td>JC，JNAE</td>
+<td>JNB</td>
+</tr>
+<tr>
+<td>JNAE</td>
+<td>如果不超过或等于(不&gt;=)则跳转</td>
+<td>进位标志＝1</td>
+<td>JC，JB</td>
+<td>JAE</td>
+</tr>
+<tr>
+<td>JBE</td>
+<td>如果低于或等于(&lt;=)则跳转</td>
+<td>进位标志＝1或0标志＝1</td>
+<td>JNA</td>
+<td>JNBE</td>
+</tr>
+<tr>
+<td>JNA</td>
+<td>如果不超过(不&gt;)则跳转</td>
+<td>进位标志＝1或0标志＝1</td>
+<td>JBE</td>
+<td>JA</td>
+</tr>
+<tr>
+<td>JE</td>
+<td>如果相等(=)则跳转</td>
+<td>0标志=1</td>
+<td>JZ</td>
+<td>JNE</td>
+</tr>
+<tr>
+<td>JNE</td>
+<td>如果不相等(&lt;&gt;)则跳转</td>
+<td>0标志=0</td>
+<td>JNZ</td>
+<td>JE</td>
+</tr>
+</tbody></table>
+<ul>
+<li>使用有符号数比较的JCC指令</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>指 令</th>
+<th>描 述</th>
+<th>条 件</th>
+<th>别 名</th>
+<th>相 反 指 令</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>JG</td>
+<td>如果大于(&gt;)则跳转</td>
+<td>符号标志=溢出标志或0标志=0</td>
+<td>JNLE</td>
+<td>JNG</td>
+</tr>
+<tr>
+<td>JNLE</td>
+<td>如果小于或等于(&lt;=)则跳转</td>
+<td>符号标志=溢出标志或0标志=0</td>
+<td>JG</td>
+<td>JLE</td>
+</tr>
+<tr>
+<td>JGE</td>
+<td>如果大于或等于(&gt;=)则跳转</td>
+<td>符号标志=溢出标志</td>
+<td>JNL</td>
+<td>JGE</td>
+</tr>
+<tr>
+<td>JNL</td>
+<td>如果不小于(不&lt;)则跳转</td>
+<td>符号标志=溢出标志</td>
+<td>JGE</td>
+<td>JL</td>
+</tr>
+<tr>
+<td>JL</td>
+<td>如果小于(&lt;)则跳转</td>
+<td>符号标志&lt;&gt;溢出标志</td>
+<td>JNGE</td>
+<td>JNL</td>
+</tr>
+<tr>
+<td>JNGE</td>
+<td>如果大于或等于(&gt;=)跳转</td>
+<td>符号标志&lt;&gt;溢出标志</td>
+<td>JL</td>
+<td>JGE</td>
+</tr>
+<tr>
+<td>JLE</td>
+<td>如果小于或等于(&lt;=)跳转</td>
+<td>符号标志&lt;&gt;溢出标志或0标志=1</td>
+<td>JNG</td>
+<td>JNLE</td>
+</tr>
+<tr>
+<td>JNG</td>
+<td>如果不大于(不&gt;)则跳转</td>
+<td>符号标志&lt;&gt;溢出标志或0标志=1</td>
+<td>JLE</td>
+<td>JG</td>
+</tr>
+<tr>
+<td>JE</td>
+<td>如果等于(=)则跳转</td>
+<td>0标志=1</td>
+<td>JZ</td>
+<td>JNE</td>
+</tr>
+<tr>
+<td>JNE</td>
+<td>如果不等于(&lt;&gt;)则跳转</td>
+<td>0标志=0</td>
+<td>JNZ</td>
+<td>JE</td>
+</tr>
+</tbody></table>
+<h4 id="LOOP-amp-LOOPE-amp-LOOPNE"><a href="#LOOP-amp-LOOPE-amp-LOOPNE" class="headerlink" title="LOOP &amp; LOOPE &amp; LOOPNE"></a>LOOP &amp; LOOPE &amp; LOOPNE</h4><p><strong>循环指令LOOP</strong><br>语句格式： LOOP  短标号  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a:  ...循环体</span><br><span class="line">    loop a      ;循环执行a次循环体</span><br></pre></td></tr></table></figure>
+
+<p>执行过程：  </p>
+<ol>
+<li>(CX）＝（CX）-1（不改变任何标志位）  </li>
+<li>如果（CX）≠0，转向“标号”所指向的指令，否则，终止循环，执行该指令下面的指令。   </li>
+</ol>
+<blockquote>
+<p>例：记录字符串中的空格个数到 RESULT单元。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">            MOV   CX，COUNT            ；设置循环次数  </span><br><span class="line">            MOV   SI，OFFSET STRING  </span><br><span class="line">            XOR    BX，BX                       ；BX清0，用于记录空格数  </span><br><span class="line">            MOV   AL，20H                     ；空格的ASC码为20H  </span><br><span class="line">AGAIN:      CMP   AL，ES:[SI]  </span><br><span class="line">            JNZ      NEXT                             ；ZF&#x3D;0，非空格，转移  </span><br><span class="line">            INC       BX                                  ；ZF&#x3D;1，是空格，个数加1  </span><br><span class="line">NEXT:       INC     SI  </span><br><span class="line">            LOOP  AGAIN                     ；字符个数减1，不为0继续循环  </span><br><span class="line">            MOV   RESULT，BX            ；保存结果  </span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><strong>相等/为零循环指令  LOOPE/LOOPZ</strong><br>语句格式： LOOPE/ LOOPZ  短标号  </p>
+<p>执行过程：<br>1）（CX）＝（CX）-1（不改变任何标志位）<br>2）如果CX≠0且ZF=1，则程序转到循环体的第一条指令，否则，程序将执行该循环指令下面的指令。   </p>
+<p><strong>不相等/不为零循环指令LOOPNE/LOOPNZ</strong><br>语句格式： LOOPNE/ LOOPNZ  短标号<br>执行过程：  </p>
+<ol>
+<li>（CX）＝（CX）-1（不改变任何标志位）  </li>
+<li>如果CX≠0且ZF=0，则程序转到循环体的第一条指令，否则，程序将执行该循环指令下面的指令。   </li>
+</ol>
+<h3 id="处理机控制和杂项指令"><a href="#处理机控制和杂项指令" class="headerlink" title="处理机控制和杂项指令"></a>处理机控制和杂项指令</h3><h4 id="标志处理指令"><a href="#标志处理指令" class="headerlink" title="标志处理指令"></a>标志处理指令</h4><h5 id="进位位置0指令-CLC"><a href="#进位位置0指令-CLC" class="headerlink" title="进位位置0指令 CLC"></a>进位位置0指令 CLC</h5><p>CF ← 0  </p>
+<h5 id="进位位求反指令-CMC"><a href="#进位位求反指令-CMC" class="headerlink" title="进位位求反指令 CMC"></a>进位位求反指令 CMC</h5><p>CF ← ~CF  </p>
+<h5 id="进位位置1指令-STC"><a href="#进位位置1指令-STC" class="headerlink" title="进位位置1指令   STC"></a>进位位置1指令   STC</h5><p>CF ← 1  </p>
+<h5 id="方向标志位置0指令-CLD"><a href="#方向标志位置0指令-CLD" class="headerlink" title="方向标志位置0指令    CLD"></a>方向标志位置0指令    CLD</h5><p>DF ← 0  </p>
+<h5 id="方向标志位置1指令-STD"><a href="#方向标志位置1指令-STD" class="headerlink" title="方向标志位置1指令 STD"></a>方向标志位置1指令 STD</h5><p>DF ← 1</p>
+<h5 id="中断标志位置0指令-CLI"><a href="#中断标志位置0指令-CLI" class="headerlink" title="中断标志位置0指令   CLI"></a>中断标志位置0指令   CLI</h5><p>IF ← 0 </p>
+<h5 id="中断标志位置1指令-STI"><a href="#中断标志位置1指令-STI" class="headerlink" title="中断标志位置1指令  STI"></a>中断标志位置1指令  STI</h5><p>IF ← 1  </p>
+<h5 id="标志置位指令-SETX"><a href="#标志置位指令-SETX" class="headerlink" title="标志置位指令 SETX"></a>标志置位指令 SETX</h5><p>SETBE/SETNA 小于等于/不大于 CF=1 或 ZF=1<br>SETE/SETZ 等于/为零 ZF=1<br>SETNE/SETNZ 不等于/不为零 ZF=0<br>SETG/SETNLE 大于/不小于等于(带符号) SF=0 或 ZF=0<br>SETGE/SETNL 大于等于/不小于(带符号) SF=0<br>SETL/SETNGE 小于/不大于等于(带符号) SF=1<br>SETLE/SETNG 小于等于/不大于(带符号) SF=1 或 ZF=1<br>SETC 有进位或借位 CF=1<br>SETNC 无进位或借位 CF=0<br>SETO 有溢出 OF=1<br>SETNO 无溢出 OF=0<br>SETP/SETPE 低8位1的个数为偶数 PF=1<br>SETNP/SETPO 低8位1的个数为奇数 PF=0<br>SETS 结果为负 SF=1<br>SETNS 结果为正 SF=0  </p>
+<p>其中在CE中SETNC指令相当于SETNE，一般都会把SETNE写成SETNC。 例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CMP EAX,EBX</span><br><span class="line">SETNC CL &#x2F;&#x2F;如果EAX不&#x3D;EBX，那么CL&#x3D;01，否则CL&#x3D;00</span><br><span class="line">CMP EAX,ECX</span><br><span class="line">SETE [20401000] &#x2F;&#x2F;如果EAX&#x3D;ECX，那么0x20401000处&#x3D;01，否则&#x3D;00</span><br><span class="line">&#x2F;&#x2F;注意目标为地址时，不需要用 XXXX PTR 来区分数据的操作长度。</span><br></pre></td></tr></table></figure>
+
+<p>同样在修改时，如果不知道前面判定的结果会是什么，那么可以直接把<br>SETE AL改成MOV AL,01或者是MOV AL,00这两种指令，来看游戏中的实际影响。<br>SETE AL指令占3字节，MOV AL,01指令占2字节，再补上一个NOP指令，正好可以替换</p>
+<h4 id="CPU控制类指令"><a href="#CPU控制类指令" class="headerlink" title="CPU控制类指令"></a>CPU控制类指令</h4><h5 id="空操作指令-NOP（No-Operation-Instruction）"><a href="#空操作指令-NOP（No-Operation-Instruction）" class="headerlink" title="空操作指令   NOP（No Operation Instruction）"></a>空操作指令   NOP（No Operation Instruction）</h5><p>该指令不执行任何操作，但占用一个字节存储单元，空耗一个指令执行周期，常用于程序调试。<br>例如：在需要预留指令空间时用NOP填充，代码空间多余时也可以用NOP填充，还可以用NOP实现软件延时。<br>事实上，NOP和   XCHG AL，AL    的指令代码一样。  </p>
+<h5 id="暂停指令-HLT（Enter-Halt-State-Instruction）"><a href="#暂停指令-HLT（Enter-Halt-State-Instruction）" class="headerlink" title="暂停指令   HLT（Enter Halt State Instruction）"></a>暂停指令   HLT（Enter Halt State Instruction）</h5><p>在等待中断信号时，该指令使CPU处于暂停工作状态，CS:IP指向下一条待执行的指令。当产生了中断信号，CPU把CS和IP压栈，并转入中断处理程序。在中断处理程序执行完后，中断返回指令IRET弹出IP和CS，并唤醒CPU执行下条指令。  </p>
+<h5 id="换码指令ESC"><a href="#换码指令ESC" class="headerlink" title="换码指令ESC"></a>换码指令ESC</h5><p>把浮点指令交给浮点处理器执行。提高系统浮点运算能力的协处理器8087指令是与8086的整数指令组合在一起的，8086主存中存储8087的操作码及其所需的操作数。当8086发现是一条浮点指令时，就利用ESC指令将浮点指令交给8087执行。实际编写程序时，一般采用易于理解的浮点指令助记符格式。  </p>
+<blockquote>
+<p>ESC 6，[SI]               ；实数除法指令：FDIV dword ptr [SI]<br>ESC 20H，AL；整数加法指令：FADD ST(0),ST  </p>
+</blockquote>
+<h5 id="等待指令-WAIT（Put-Processor-in-Wait-State-Instruction）"><a href="#等待指令-WAIT（Put-Processor-in-Wait-State-Instruction）" class="headerlink" title="等待指令  WAIT（Put Processor in Wait State Instruction）"></a>等待指令  WAIT（Put Processor in Wait State Instruction）</h5><p>该指令使CPU处于等待状态，直到协处理器（Coprocessor）完成运算，并用一个重启信号唤醒CPU为止。该指令执行不影响任何标志位。<br>8086就是利用WAIT指令和测试引脚实现与8087同步运行的。浮点指令经由8086CPU处理发往8087，并与8086本身的整数指令在同一个指令序列；而8087执行浮点指令较慢，所以8086必须与8087保持同步。  </p>
+<h5 id="封锁数据指令LOCK（Lock-Bus-Instruction）"><a href="#封锁数据指令LOCK（Lock-Bus-Instruction）" class="headerlink" title="封锁数据指令LOCK（Lock Bus Instruction）"></a>封锁数据指令LOCK（Lock Bus Instruction）</h5><p>这是一个指令前缀，可放在任何指令前。这个前缀使得在这个指令执行时间内，8086 处理器的封锁输出引脚有效，即把总线封锁，使别的控制器不能控制总线；直到该指令执行完后，总线封锁解除。  </p>
+<h3 id="子程序"><a href="#子程序" class="headerlink" title="子程序"></a>子程序</h3><ul>
+<li>当主程序（调用程序）需要执行这个功能时，采用 CALL 调用指令转移到该子程序的起始处执行；  </li>
+<li>当运行完子程序功能后，采用 RET 返回指令回到主程序继续执行。  </li>
+</ul>
+<h4 id="CALL"><a href="#CALL" class="headerlink" title="CALL"></a>CALL</h4><p>类似JMP指令， CALL指令分成4种类型：<br>CALL label     ；段内调用、直接寻址（段内直接调用）<br>CALL r16/m16；段内调用、间接寻址（段内间接调用）<br>CALL far ptr label；段间调用、直接寻址（段间直接调用）<br>CALL dword ptr mem；段间调用、间接寻址（段间间接调用）  </p>
+<p>但不同于JMP指令，CALL指令需要保存返回地址：<br><strong>段内调用——入栈偏移地址IP</strong><br>SP←SP－2，SS:SP←IP  </p>
+<p><strong>段间调用——入栈偏移地址IP和段地址CS</strong><br>SP←SP－2，SS:SP←IP；<br>SP←SP－2，SS:SP←CS。  </p>
+<h5 id="段内直接调用"><a href="#段内直接调用" class="headerlink" title="段内直接调用"></a>段内直接调用</h5><p>格        式：CALL　DST<br>执行步骤：  </p>
+<ol>
+<li>将子程序的返回地址存入堆栈，以便子程序返回使用。  <ol>
+<li>（SP）←SP - 2；  </li>
+<li>（SP）+1,（SP）←IP  </li>
+</ol>
+</li>
+<li>转移到子程序入口地址去继续执行子程序。指令中的DST在汇编格式指令作用子程序入口地址的符号地址（标号）。在机器语言中，它是一个16位的偏移量。即： （IP）←IP+ D16  </li>
+</ol>
+<p>注：段内调用只改变IP，不改变CS的值。  </p>
+<h5 id="段内间接调用"><a href="#段内间接调用" class="headerlink" title="段内间接调用"></a>段内间接调用</h5><p>格  式：CALL　DST<br>此指令的执行步骤和段内直接调用大致相同，主要区别是子程序的入口地址DST的寻址方式不同而已。它可以是寄存器操作数和各种寻址方式的存储器操作数，当然不允许是立即数和段寄存器操作数。  </p>
+<blockquote>
+<p>例如：<br>CALL  BX                      ；BX的内容是子程序的偏移量<br>CALL  word ptr [BX]   ；BX所指内存字单元的值是子           程序的偏移量   </p>
+</blockquote>
+<h5 id="段间直接调用"><a href="#段间直接调用" class="headerlink" title="段间直接调用"></a>段间直接调用</h5><p>格         式：CALL　DST<br>IP ←偏移地址（指令的第2、3字节）；<br>CS ←段地址（指令的第4、5字节）；<br>执行操作：  </p>
+<ol>
+<li>SP←SP - 2；  (SP）+1,（SP）←CS ；  </li>
+<li>SP←SP - 2；  (SP）+1,（SP）←IP ；  </li>
+</ol>
+<h5 id="段间直接调用-1"><a href="#段间直接调用-1" class="headerlink" title="段间直接调用"></a>段间直接调用</h5><p>格         式：CALL　DST<br>IP ←（EA）；<br>CS ←（EA+2）；<br>执行操作：  </p>
+<ol>
+<li>SP←SP - 2；      （SP）+1,（SP）←CS ；  </li>
+<li>SP←SP - 2；      （SP）+1,（SP）←IP ；<br>此指令的执行步骤和段间直接调用大致相同，主要区别是子程序的入口地址DST的寻址方式不同而已。它可以是寄存器操作数和各种寻址方式的存储器操作数，也即由各种寻址方式形成的有效地址EA和EA+1两个单元内容送入IP，EA+2和EA+3两个单元内容送入CS。  </li>
+</ol>
+<blockquote>
+<p>例如：<br>CALL  dword ptr [BX] ；BX所指内存双字单元的值是子程序的偏移量和段值   </p>
+</blockquote>
+<h4 id="RET"><a href="#RET" class="headerlink" title="RET"></a>RET</h4><h5 id="段内近返回：RET"><a href="#段内近返回：RET" class="headerlink" title="段内近返回：RET"></a>段内近返回：RET</h5><p>执行操作：<br>（IP ）← （SP）+1,（SP）<br>（SP）← SP + 2<br>将返回地址赋值给IP</p>
+<h5 id="段内带立即数近返回：RET-EXP"><a href="#段内带立即数近返回：RET-EXP" class="headerlink" title="段内带立即数近返回：RET  EXP"></a>段内带立即数近返回：RET  EXP</h5><p>RET可以带有一个立即数，堆栈指针SP将增加，即SP←SP+EXP。这个特点使得程序可以方便地废除若干执行CALL指令以前入栈参数。  </p>
+<h5 id="段间远返回：RET"><a href="#段间远返回：RET" class="headerlink" title="段间远返回：RET"></a>段间远返回：RET</h5><p>执行操作：<br>（IP） ← （SP）+1,（SP）<br>（SP）←（SP） + 2<br>（CS）← （SP）+1,（SP）<br>（SP）←（SP） + 2  </p>
+<h5 id="段间带立即数远返回：RET-EXP（同段内带立即数返回）"><a href="#段间带立即数远返回：RET-EXP（同段内带立即数返回）" class="headerlink" title="段间带立即数远返回：RET  EXP（同段内带立即数返回）"></a>段间带立即数远返回：RET  EXP（同段内带立即数返回）</h5><h3 id="中断"><a href="#中断" class="headerlink" title="中断"></a>中断</h3><h4 id="中断源"><a href="#中断源" class="headerlink" title="中断源"></a>中断源</h4><p>引起中断的原因或能发出中断申请的来源，称为中断源。<br>通常中断源有以下4种：<br>(1)  输入/输出设备<br>(2) 实时时钟<br>(3) 故障源<br>(4) 为调试程序而设置的中断源  </p>
+<h4 id="内部中断-amp-硬件中断"><a href="#内部中断-amp-硬件中断" class="headerlink" title="内部中断&amp;硬件中断"></a>内部中断&amp;硬件中断</h4><h5 id="内部中断"><a href="#内部中断" class="headerlink" title="内部中断"></a>内部中断</h5><p>内部中断简称内中断，又称软件中断。它不需要外部硬件支持。并且不受中断标志位状态的影响。8086/8088内部中断有以下5种：  </p>
+<ol>
+<li>除数为０中断——类型0中断  </li>
+<li>溢出中断——类型4中断  </li>
+<li>单步中断——类型1中断  </li>
+<li>断点中断——类型3中断  </li>
+<li>中断指令——指令INT n中断  </li>
+</ol>
+<h5 id="硬件中断"><a href="#硬件中断" class="headerlink" title="硬件中断"></a>硬件中断</h5><p>来自处理机的外条件,所以又称外中断.硬件中断主要有两种来源——非屏蔽中断NMI和可屏蔽中断INTR。  </p>
+<ul>
+<li>非屏蔽中断NMI。非屏蔽中断来源于三方：  <ul>
+<li>系统板的RAM在读写时产生奇偶校验错；  </li>
+<li>I/O通道中的扩展选件出现奇偶校验错；  </li>
+<li>协处理器8087的异常状态产生的中断。  </li>
+</ul>
+</li>
+<li>可屏蔽中断INTR。由外部设备通过一片8259A产生的中断请求。  </li>
+</ul>
+<p>从外设发出的中断请求到cpu相应中断，用两个控制条件起决定作用：  </p>
+<ul>
+<li>外设的中断请求是否被屏蔽  </li>
+<li>cpu是否允许相应中断。  <ul>
+<li>STI——开中断指令<br>将标志寄存器中的中断标志位IF置1，允许CPU响应来自INTR引脚的中断请求  </li>
+<li>CLI——关中断指令<br>将标志寄存器中的中断标志位IF清0，使CPU不响应来自INTR引脚的中断请求  </li>
+</ul>
+</li>
+</ul>
+<h4 id="中断向量表"><a href="#中断向量表" class="headerlink" title="中断向量表"></a>中断向量表</h4><p>(1) 中断向量表和中断服务程序<br>中断向量表是一个特殊的线性表，它保存着系统所有中断服务程序的入口地址（偏移量和段地址）。<br>在微机系统中，该向量表有256个元素（0~0FFH），每个元素占4个字节，总共1K字节。<br>“中断偏移量”和“中断段地址”是指该中断服务程序入口单元的“偏移量”和“段地址”。</p>
+<table>
+<thead>
+<tr>
+<th>地址</th>
+<th>中断向量表</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>000H</td>
+<td>类型0的IP</td>
+</tr>
+<tr>
+<td>002H</td>
+<td>类型0的CS</td>
+</tr>
+<tr>
+<td>004H</td>
+<td>类型1的IP</td>
+</tr>
+<tr>
+<td>006H</td>
+<td>类型1的CS</td>
+</tr>
+<tr>
+<td>…H</td>
+<td>类型x的CS</td>
+</tr>
+<tr>
+<td>3FCH</td>
+<td>类型255的IP</td>
+</tr>
+<tr>
+<td>3FEH</td>
+<td>类型255的CS</td>
+</tr>
+</tbody></table>
+<p><strong>中断类型号的获取</strong><br>凡与0～5号中断类型号对应的中断请求，一旦被响应，系统将自动提供中断类型号，并自动地转到中断处理程序中去。<br>对于可屏蔽的外部中断INTR，则是经过中断控制器8259，在CPU中断响应的第二个周期，通过中断响应信号，将对应的中断类型号送至数据总线。<br>内部中断是通过INT n指令将中断号直接发送给CPU。  </p>
+<p>用户可以为保留的中断类型号扩充自己的需要的中断功能，对新增加的中断功能要在中断向量表中建立相应的中断向量。  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">用指令来为中断类型N设置中断向量：  </span><br><span class="line">CODE     SEGMENT  </span><br><span class="line">MAIN：  </span><br><span class="line">                  MOV  AX,  0  </span><br><span class="line">                  MOV  DS,  AX                 ；DS指向矢量表的段地址  </span><br><span class="line">                  MOV  SI,  n*4  </span><br><span class="line">                  MOV  AX,  OFFSET  INTSP  </span><br><span class="line">                  MOV  [SI],  AX  </span><br><span class="line">                  MOV  AX,  SEG  INTSP  </span><br><span class="line">                  MOV  [SI+2],  AX  </span><br><span class="line">    INTSP     PROC  FAR  </span><br><span class="line">              STI                           ；开中断  </span><br><span class="line">               …  </span><br><span class="line">              IRET                          ；中断返回  </span><br><span class="line">    INTSP     ENDP  </span><br><span class="line">    CODE     ENDS</span><br></pre></td></tr></table></figure>
+
+<h4 id="中断向量"><a href="#中断向量" class="headerlink" title="中断向量"></a>中断向量</h4><h5 id="取中断向量"><a href="#取中断向量" class="headerlink" title="取中断向量"></a>取中断向量</h5><p>预置AH=35H, AL=中断类型号<br>执行INT 21H<br>——把类型号为AL的中断向量取出到ES:BX中  </p>
+<h5 id="设置中断向量"><a href="#设置中断向量" class="headerlink" title="设置中断向量"></a>设置中断向量</h5><p>预置AH=25H, AL=中断类型号,DS:DX=中断向量<br>执行INT 21H<br>——把DS:DX指向的中断向量放置到中断向量表中类型号为AL的中断向量处  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">CODE     SEGMENT  </span><br><span class="line">MAIN：  </span><br><span class="line">    MOV   AL,  N  </span><br><span class="line">    MOV   AH,35H                </span><br><span class="line">    INT      21H                ;取原来的中断向量  </span><br><span class="line">    PUSH   ES                  ；原中断向量段地址  </span><br><span class="line">    PUSH   BX                 ；原中断向量的偏移地址  </span><br><span class="line">    PUSH    DS  </span><br><span class="line">    MOV  AX,  SEG  INTSP  </span><br><span class="line">    MOV  DS,  AX  </span><br><span class="line">    MOV  DX,  OFFSET  INTSP  </span><br><span class="line">    MOV   AL,N  </span><br><span class="line">    MOV    AH,25H  </span><br><span class="line">    INT      21H       ；在中断向量表中设置新的中断向量  </span><br><span class="line">    POP     DS  </span><br><span class="line">    POP     DX  </span><br><span class="line">    POP     DS  </span><br><span class="line">    MOV          AL,N  </span><br><span class="line">    MOV          AH,25H  </span><br><span class="line">    INT             21H           ；恢复原来的中断向量  </span><br><span class="line">    RET  </span><br><span class="line">    INTSP     PROC  FAR  </span><br><span class="line">              STI                           ；开中断  </span><br><span class="line">               …  </span><br><span class="line">              IRET                          ；中断返回  </span><br><span class="line">    INTSP     ENDP  </span><br><span class="line">CODE     ENDS</span><br></pre></td></tr></table></figure>
+
+<h4 id="DOS功能调用"><a href="#DOS功能调用" class="headerlink" title="DOS功能调用"></a>DOS功能调用</h4><ul>
+<li><p>单字符输入（1号调用）<br>格式：MOV    AH，1<br>　         INT    21H<br>功能：从键盘输入字符的ASCII码送入寄存器AL中，并送显示器显示。</p>
+</li>
+<li><p>单字符显示（2号调用）<br>格式：MOV  DL，待显示字符的ASCII码<br>　        MOV  AH，2<br>　        INT   21H<br>功能：将DL寄存器中的字符送显示器显示.  </p>
+</li>
+<li><p>打印输出（5号调用）<br>格式：MOV    DL，待打印字符的ASCII码<br>　        MOV    AH，5<br>　        INT    21H<br>功能：将DL寄存器中的字符送打印机打印。  </p>
+</li>
+<li><p>结束调用（4CH号调用）<br>格式：MOV    AH，4CH<br>　        INT    21H<br>功能：终止当前程序并返回调用程序。  </p>
+</li>
+<li><p>显示字符串（9号调用）<br>格式：LEA    DX，待显示字符串首偏移地址<br>　       MOV    AH，9<br>　         INT    21H<br>功能：将当前数据区中以‘＄’结尾的字符串送显示器显示。   </p>
+</li>
+<li><p>字符串输入（10号调用）<br>格式：LEA    DX，缓冲区首偏移地址  </p>
+<pre><code>MOV    AH，10  
+INT    21H  </code></pre><p>功能：从键盘上输入一字符串到用户定义的输入缓冲区中，并送显示器显示。  </p>
+</li>
+</ul>
+<h4 id="中断指令INT"><a href="#中断指令INT" class="headerlink" title="中断指令INT"></a>中断指令INT</h4><p>一般格式：INT    TYPE<br>其中：立即数TYPE是一个0~0FFH范围内的整数。  </p>
+<p>指令执行的步骤：  </p>
+<ol>
+<li>把标志寄存器压栈，清除标志位IF和TF；  </li>
+<li>把代码段寄存器CS和指令指针寄存器IP的内容压栈；   </li>
+<li>（IP） ←（TYPE<em>4），（CS） ←（TYPE</em>4+2）  </li>
+</ol>
+<h4 id="溢出指令-INTO"><a href="#溢出指令-INTO" class="headerlink" title="溢出指令 INTO"></a>溢出指令 INTO</h4><p>当标志位OF为1时，引起中断。<br>该指令的格式如下： INTO<br>该指令影响标志位：IF和TF。   </p>
+<h4 id="中断返回指令-IRET"><a href="#中断返回指令-IRET" class="headerlink" title="中断返回指令 IRET"></a>中断返回指令 IRET</h4><p>当一个中断服务程序执行完毕时，CPU将恢复被中断的现场，返回到引起中断的程序中。为了实现此项功能，指令系统提供了一条专用的中断返回指令。  </p>
+<p>指令格式：  IRET   </p>
+<p>该指令执行的过程基本上是INT指令的逆过程，具体如下：   </p>
+<ol>
+<li>从栈顶弹出内容送入IP；   </li>
+<li>再从新栈顶弹出内容送入CS；   </li>
+<li>再从新栈顶弹出内容送入标志寄存器；   </li>
+</ol>
+<h2 id="汇编程序"><a href="#汇编程序" class="headerlink" title="汇编程序"></a>汇编程序</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">segment .data </span><br><span class="line">msg db &quot;Hello, world!&quot;,10 </span><br><span class="line">len equ $ - msg </span><br><span class="line"></span><br><span class="line">segment .text </span><br><span class="line">global _start </span><br><span class="line"></span><br><span class="line">_start: </span><br><span class="line">    mov eax,4 </span><br><span class="line">    mov ebx,1 </span><br><span class="line">    mov ecx,msg </span><br><span class="line">    mov edx,len </span><br><span class="line">    int 80h </span><br><span class="line"></span><br><span class="line">    mov eax,1 </span><br><span class="line">    mov ebx,0 </span><br><span class="line">    int 80h</span><br></pre></td></tr></table></figure>
+
+<h3 id="伪指令"><a href="#伪指令" class="headerlink" title="伪指令"></a>伪指令</h3><h4 id="数据定义伪指令"><a href="#数据定义伪指令" class="headerlink" title="数据定义伪指令"></a>数据定义伪指令</h4><p>伪指令由编译器来执行, 编译器根据伪指令来进行相关的编译工作<br>[变量名]   助记符   表达式 [ ,表达式, … ]  [ ; 注释]   </p>
+<ul>
+<li><p>助记符：DB DW DD DF DQ DT  </p>
+<blockquote>
+<p>例<br>DATA_BYTE  DB  10,4,10H,?<br>DATA_WORD  DW  100,100H,-5,?  </p>
+</blockquote>
+</li>
+<li><p>表达式: 可以是常数、寄存器、标号、变量或由多个表达式组成</p>
+<ol>
+<li><p>算数表达式: +, -, *, /, MOD</p>
+<blockquote>
+<p>例子  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">VIDEO_BUF  DB  25*80*2  DUP(?)  </span><br><span class="line"></span><br><span class="line">ARRAY   DW   1,2,3,4h,5,6,7  </span><br><span class="line">ARYEND  DW   ?  </span><br><span class="line">MOV  CX, (ARYEND-ARRAY)&#x2F;2  </span><br><span class="line"></span><br><span class="line">ADD  AX, ARRAY+(6-1)*2   </span><br><span class="line">MOV  AX, BX+1           </span><br><span class="line"></span><br><span class="line">ARRAY   DW   1,2,3,4h,5,6,7  </span><br><span class="line">ARYEND  DW   ?  </span><br><span class="line">MOV  CX, (ARYEND-ARRAY)&#x2F;2  </span><br><span class="line">&#96;&#96;&#96; </span><br><span class="line">   2. 逻辑和移位操作符： AND、OR、XOR、NOT、SHL、SHR  </span><br></pre></td></tr></table></figure>
+<p>OPR1  EQU  25   ；00011001B<br>OPR2  EQU  7    ；00000111B  </p>
+<p>AND  AX, OPR1 AND OPR2  </p>
+<p>MOV  AX,  0FFFFH SHL 2</p>
+<p>IN    AL, PORT_VAL            ;61H<br>OUT   PORT_VAL AND 0FEH, AL   ;60H  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">3. 关系操作符： EQ、NE、LT、LE、GT、GE  </span><br><span class="line">计算结果为逻辑值：真   0FFFFH  假   0000H  </span><br><span class="line">MOV FID, (OFFSET Y - OFFSET X) LE 128  </span><br><span class="line">4.  数值回送操作符： OFFSET、SEG、TYPE、 LENGTH、SIZE </span><br><span class="line">OFFSET &#x2F;  SEG      变量 &#x2F; 标号  </span><br><span class="line">功能：回送变量或标号的偏址 &#x2F; 段址  </span><br><span class="line">TYPE      变量 &#x2F; 标号 &#x2F; 常数  </span><br><span class="line">DB DW DD DF DQ DT   NEAR FAR   常数  </span><br><span class="line">LENGTH   变量  </span><br><span class="line">功能：回送由DUP定义的变量的单元数，其它情况回送1  </span><br><span class="line">SIZE   变量  </span><br><span class="line">功能：LENGTH * TYPE </span><br></pre></td></tr></table></figure>
+<p>ARRAY   DW   100 DUP (?)<br>TABLE   DB   ‘ABCD’  </p>
+</blockquote>
+<p>ADD  SI,  TYPE    ARRAY   ;  ADD  SI, 2<br>ADD  SI,  TYPE    TABLE   ;  ADD  SI, 1<br>MOV  CX,  LENGTH  ARRAY   ;  MOV  CX, 100<br>MOV  CX,  LENGTH  TABLE   ;  MOV  CX, 1<br>MOV  CX,  SIZE    ARRAY   ;  MOV  CX, 200<br>MOV  CX,  SIZE    TABLE   ;  MOV  CX, 1  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">5. 属性操作符： PTR、段操作符、SHORT、 THIS、HIGH、LOW、HIGHWORD、LOWWORD  </span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>类型 PTR 表达式   MOV  WORD PTR [BX], 5<br>段操作符          MOV  ES: [BX], AL<br>SHORT  标号      JMP  SHORT  NEXT  </p>
+<p>THIS  类型       TA   EQU  THIS  BYTE  </p>
+<pre><code>TD   DW   1234H  
+NEXT EQU  THIS  FAR  
+     MOV  AX,2  </code></pre><p>HIGH和LOW         CONS  EQU  1234H  </p>
+<pre><code>MOV   AH,  HIGH  CONS  
+MOV   AL,  LOW   CONS   </code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 符号定义伪指令</span><br><span class="line"></span><br><span class="line">##### EQU伪指令  </span><br><span class="line">格式：标识符	EQU	表达式  </span><br><span class="line">功能：用表达式来定义标识符，即使得标识符等同于表达式。  </span><br><span class="line">例  COUNT	EQU	8   ；定义一个符号常量COUNT，使其等同于8  </span><br><span class="line">ADDR	EQU	SS:[BX][SI]	；使得ADDR等同于地址表达式SS:[BX][SI]   </span><br><span class="line"></span><br><span class="line">##### ＝伪指令  </span><br><span class="line">格式：标识符         &#x3D;	表达式  </span><br><span class="line">功能：与EQU伪指令基本相同，但&#x3D;伪指令可对同一标识符重新定义。  </span><br><span class="line">例　COUNT&#x3D;7；定义COUNT等于7  </span><br><span class="line">COUNT&#x3D;COUNT+1	；重新定义COUNT等于8  </span><br><span class="line"></span><br><span class="line">##### LABEL伪指令  </span><br><span class="line">格式：标识符	LABEL	类型  </span><br><span class="line">功能：定义标识符的类型。如果标识符是变量，则类型可以是BYTE、WORD、DWORD。如果标识符是标号，则类型可以是FAR、NEAR。  </span><br><span class="line">例	BYTE\_ARRAY	LABEL	BYTE  </span><br><span class="line">WORD\_ARRAY	DW	50 DUP(?)  </span><br><span class="line"></span><br><span class="line">#### 段定义伪指令</span><br><span class="line"></span><br><span class="line">##### segment&amp;ends</span><br><span class="line">&#96;&#96;&#96;asm</span><br><span class="line">XXX segment</span><br><span class="line">...</span><br><span class="line">XXX ends </span><br></pre></td></tr></table></figure>
+<p>segment和ends是一对成对使用的伪指令, 用于定义一个段, 如例子中的codesg</p>
+</blockquote>
+</li>
+</ol>
+</li>
+</ul>
+<h5 id="end"><a href="#end" class="headerlink" title="end"></a>end</h5><p>end是一个汇编程序的结束标记</p>
+<h5 id="assume"><a href="#assume" class="headerlink" title="assume"></a>assume</h5><p>将某段寄存器与程序中的一个用segment…ends定义的段相关联</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">assume cs:codesg                ;将cs与代码段codesg相关联</span><br></pre></td></tr></table></figure>
+<p>格式１：ASSUME 段寄存器名：段名、组名[，段寄存器名：段名/组名…]<br>功能：该伪指令用于通知汇编程序，CS、DS、SS或ES被设定为哪些段的段地址寄存器，从而在汇编时能知道语句中引用的变量、标号或表达式所对应的段。<br>格式２：ASSUME 段寄存器：NOTHING<br>格式3：ASSUME NOTHING<br>这两种格式取消前面由ASSUME指定的段寄存器与段或组的联系。  </p>
+<h5 id="段组语句GROUP"><a href="#段组语句GROUP" class="headerlink" title="段组语句GROUP"></a>段组语句GROUP</h5><p>格式：组名　GROUP 段名[,…]<br>功能 :GROUP伪指令可以把模块中若干不同的段集合成一个组，并赋予一个组名，使它们都装在同一物理段（64KB）中。  </p>
+<h5 id="ORG伪指令"><a href="#ORG伪指令" class="headerlink" title="ORG伪指令"></a>ORG伪指令</h5><p>格式１：ORG 表达式<br>格式2：ORG $+表达式<br>其中表达式的值必须为常量。<br>功能：告知汇编程序，使其后的指令或数据从表达式的值所指定的偏移地址开始存放。  </p>
+<h5 id="程序计数器"><a href="#程序计数器" class="headerlink" title="程序计数器$"></a>程序计数器$</h5><p>在汇编程序对源程序汇编的过程中，使用地址计数器来保存当前正在汇编指令的偏移地址。当开始汇编或每一段开始时，将地址计数器初始化为０，以后汇编过程中，每处理一条指令就增加一个值，此值为该指令所需字节数。地址计数器的值用$表示，汇编语言允许用户直接用$引用地址计数器的值。  </p>
+<h5 id="过程定义伪指令-PROC"><a href="#过程定义伪指令-PROC" class="headerlink" title="过程定义伪指令 PROC"></a>过程定义伪指令 PROC</h5><blockquote>
+<p>一个过程由伪指令PROC和ENDP来定义  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">格式：  </span><br><span class="line">    过程名	PROC  [类型]  </span><br><span class="line">       		┇；过程体  </span><br><span class="line">      	 RET  </span><br><span class="line">    过程名	ENDP  </span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>其中过程名是为过程所起的名称，不能省略，过程的类型由FAR（远过程，为段间调用）和NEAR（近过程，在本段内调用）来确定。如果缺省类型，则该过程就默认为近过程。ENDP表示过程结束。   </p>
+<h3 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h3><h4 id="计数控制法-循环次数已知的循环控制方法"><a href="#计数控制法-循环次数已知的循环控制方法" class="headerlink" title="计数控制法(循环次数已知的循环控制方法)"></a>计数控制法(循环次数已知的循环控制方法)</h4><p>当循环次数已知时，通常使用计数控制法。  </p>
+<ul>
+<li><p>先将循环次数的初值N送入循环计数器，然后，每循环一次，循环计数器减1，直至循环计数器中的内容为0时结束循环。   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">        MOV	CX，N   ；置初始值部分  </span><br><span class="line">        ┇  </span><br><span class="line"></span><br><span class="line">LAB:			         </span><br><span class="line">        ┇ 		；工作部分  </span><br><span class="line">        ┇		；修改部分  </span><br><span class="line">DEC  CX				；控制部分  </span><br><span class="line">JNZ  	LAB</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>先将循环次数初值N的负数-N送入循环计数器，然后每循环一次，计数器加1，直至循环计数器的内容为0时结束循环。   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">        MOV	CX，-N	；置初始值部分  </span><br><span class="line">		┇  </span><br><span class="line">LAB:	  </span><br><span class="line">        ┇		；工作部分  </span><br><span class="line">        ┇		；修改部分  </span><br><span class="line">        INC	CX			；控制部分  </span><br><span class="line">        JNZ	LAB</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>先将0送入循环计数器中，然后每循环一次，计数器加1，直至循环计数器与循环次数N相等时退出循环。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">        MOV	CX，0	             ；置初始值部分  </span><br><span class="line">		┇  </span><br><span class="line">LAB:	  </span><br><span class="line">        ┇		 ；工作部分  </span><br><span class="line">        ┇		  </span><br><span class="line">        INC	CX 			 ；修改部分  </span><br><span class="line">        CMP	CX，N             ；控制部分  </span><br><span class="line">  </span><br><span class="line">JNZ  	LAB</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="多重循环"><a href="#多重循环" class="headerlink" title="多重循环"></a>多重循环</h4><blockquote>
+<p><strong>单充循环</strong><br>例7.2 已知有几个元素存放在以BUF为首址的字节存贮区中，试统计其中正数的个数，并存放在随后的NUM字节单元中。  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">DATA  SEGMENT  </span><br><span class="line">BUF	DB 23,56,-6,89,52,-89,-63,5,-12,52,0,89,-8  </span><br><span class="line">NUM  DB	0  </span><br><span class="line">DATA  ENDS  </span><br><span class="line">CODE  SEGMENT  </span><br><span class="line">  ASSUME    CS:CODE,DS:DATA  </span><br><span class="line">MAIN  PROC      FAR  </span><br><span class="line">START:  PUSH	DS  </span><br><span class="line">       XOR	AX,AX  </span><br><span class="line">       PUSH	AX  </span><br><span class="line">       MOV	AX,DATA  </span><br><span class="line">       MOV	DS,AX  </span><br><span class="line">       MOV	CX,NUM-BUF  </span><br><span class="line">       MOV		AX,0  </span><br><span class="line">       LEA		BX,BUF  </span><br><span class="line">AGAIN:  CMP		BYTE PTR [BX],0  </span><br><span class="line">                 JLE		LAB1  </span><br><span class="line">                 INC		AX  </span><br><span class="line">LAB1:	     INC		BX  </span><br><span class="line"> 	     LOOP		AGAIN  </span><br><span class="line">                 MOV	            NUM,AL  </span><br><span class="line">                 RET  </span><br><span class="line">MAIN  ENDP  </span><br><span class="line">CODE  ENDS  </span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><strong>多重循环要点</strong>  </p>
+<ul>
+<li>内层循环必须完全包含在外层循环内  </li>
+<li>在每次通过外层循环进入内层循环时，内层循环的初始条件必须重设。  </li>
+</ul>
+<blockquote>
+<p>例7.4 有一首地址为ADDR的N字数组，编制程序使该数组按照从大到小的顺序排列。<br>这里采用起泡排序算法，从第一个数开始依次对相邻两个数进行比较，大数在前，小数在后，若次序不对，则两个数交换位置。   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">	mov cx,count	;CX←数组元素个数  </span><br><span class="line">	dec cx	;元素个数减1为外循环次数  </span><br><span class="line">outlp:	mov dx,cx	;DX←内循环次数  </span><br><span class="line">	mov bx,offset addr  </span><br><span class="line">inlp:	mov ax,[bx]	;取前一个元素  </span><br><span class="line">	cmp ax,[bx+2]	;与后一个元素比较  </span><br><span class="line">	jge next  </span><br><span class="line">	;前一个大于等于后一个元素，则不进行交换  </span><br><span class="line">	xchg ax,[bx+2]	;否则，进行交换  </span><br><span class="line">	mov [bx],ax  </span><br><span class="line">next:	add bx,2	;下一对元素  </span><br><span class="line">	dec dx  </span><br><span class="line">	jnz inlp	;内循环尾  </span><br><span class="line">	loop outlp	;外循环尾  </span><br></pre></td></tr></table></figure>
+</blockquote>
+<h4 id="条件控制法（循环次数未知的循环控制方法）"><a href="#条件控制法（循环次数未知的循环控制方法）" class="headerlink" title="条件控制法（循环次数未知的循环控制方法）"></a>条件控制法（循环次数未知的循环控制方法）</h4><p>有些情况，循环的次数无法事先确定，但它与其中的某些条件有关。选定某些条件来控制循环,每循环一次,测试一次条件,条件满足,继续循环,不满足,退出循环.  </p>
+<p>⑶ 混合控制法（已知循环次数和循环继续的条件）  </p>
+<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">exec <span class="string">"!nasm % -f elf64 -g -o %&lt;.o"</span></span><br><span class="line">exec <span class="string">"!ld %&lt;.o -o %&lt;"</span></span><br><span class="line">exec <span class="string">"!time ./%&lt;"</span></span><br></pre></td></tr></table></figure>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>汇编</p>
+    
+    <p><span class="copy-title">本文作者:</span><a  title="overturncat">overturncat</a></p>
+    <p><span class="copy-title">发布时间:</span>2020-01-05, 00:33:00</p>
+    <p><span class="copy-title">最后更新:</span>2020-01-05, 00:40:50</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/01/05/%E6%B1%87%E7%BC%96/" title="汇编">http://yoursite.com/2020/01/05/%E6%B1%87%E7%BC%96/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2016-2019 Yelog</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+<div class="acParent"></div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.0.1" ></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#WEB','#Mysql','#汇编','#逆向','#密码学','#CTF','#fabric2','#Python','#request','#inspect','#函数堆栈','#c反汇编','#Ollydbg',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: #fafafa;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+        .nav .hide-list.fullscreen {
+            left: 492px
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
